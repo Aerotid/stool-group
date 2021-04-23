@@ -1,0 +1,6 @@
+mixin collection-quote(args)
+    .collection-quote&attributes(attributes).d-flex.flex-column.align-items-center
+        +morph-svg({view: '0 0 81 75'}).collection-quote__morph-svg
+        .collection-quote__wrapper
+            .collection-quote__text!= args.text
+            .collection-quote__quote!= args.quote

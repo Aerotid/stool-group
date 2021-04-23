@@ -1,0 +1,36 @@
+.tail {
+  padding-top: 230px;
+  //padding-bottom: $footer-height;
+  position: relative;
+  padding-bottom: 50px;
+
+  @include media-breakpoint-down(sm) {
+      padding-top: 100px;
+  }
+
+  @media print {
+    padding-top: 30px !important;
+  }
+}
+
+[data-namespace="index"] {
+  .tail {
+    padding-top: 240px;
+    padding-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 100px;
+    }
+  }
+}
+
+[data-namespace="product"] {
+  .tail {
+    padding-bottom: 130px;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 60px;
+    }
+  }
+
+}

@@ -1,0 +1,22 @@
+extends ../../layout/layout
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='collections')
+            .row.collections__top
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    h2.tp_h-1 Коллекции
+
+            .row
+                .offset-2.offset-md-1.offset-xl-2.col-20.col-md-22.col-xl-20.collections__collections
+                    each item, i in data.collections
+                        a(href='/collection.html').d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center.justify-content-between.collections__item
+                            .d-flex.flex-column(class= i % 2 === 0 ? 'order-1 order-md-0 align-items-start' : 'order-1 align-items-end').collections__text
+                                .collections__type!= item.type
+                                .collections__title!= item.title
+                                span.collections__link Подробнее
+                            .collections__image
+                                .collections__image-bg
+                                    +img({
+                                        path: item.path
+                                    })(object-fit='cover')

@@ -1,0 +1,12 @@
+mixin scroll-up(args)
+    -
+        if (args.type === 'scroll')
+            attributes.class = 'scroll-up_scroll'
+        else if (args.type === 'button')
+            attributes.class = 'scroll-up_button'
+    .scroll-up&attributes(attributes)(class=args.forType ? 'scroll-up_video video__scroll-up' : false)
+        .scroll-up__wrapper
+            if (args.type === 'scroll')
+                +svg({name: 'arrow-left-min'}).scroll-up__arrow.scroll-up__arrow_up
+            .scroll-up__text!= args.text
+        canvas.scroll-up__canvas(resize)

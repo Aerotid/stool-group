@@ -1,0 +1,79 @@
+.preloader {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    pointer-events: none;
+
+    &__progress-wrapper {
+        position: absolute;
+        left: 50%;
+        bottom: 21.5%;
+        width: calc(#{$col-width} * 4);
+        height: 2px;
+        background-color: $color-5;
+        animation-duration: 1s;
+        animation-delay: .5s;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-between(md, lg) {
+            width: calc(#{$col-width} * 6);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: calc(#{$col-width} * 10);
+        }
+    }
+
+    &__progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        background-color: transparent;
+        border-bottom: 2px solid $color-1;
+        transition: width 0.5s;
+        will-change: width;
+        animation-duration: 1s;
+        animation-delay: 1s;
+    }
+
+    &__progress-text {
+        margin-top: 45px;
+        @include font-2;
+        line-height: 1.214;
+        text-align: center;
+        color: $color-1;
+    }
+
+    &__logo {
+        width: calc(#{$col-width} * 6);
+        padding: 0 16px;
+        //height: 150px;
+        animation-duration: 1s;
+        animation-delay: .5s;
+        opacity: 0;
+        visibility: hidden;
+
+        @include media-breakpoint-between(md, lg) {
+            width: calc(#{$col-width} * 8);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: calc(#{$col-width} * 14);
+        }
+    }
+
+    @media print {
+        display: none !important;
+    }
+}

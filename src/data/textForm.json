@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Запрос прайс-листа",
+    "content": [
+      {
+        "id": "wholesalers-name",
+        "place": "Контактное лицо",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "wholesalers-company",
+        "place": "Название организации",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "wholesalers-city",
+        "place": "Ваш город",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "wholesalers-email",
+        "place": "Электронная почта",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "wholesalers-phone",
+        "place": "Номер телефона",
+        "required": true,
+        "type": "tel"
+      },
+      {
+        "id": "wholesalers-site",
+        "place": "Адрес сайта",
+        "required": true,
+        "type": "text"
+      }
+    ]
+  }
+]

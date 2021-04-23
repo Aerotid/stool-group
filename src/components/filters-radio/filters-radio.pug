@@ -1,0 +1,20 @@
+mixin filters-radio(args)
+    label.filters-radio&attributes(
+    attributes)
+        input(
+        class='cm-product-filters-checkbox'
+        type='radio'
+        name='product_filters[9]'
+        data-ca-filter-id='9'
+        value!=args.value
+        id='elm_checkbox_31_9_' + args.value
+        checked= (args && args.checked) ? 'checked' : false
+        disabled= (args && args.disabled) ? 'disabled': false
+        ).filters-radio__radio
+        .filters-radio__radio-emulator
+        .filters-radio__info
+            .filters-radio__info-title!= args.title
+            if(args && args.count)
+                div (
+                    span.filters-radio__info-count!= args.count
+                | )

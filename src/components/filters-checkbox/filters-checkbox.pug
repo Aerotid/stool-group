@@ -1,0 +1,24 @@
+mixin filters-checkbox(args)
+    label.filters-checkbox&attributes(attributes)
+        input(
+            class="cm-product-filters-checkbox"
+            type="checkbox"
+            name="product_filters[9]"
+            data-ca-filter-id="9"
+            value!=args.value
+            id="elm_checkbox_31_9_"+args.value
+            checked= (args && args.checked) ? "checked" : false
+            disabled= (args && args.disabled) ? "disabled": false
+        ).filters-checkbox__checkbox
+        .filters-checkbox__info(class= args.invert ? 'filters-checkbox__info-left' : null)
+            .filters-checkbox__info-title!= args.title
+            if(args && args.count)
+                div (
+                    span.filters-checkbox__info-count!= args.count
+                | )
+        .filters-checkbox__checkbox-emulator(class= args.invert ? 'filters-checkbox__checkbox-emulator-left' : null)
+            +svg({name: 'check'}).filters-checkbox__checkbox-emulator-icon
+
+
+
+

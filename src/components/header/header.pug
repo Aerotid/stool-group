@@ -1,0 +1,68 @@
+include ../../components/sandwich-btn/sandwich-btn
+include ../../components/header-menu/header-menu
+include ../../components/header-submenu/header-submenu
+include ../../components/simple-slider/simple-slider
+include ../../components/modal/modal
+include ../../components/cart-preview/cart-preview
+include ../../components/search/search
+include ../../components/login/login
+include ../../components/sandwich/sandwich
+
+mixin header(args)
+    header.header&attributes(attributes)
+        .row.align-items-stretch.header__wrapper
+            .offset-md-1.col-15.col-md-5.col-xl-3.d-flex.align-items-center.header__logo
+                a.logo(href='/').d-flex.align-items-center
+                    +svg({ name: 'stool' }).header__logo-icon
+                    span
+                        +svg({ name: 'group' }).header__logo-span
+            .col-10.d-xl-flex.d-none.header__menu
+                +header-menu
+            .offset-md-2.offset-lg-3.offset-xl-0.offset-xxl-1.col-12.col-md-4.col-xl-3.align-items-center.justify-content-end.header__phone
+                a(href='tel:+74951265327').tp-link + 7 (495) 126-53-27
+            .header__ticker.header__ticker_icons-show
+                +simple-slider({
+                    data: data.headerSlider,
+                    interval: '5000'
+                }).header__simple-slider
+                .header__ticker-right
+                    .header__icon-container.header__icon-container_compare
+                        a(href='/compare.html').header__icon.header__icon-compare(title='Сравнение')
+                            +svg({ name: 'compare' })
+                            div.header__count.tp_cnt
+                                span 10
+                    .header__icon-container.header__icon-container_favorite
+                        a(href='/favorites.html').header__icon.header__icon-favorite(title='Избранное')
+                            +svg({ name: 'heart' })
+                            div.header__count.tp_cnt
+                                span 10
+                    .header__icon-container.header__icon-container_person(data-toggle="modal" data-target="#login" title='Личный кабинет')
+                        .header__icon.header__icon-person
+                            +svg({ name: 'person' })
+                        .header__icon-text Войти
+
+                +modal({ id: 'login', header: true, headerGrey: true }).modal_login
+                    +login
+            .header__icons
+                .header__icon-container
+                    .header__icon.header__icon-search(data-toggle='modal' data-target='#searching' title='Поиск')
+                        +svg({name: 'search'})
+
+                    +modal({id: "searching", search:true, header: true}).modal_search
+                        +search.modal__search
+                .header__icon-container
+                    .header__icon.header__icon-bag(data-toggle="modal" data-target="#cart" title='Корзина')
+                        +svg({name: 'bag'})
+                        div.header__count.tp_cnt
+                            span 10
+
+                    +modal({id: "cart", cart: true, header: true, mobileHeader: true, headerGrey: true}).modal_cart
+                        +cart-preview({prodPrevs: data.cartPreview}).modal__cart-preview
+                .header__icon-container.d-xl-none
+                    +sandwich-btn(data-toggle='modal' data-target='#sandwich' tabindex='1')
+                    +modal({id: "sandwich"}).header__sandwich(aria-label='Close' data-dismiss='modal').modal_sandwich
+                        +sandwich({
+                            data: data.sandwich
+                        })
+        .row.header__submenu
+            +header-submenu

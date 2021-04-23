@@ -1,0 +1,72 @@
+$sandwich-line-width: 20px;
+$sandwich-width: $col-width;
+$sandwich-width-max: 80px;
+$sandwich-width-min: 55px;
+
+.sandwich-menu-close {
+  $root: &;
+  position: relative;
+
+  cursor: pointer;
+
+  width: $sandwich-width;
+  height: $sandwich-width;
+  min-height: $sandwich-width-min;
+  min-width: $sandwich-width-min;
+  //max-width: $sandwich-width-max;
+  //max-height: $sandwich-width-max;
+  background-color: $color-1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    width: $sandwich-line-width;
+    position: relative;
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: $sandwich-line-width;
+    border-top: medium solid #fff;
+    will-change: transform, top, bottom;
+
+  }
+
+  //.ie & {
+  //  #{$root}__line {
+  //    border-top-width: 2px;
+  //  }
+  //}
+
+  &_transition {
+    #{$root}__line {
+      transition: transform .75s;
+
+      &_top {
+        transform: rotate(45deg);
+      }
+
+      &_bottom {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &:hover  {
+    & #{$root}__line {
+
+      &_top {
+        transform: rotate(180deg);
+      }
+
+      &_bottom {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+}

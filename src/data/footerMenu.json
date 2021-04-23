@@ -1,0 +1,65 @@
+[
+  {
+    "title": "СтулГруп",
+    "child": [
+      {
+        "name": "О компании",
+        "href": "/about-company.html"
+      },
+      {
+        "name": "Проекты",
+        "href": "/projects.html"
+      },
+      {
+        "name": "Контакты",
+        "href": "/contacts.html"
+      },
+      {
+        "name": "Блог",
+        "href": "/blog.html"
+      }
+    ]
+  },
+  {
+    "title": "Помощь",
+    "child": [
+      {
+        "name": "Доставка",
+        "href": "/delivery.html"
+      },
+      {
+        "name": "Процесс оплаты",
+        "href": "/payment.html"
+      },
+      {
+        "name": "Возврат",
+        "href": "/return.html"
+      },
+      {
+        "name": "Оптовикам",
+        "href": "/wholesalers.html"
+      },
+      {
+        "name": "Реквизиты",
+        "href": "/requisites.html"
+      }
+    ]
+  },
+  {
+    "title": "Соцсети",
+    "child": [
+      {
+        "name": "Instagram",
+        "href": "#"
+      },
+      {
+        "name": "Facebook",
+        "href": "#"
+      },
+      {
+        "name": "WhatsApp",
+        "href": "#"
+      }
+    ]
+  }
+]

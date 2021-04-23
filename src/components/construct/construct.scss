@@ -1,0 +1,21 @@
+.construct {
+    $root: &;
+    padding-bottom: 10px;
+    background-color: white;
+
+    &__title {
+        margin-bottom: 2vh;
+        @include font-6;
+        line-height: 1.5;
+        color: $color-1;
+    }
+
+    & a:not(.link) {
+        color: $color-1;
+
+        &:hover, &:focus, &:active {
+            color: $color-1;
+            text-decoration: none;
+        }
+    }
+}

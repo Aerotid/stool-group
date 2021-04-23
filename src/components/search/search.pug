@@ -1,0 +1,75 @@
+mixin search(args)
+    .search&attributes(attributes)
+
+        .row
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.search__form-wrapper(class="ty-search-block")
+                form.search__form(action="/" name="search_form" method="get" class="cm-processed-form")
+                    input(type="hidden" name="subcats" value="Y")
+                    input(type="hidden" name="pcode_from_q" value="Y")
+                    input(type="hidden" name="pshort" value="Y")
+                    input(type="hidden" name="pfull" value="Y")
+                    input(type="hidden" name="pname" value="Y")
+                    input(type="hidden" name="pkeywords" value="Y")
+                    input(type="hidden" name="search_performed" value="Y")
+
+                    label.search__form-input-label
+                        input(
+                            type="text"
+                            name="hint_q"
+                            value=""
+                            id="search_input"
+                            title="Поиск"
+                            class="ty-search-block__input ui-autocomplete-input cm-hint"
+                            autocomplete="off"
+                            placeholder="Поиск"
+                        ).search__form-input
+                        //span.search__form-input-label-info Популярные запросы
+                        span.search__form-input-label-info Введите запрос
+                            span и&nbsp;нажмите Enter
+
+                    button.search__form-btn(title="Найти" class="ty-search-magnifier" type="submit")
+                        +svg({name: 'arrow'})(class="ty-icon-search")
+
+                    input(type="hidden" name="dispatch" value="products.search")
+
+                    input(type="hidden" name="security_hash" class="cm-no-hide-input" value="72c137b1aede0214afc2b037ed080ca2")
+
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.search__popular
+                .search__popular-title Популярные запросы
+                ul.search__popular-container
+                    each item in data.search[0].popular
+                        li.search__popular-item
+                            a(href="#").search__popular-item-link!= item
+
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.search__result
+                .search__result-title Найдено&nbsp;
+                    a.search__result-title-count(class="ui-corner-all" href="#" onclick="return $('form[name=search_form]').submit()") 7
+                    |  продуктов
+                ul.search__result-container(class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0")
+                    each item in data.search[1]
+                        li.search__result-item-wrapper(class="p-item clearfix")
+                            a.search__result-item(class="ui-corner-all" href="#")
+                                +img({ path: item.img }).search__result-item-img(class="ty-pict product-notification-image cm-image")
+                                .search__result-item-info
+                                    .search__result-item-title!= item.title
+                                    .search__result-item-cost
+                                        span(class="ty-list-price ty-nowrap").search__result-cost
+                                            bdi
+                                                span(class="ty-list-price ty-nowrap")!= item.cost
+                                                | &nbsp;
+                                                span(class="ty-list-price ty-nowrap")
+                                                    span(class="ty-rub") Р
+
+                                        if(item.costOld)
+                                            span(class="ty-list-price old-price" id="line_list_price_2781").search__result-cost_old
+                                                span(class="ty-strike")
+                                                    bdi
+                                                        span(id="sec_list_price_2781" class="ty-list-price ty-nowrap")!= item.costOld
+                                                        | &nbsp;
+                                                        span(class="ty-list-price ty-nowrap")
+                                                            span(class="ty-rub") Р
+
+
+
+
+

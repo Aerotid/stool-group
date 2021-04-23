@@ -1,0 +1,45 @@
+[
+  {
+    "popular" : ["Стул Eames DSW", "Стул Beetle", "Стул Eames Style DSW", "Стул Валенсия бархат", "Стул Tolix Arms Soft", "Стул Монарх", "Стул барный Beetle Lite PU"]
+  },
+  [
+    {
+      "title": "Стул Eames DSW",
+      "img": "../../pages/product/images/collections-yellow.png",
+      "cost": "1190",
+      "costOld": "3099"
+    },
+    {
+      "title": "Стул Eames Style DSW",
+      "img": "../../pages/product/images/collections-brown.png",
+      "cost": "1399",
+      "costOld": "1750"
+    },
+    {
+      "title": "Стул Eames DSR",
+      "img": "../../pages/product/images/collections-black.png",
+      "cost": "1990"
+    },
+    {
+      "title": "Стул Eames DAW",
+      "img": "../../pages/product/images/frankfurt.png",
+      "cost": "4299"
+    },
+    {
+      "title": "Стул Eames DSW детский",
+      "img": "../../pages/product/images/collections-white.png",
+      "cost": "1799"
+    },
+    {
+      "title": "Стул Eames Style DSW",
+      "img": "../../pages/product/images/collections-brown.png",
+      "cost": "1399",
+      "costOld": "1750"
+    },
+    {
+      "title": "Стул Eames DSW детский",
+      "img": "../../pages/product/images/collections-white.png",
+      "cost": "1799"
+    }
+  ]
+]

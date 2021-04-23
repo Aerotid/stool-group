@@ -1,0 +1,19 @@
+mixin sandwich(args)
+    .sandwich&attributes(attributes)
+        .sandwich__title Каталог
+
+        .sandwich__items
+            each item in args.data
+                #{item.href ? 'a' : 'div'}.d-flex.align-items-center.justify-content-between.sandwich__item(href= item.href class= item.typeMenu == '1' ? 'sandwich__item-grey' : null class= item.typeMenu == '2' ? 'sandwich__item-grey-2' : null)
+                    span!= item.menuTitle
+                    if item.subMenu
+                        +svg({ name: 'arrow-left-min' }).sandwich__item-icon
+                        .sandwich__sub-items(class= item.typeMenu == '1' ? 'sandwich__item-grey' : null class= item.typeMenu == '2' ? 'sandwich__item-grey-2' : null)
+                            .sandwich__back
+                                +svg({ name: 'arrow-left-min' }).sandwich__back-icon
+                                span!= item.menuTitle
+                            each subItem in item.subMenu
+                                a(href= subItem.subHref).sandwich__sub-item!= subItem.subMenuTitle
+
+        .offset-2.col-20
+            .sandwich__bottom &copy; 2016-2019 Stool Group

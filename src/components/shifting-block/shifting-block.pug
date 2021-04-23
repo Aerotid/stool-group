@@ -1,0 +1,15 @@
+include ../../components/cursor/cursor
+
+mixin shifting-block(args)
+    .shifting-block&attributes(attributes)
+        .shifting-block__wrapper
+            .shifting-block__hide.cursor-area
+                .shifting-block__hide-top
+                    .shifting-block__hide-logo
+                        a.logo(href='/html/') Stool
+                    .shifting-block__hide-top-btn
+                +cursor.shifting-block__cursor
+            .shifting-block__container
+                block
+
+        

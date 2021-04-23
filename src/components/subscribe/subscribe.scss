@@ -1,0 +1,41 @@
+.subscribe {
+    display: flex;
+    width: 100%;
+    border: 1px solid $color-2;
+    border-radius: 3px;
+
+    &__input {
+        flex: 1 1 100%;
+        @include font-3;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        border-right: 1px solid $color-2;
+        outline: none;
+        margin: 0;
+        padding: 10px 14px 8px;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding: 8px 14px 10px;
+        }
+    }
+
+    &__button {
+        flex: 1 1 auto;
+        @include font-2;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 2px 14px 0;
+        transition: all 0.3s;
+
+        &:hover {
+            color: white;
+            background-color: $color-1;
+        }
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding: 0 14px 2px;
+        }
+    }
+}

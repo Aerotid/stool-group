@@ -1,0 +1,22 @@
+include ../canvas-indicate/canvas-indicate
+
+mixin video(args)
+    .video&attributes(attributes)
+        if (args.type === 'inner')
+            .video__bg-wrapper
+                .video__button
+                    +canvas-indicate({
+                        title: 'Смотреть видео',
+                        type: 'button'
+                    })
+            +autoplay-video({
+                path: `${args.path}#t=0.1`
+            }).video__item.video__item_inner
+        else if (args.type === 'youtube')
+            +img({ path: 'https://img.youtube.com/vi/' + args.id + '/maxresdefault.jpg' }).video__bg-wrapper
+            .video__button
+                +canvas-indicate({
+                    title: 'Смотреть видео',
+                    type: 'button'
+                })
+            .video__item.video__item_youtube(data-embed=args.id)

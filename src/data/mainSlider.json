@@ -1,0 +1,38 @@
+[
+  {
+    "img": "./images/main-slider/1.jpg",
+    "title": "Вдохновение повсюду",
+    "text": "Новинки каталога",
+    "anchor": "Коллекция Beetle"
+  },
+  {
+    "img": "./images/main-slider/2.jpg",
+    "title": "Скидки до&nbsp;42%",
+    "text": "Новые стулья в&nbsp;каждый дом",
+    "anchor": "Пластиковые и&nbsp;мягкие стулья"
+  },
+  {
+    "img": "./images/main-slider/3.jpg",
+    "title": "Вдохновение повсюду",
+    "text": "Новинки каталога",
+    "anchor": "Коллекция Beetle"
+  },
+  {
+    "img": "./images/main-slider/4.jpg",
+    "title": "Скидки до&nbsp;42%",
+    "text": "Новые стулья в&nbsp;каждый дом",
+    "anchor": "Пластиковые и&nbsp;мягкие стулья"
+  },
+  {
+    "img": "./images/main-slider/5.jpg",
+    "title": "Вдохновение повсюду",
+    "text": "Новинки каталога",
+    "anchor": "Коллекция Beetle"
+  },
+  {
+    "img": "./images/main-slider/6.jpg",
+    "title": "Скидки до&nbsp;42%",
+    "text": "Новые стулья в&nbsp;каждый дом",
+    "anchor": "Пластиковые и&nbsp;мягкие стулья"
+  }
+]

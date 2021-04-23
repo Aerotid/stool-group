@@ -1,0 +1,20 @@
+{
+  "desc": [
+    {
+      "title": "Описание",
+      "content": "<p>Лаконичный и оригинальный дизайн, надежность и долговечность, функциональность и практичность, простота в уходе и универсальность – все это стул Eames DAW, созданный популярнейшими дизайнерами Чарльзом и Рэй Имз.</p><p>Эргономичные подлокотники позволяют использовать модель в качестве рабочего кресла. Основание, выполненное из массива бука и прочной стали, очень устойчивое и надежное. Несмотря на это, стул весит всего 4,9 кг, что позволяет легко переносить его с места на место.</p>",
+      "img": "./images/description.jpg",
+      "noCollapsed": true
+    },
+    {
+      "class":  "spoiler-list__description",
+      "collapseClass": "spoiler-list__collapse",
+      "title": "Характеристики",
+      "content": "<div class=\"table-product__title\">Основные</div><table class=\"table-product\"><tbody><tr><td class=\"w-50\">Бренд, серия</td><td class=\"w-50\">Eames, Eames DSW</td></tr><tr><td class=\"w-50\">Гарантийный срок</td><td class=\"w-50\">12 месяцев</td></tr><tr><td class=\"w-50\">Страна производства</td><td class=\"w-50\">Китай</td></tr><tr><td class=\"w-50\">Тип стула</td><td class=\"w-50\">со спинкой, с полокотниками</td></tr><tr><td class=\"w-50\">Мягкость сиденья</td><td class=\"w-50\">твердые</td></tr><tr><td class=\"w-50\">Назначение</td><td class=\"w-50\">для дома, для кухни</td></tr></tbody></table><div class=\"table-product__title\">Габариты</div><table class=\"table-product\"><tbody><tr><td class=\"w-50\">Масса</td><td class=\"w-50\">4,25 кг</td></tr><tr><td class=\"w-50\">Высота до сиденья</td><td class=\"w-50\">44 см</td></tr><tr><td class=\"w-50\">Размеры стула (ВxШxГ)</td><td class=\"w-50\">80x62x62</td></tr></tbody></table><div class=\"table-product__title\">Материалы, цвета</div><table class=\"table-product\"><tbody><tr><td class=\"w-50\">Материал сиденья</td><td class=\"w-50\">PP пластик</td></tr><tr><td class=\"w-50\">Материал каркаса</td><td class=\"w-50\">дерево и металл</td></tr><tr><td class=\"w-50\">Цвет</td><td class=\"w-50\">черный</td></tr></tbody></table><div class=\"table-product__title\">Параметры упаковки</div><table class=\"table-product\"><tbody><tr><td class=\"w-50\">Вес коробки №1</td><td class=\"w-50\">10,6 кг</td></tr><tr><td class=\"w-50\">Объем коробки №1</td><td class=\"w-50\">0,1523 м3</td></tr><tr><td class=\"w-50\">Длина коробки №1</td><td class=\"w-50\">72 см</td></tr><tr><td class=\"w-50\">Ширина коробки №1</td><td class=\"w-50\">46 см</td></tr><tr><td class=\"w-50\">Высота коробки №1</td><td class=\"w-50\">46 см</td></tr><tr><td class=\"w-50\">Вес коробки №2</td><td class=\"w-50\">11 кг</td></tr><tr><td class=\"w-50\">Объем коробки №2</td><td class=\"w-50\">0,1922 м3</td></tr><tr><td class=\"w-50\">Длина коробки №2</td><td class=\"w-50\">50 см</td></tr><tr><td class=\"w-50\">Ширина коробки №2</td><td class=\"w-50\">62 см</td></tr><tr><td class=\"w-50\">Высота коробки №2</td><td class=\"w-50\">62 см</td></tr><tr><td class=\"w-50\">Количество в коробке</td><td class=\"w-50\">6 шт.</td></tr></tbody></table>"
+    },
+    {
+      "title": "Инструкции и сертификаты",
+      "content": "<div class=\"download-list\"><a class=\"row align-items-center justify-content-between download-list__item\" href=\"#\"><div class=\"download-list__item-title\">Инструкция по сборке Стул Eames DAW</div><div class=\"d-flex align-items-center download-list__item-file\">pdf, 373 Kb<svg class=\"download-list__icon\"><use xlink:href=\"#download-arrow\"></use></svg></div></a><a class=\"row align-items-center justify-content-between download-list__item\" href=\"#\"><div class=\"download-list__item-title\">Инструкция по сборке Стул Eames DAW</div><div class=\"d-flex align-items-center download-list__item-file\">jpg, 25 Kb<svg class=\"download-list__icon\"><use xlink:href=\"#download-arrow\"></use></svg></div></a></div>"
+    }
+  ]
+}

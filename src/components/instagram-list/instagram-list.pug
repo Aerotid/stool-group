@@ -1,0 +1,21 @@
+include ../morph-svg/morph-svg
+
+mixin instagram-list(args)
+    .swiper-container.instagram-list__swiper-container.instagram-list&attributes(attributes)
+        .swiper-wrapper.instagram-list__swiper-wrapper
+            each item in args.data
+                a(href='#').swiper-slide.instagram-list__swiper-slide.instagram-list__item
+                    .instagram-list__wrapper
+                        .instagram-list__bg-wrapper
+                            +img({ path: item.img }).instagram-list__bg(data-object-fit='cover')
+                        .instagram-list__row
+                            .instagram-list__likes
+                                .instagram-list__icon
+                                    +svg({ name: 'heart' })
+                                .instagram-list__count!=item.likes
+                            .instagram-list__name!=item.name
+            a(href='#' target='_blank').instagram-list__item.instagram-list__item_last
+                +morph-svg({ view: '0 0 81 75' }).instagram-list__morph-svg
+                .instagram-list__wrapper.instagram-list__wrapper_center
+                    .instagram-list__text-1 Подпишитесь на @stoolgroup.ru
+                    .instagram-list__text-2.tp-link Перейти в профиль

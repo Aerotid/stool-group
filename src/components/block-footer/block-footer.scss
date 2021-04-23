@@ -1,0 +1,116 @@
+.block-footer {
+  $root: &;
+  position: relative;
+
+  background-color: $color-7;
+  color: white;
+
+  padding-bottom: 70px;
+  padding-top: 90px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  &__col {
+
+    @include media-breakpoint-down(sm) {
+      &:not(:first-of-type) {
+        margin-top: 30px;
+      }
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+
+    &-top {
+      height: 1em;
+
+      &._no-mobile {
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+
+    &-middle {
+      display: flex;
+      flex-direction: column;
+      max-width: 270px;
+      margin-bottom: 30px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+      }
+    }
+    &:not(:last-of-type) {
+      padding-right: $col-width;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__social,
+  &__phone{
+    color: white;
+    transition: all 0.3s;
+    will-change: color;
+
+    &:hover {
+      color: rgba(white, 0.8);
+    }
+  }
+
+  &__head {
+    margin-bottom: 75px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    line-height: 1.5;
+    span {
+      color: $color-2;
+    }
+  }
+
+  &__link {
+    .link-more__link {
+      color: $color-2;
+    }
+    .link-more__icon {
+      stroke: $color-2;
+    }
+
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+  }
+
+  &__link-button {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      border-color: $color-2;
+      color: white;
+
+      &:hover {
+        color:white;
+      }
+    }
+  }
+
+  @media print {
+    display: none !important;
+  }
+}

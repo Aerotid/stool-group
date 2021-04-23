@@ -1,0 +1,101 @@
+extends ../../layout/layout
+include ../../components/bread-crumbs/bread-crumbs
+include ../../components/product-interface/product-interface
+include ../../components/product-gallery/product-gallery
+include ../../components/construct/construct
+include ../../components/full-collection/full-collection
+include ../../components/scroll-up/scroll-up
+include ../../components/button-load/button-load
+include ../../components/spoiler-menu/spoiler-menu
+include ../../components/product-list/product-list
+include ../../components/product-card/product-card
+include ../../components/spoiler-reviews/spoiler-reviews
+include ../../components/mobile-navigation/mobile-navigation
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='product')
+            .offset-2.offset-md-1.offset-xl-3
+                +bread-crumbs({
+                    links: [
+                        {title: 'Главная', href: '/'},
+                        {title: 'Стулья', href: '/'},
+                        {title: '<span class="active">Cтул Eames DAW</span>', href: '/'},
+                    ]
+                })
+            .row.product__offset
+                .col-12.col-md-11.col-xl-12.offset-2.offset-md-1.offset-xl-3.d-none.d-md-block
+                    +product-gallery({ data: data.scrollGallery })
+                .col-20.col-md-11.col-xl-6.offset-2.offset-md-0
+                    +product-interface({
+                        title: 'Cтул Eames DAW черный название в два ряда',
+                        sale: 'sale <span class="product-interface__sale-bold">-42%</span>',
+                        newPrice: '2 499',
+                        oldPrice: '4 299',
+                        transcription: 'Транскрипция — Стул Эймс ДАВ',
+                        desc: 'Удобное сиденье из качественного и прочного PP пластика, который легко очищать от любых загрязнений, повторяет форму тела, обеспечивая сидящему комфорт.',
+                        size: '50 см  х  50 см  х  95 см',
+                        code: 'УТ000001391',
+                        inStock: false,
+                        date: '19.07.2021',
+                        saleType: 3
+                    })
+                .col-20.col-md-22.col-xl-8.offset-2.offset-md-1.offset-xl-3.product__info
+                    +construct({
+                        data: data.construct.desc,
+                        name: 'desc'
+                    })
+                    +spoiler-reviews({
+                        title: 'Отзывы',
+                        data: data.reviews
+                    })
+            .row
+                .col-20.col-md-11.col-xl-8.offset-2.offset-md-1.offset-xl-3.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Товары из коллекции
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_product-list-0
+                    p.d-none.d-md-block.tp__p-2 Земная группа формировалась ближе к&nbsp;Солнцу, однако засветка неба иллюстрирует нулевой меридиан.
+            .row.overflow-hidden_mobile
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    +product-list({
+                        data: data.productCards.collection,
+                        twoCards: true
+                    })
+            .row
+                .col-20.col-md-11.col-xl-8.offset-2.offset-md-1.offset-xl-3.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Рекомендации
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_product-list-1
+                    p.d-none.d-md-block.tp__p-2 Земная группа формировалась ближе к&nbsp;Солнцу, однако засветка неба иллюстрирует нулевой меридиан.
+            .row.overflow-hidden_mobile
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    +product-list({
+                        data: data.productCards.recommendations,
+                        twoCards: true
+                    })
+            .row
+                .col-20.col-md-11.col-xl-8.offset-2.offset-md-1.offset-xl-3.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Просмотренные
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_product-list-2
+                    p.d-none.d-md-block.tp__p-2 Земная группа формировалась ближе к&nbsp;Солнцу, однако засветка неба иллюстрирует нулевой меридиан.
+            .row.overflow-hidden_mobile
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    +product-list({
+                        data: data.productCards.viewed,
+                        twoCards: true
+                    })
+            .row
+                .col-20.col-md-22.col-xl-18.offset-2.offset-md-1.offset-xl-3
+                    +full-collection({
+                        title: 'Мебель Еames',
+                        path: 'images/collection.jpg'
+                    })
+            .row
+                .col-24.d-flex.justify-content-center.order-1.order-md-0
+                    +scroll-up({
+                        text: 'Наверх',
+                        type: 'scroll'
+                    })
+                .col-20.col-md-18.col-xl-15.offset-2.offset-md-3.offset-xl-5
+                    +spoiler-menu({
+                        data: data.categories,
+                        name: 'category'
+                    })

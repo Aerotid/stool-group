@@ -1,0 +1,131 @@
+.product-list {
+    $root: &;
+
+    &__product-card {
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &__swiper-container {
+        overflow: visible;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 20px;
+        }
+    }
+
+    &__swiper-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-down(lg) {
+            justify-content: space-between;
+        }
+        @include media-breakpoint-down(sm) {
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+    }
+
+    & .swiper-slide.swiper-slide {
+
+        @include media-breakpoint-down(sm) {
+            width: 250px;
+            //transform: translateX(-18.5%);
+        }
+    }
+
+    &_product {
+
+        &.product-list {
+            margin-bottom: 170px;
+
+            &__swiper-container {
+
+                @include media-breakpoint-down(sm) {
+                    overflow: hidden;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 22px;
+            }
+        }
+
+        & .swiper-slide.swiper-slide {
+
+            @include media-breakpoint-down(sm) {
+                width: 50%;
+                //transform: translateX(-18.5%);
+            }
+        }
+
+        & .product-card {
+            padding: 35px;
+
+            &__actions {
+
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+
+            &__sale {
+                @include font-15;
+            }
+
+            &__img {
+                height: 76.1%;
+
+                &-space {
+
+                    @include media-breakpoint-down(md) {
+                        padding-top: 210px;
+                    }
+                }
+            }
+
+            &::before {
+
+                @include media-breakpoint-down(sm) {
+                    box-shadow: none;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                display: block;
+                padding-bottom: 28px;
+                box-shadow: none;
+
+                &__hidden {
+
+                    @include media-breakpoint-down(sm) {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+
+                &.swiper-slide-active {
+                    box-shadow: none;
+
+                    .product-card__actions {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    .product-card__hidden {
+                        @include media-breakpoint-down(sm) {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+mixin rating-star(args)
+    - var i = 0;
+    .rating-star(data-rate= args.rate, class= args.smallIcons ? 'rating-star__small-icons' : null, class= args.justifyBetween ? 'rating-star__between justify-content-between' : null)&attributes(attributes)
+        while i < 5
+            - i++;
+            span.rating-star__icon
+                svg(width="15" height="15" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M6.5 9.80421L10.5083 12.7292L8.99167 7.96254L13 5.14587H8.125L6.5 0.270874L4.875 5.14587H0L4.00833 7.96254L2.49167 12.7292L6.5 9.80421Z")

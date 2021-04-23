@@ -1,0 +1,6 @@
+include ../video/video
+
+mixin video-block(args)
+    .video-block&attributes(attributes)
+        +video(args)#video.video-block__video
+        canvas.video-block__canvas

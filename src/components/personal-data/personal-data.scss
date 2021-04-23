@@ -1,0 +1,11 @@
+.personal-data {
+    $root: &;
+
+    &__form {
+        margin-bottom: 140px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 30px;
+        }
+    }
+}

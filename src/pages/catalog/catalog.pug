@@ -1,0 +1,24 @@
+extends ../../layout/layout
+include ../../components/bread-crumbs/bread-crumbs
+include ../../components/catalog/catalog
+include ../../components/sorting/sorting
+include ../../components/shifting-block/shifting-block
+include ../../components/product-filters/product-filters
+include ../../components/shifting-block-controls/shifting-block-controls
+include ../../components/product-list/product-list
+
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='catalog')
+            +shifting-block({selected: true}).offset-top-140
+                +product-filters
+            .row.row_catalog
+                h2.offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-2 Стулья
+                .offset-2.offset-md-1.offset-xl-3.col-6.col-md-8.col-xl-13
+                    +shifting-block-controls({selected: true})
+                .col-14.col-md-14.col-xl-5
+                    +sorting({items: data.sortingList})
+            +catalog({ cards: data.productCards.catalog })
+
+

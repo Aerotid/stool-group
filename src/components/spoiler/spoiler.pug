@@ -1,0 +1,34 @@
+mixin spoiler(args, i, name)
+    .spoiler&attributes(attributes)
+        if  i !== false
+            .justify-content-between.spoiler__header(id= (args && args.id) ? args.id : false data-toggle="collapse" href="#" + name + "-" + i aria-expanded="true" class= (args && args.class) ? args.class : false class= args.noCollapsed ? null : 'collapsed')
+                .spoiler__title(class= (args && args.titleClass) ? args.titleClass : false)!= args.title
+                if(args && args.arrow)
+                    .spoiler__arrow-container
+                        +svg({name: 's-arrow'}).spoiler__arrow
+                else
+                    .spoiler__plus
+            .collapse(id=name + "-" + i data-parent="#" + name + '-' + i class= args.collapseClass class= args.noCollapsed ? 'show' : null)
+                if(args && args.content)
+                    .spoiler__content!= args.content
+                    if(args && args.img)
+                        .spoiler__image
+                            +img({ path: args.img })
+                else
+                    .spoiler__content
+                        block
+        else
+            .justify-content-between.spoiler__header(id= (args && args.id) ? args.id : false data-toggle="collapse" href="#" + name aria-expanded="true" class= (args && args.class) ? args.class : false class= args.noCollapsed ? null : 'collapsed')
+                .spoiler__title(class= (args && args.titleClass) ? args.titleClass : false)!= args.title
+                if(args && args.arrow)
+                    .spoiler__arrow-container
+                        +svg({name: 's-arrow'}).spoiler__arrow
+                else
+                    .spoiler__plus
+            .collapse(id=name data-parent="#" + name class= args.collapseClass class= args.noCollapsed ? 'show' : null)
+                if(args && args.content)
+                    .spoiler__content!= args.content
+                else
+                    .spoiler__content
+                        block
+

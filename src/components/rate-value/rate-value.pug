@@ -1,0 +1,13 @@
+mixin rate-value(args)
+    .rate-value&attributes(attributes)
+        .d-flex.align-items-center.justify-content-between.rate-value__rating
+            each title, i in args.rateTitles
+                input(type='radio' id='rating_main_info__title_250_' + i + 1 name='post_data[rating_value]' value= i + 1).ty-rating__check.rate-value__rating-check
+                label(for='rating_main_info__title_250_' + i + 1 value= i + 1 title= title).ty-rating__label.rate-value__rating-label
+                    svg.rate-value__icon(width="15" height="15" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M6.5 9.80421L10.5083 12.7292L8.99167 7.96254L13 5.14587H8.125L6.5 0.270874L4.875 5.14587H0L4.00833 7.96254L2.49167 12.7292L6.5 9.80421Z")
+            .rate-value__rating-value 0
+        .d-flex.align-items-center.rate-value__text
+            span Ваша оценка -
+            .rate-value__value 0
+            span из 5

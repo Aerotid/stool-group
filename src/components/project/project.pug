@@ -1,0 +1,10 @@
+mixin project(args, index)
+    .project(class=index % 2 ? 'project_right': 'project_left')&attributes(attributes)
+        .project__wrapper
+            .project__bg-wrapper
+                +img({ path: args.img }).project__bg(data-object-fit='cover')
+            .project__row
+                .project__text!=args.text
+                .project__location.tp__p-2!=args.location
+                .project__more
+                    a(href='/project.html').tp-link Подробнее

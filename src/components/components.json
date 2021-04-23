@@ -1,0 +1,326 @@
+[
+  {
+    "name": "header"
+  },
+  {
+    "name": "sandwich-btn"
+  },
+  {
+    "name": "header-menu"
+  },
+  {
+    "name": "spoiler"
+  },
+  {
+    "name": "sandwich-btn"
+  },
+  {
+    "name": "sandwich-menu-close"
+  },
+  {
+    "name": "preloader"
+  },
+  {
+    "name": "tail"
+  },
+  {
+    "name": "footer"
+  },
+  {
+    "name": "table"
+  },
+  {
+    "name": "header-submenu"
+  },
+  {
+    "name": "main-slider"
+  },
+  {
+    "name": "cursor-custom"
+  },
+  {
+    "name": "bread-crumbs"
+  },
+  {
+    "name": "product-interface"
+  },
+  {
+    "name": "characteristics"
+  },
+  {
+    "name": "product-gallery"
+  },
+  {
+    "name": "construct"
+  },
+  {
+    "name": "product-card"
+  },
+  {
+    "name": "subscribe"
+  },
+  {
+    "name": "instagram-list"
+  },
+  {
+    "name": "scroll-up"
+  },
+  {
+    "name": "project"
+  },
+  {
+    "name": "button-load"
+  },
+  {
+    "name": "collection-slider"
+  },
+  {
+    "name": "slider-navigation-top"
+  },
+  {
+    "name": "product-list"
+  },
+  {
+    "name": "button-buy"
+  },
+  {
+    "name": "full-collection"
+  },
+  {
+    "name": "download-list"
+  },
+  {
+    "name": "morph-svg"
+  },
+  {
+    "name": "simple-slider"
+  },
+  {
+    "name": "product-slider"
+  },
+  {
+    "name": "spoiler-menu"
+  },
+  {
+    "name": "spoiler-reviews"
+  },
+  {
+    "name": "mobile-navigation"
+  },
+  {
+    "name": "rating-star"
+  },
+  {
+    "name": "project-list"
+  },
+  {
+    "name": "modal"
+  },
+  {
+    "name": "scroll-gallery"
+  },
+  {
+    "name": "catalog"
+  },
+  {
+    "name": "select"
+  },
+  {
+    "name": "sorting"
+  },
+  {
+    "name": "shifting-block"
+  },
+  {
+    "name": "cursor"
+  },
+  {
+    "name": "product-preview"
+  },
+  {
+    "name": "cart-preview"
+  },
+  {
+    "name": "counter"
+  },
+  {
+    "name": "promocode"
+  },
+  {
+    "name": "button-favorite"
+  },
+  {
+    "name": "button-compare"
+  },
+  {
+    "name": "collection-quote"
+  },
+  {
+    "name": "collection-list"
+  },
+  {
+    "name": "range"
+  },
+  {
+    "name": "product-filters"
+  },
+  {
+    "name": "filters-checkbox"
+  },
+  {
+    "name": "filters-checkbox-list"
+  },
+  {
+    "name": "compare-slider"
+  },
+  {
+    "name": "button-close"
+  },
+  {
+    "name": "compare-block"
+  },
+  {
+    "name": "favorites-counter"
+  },
+  {
+    "name": "input"
+  },
+  {
+    "name": "cart-form"
+  },
+  {
+    "name": "radiobtn"
+  },
+  {
+    "name": "flexible-form"
+  },
+  {
+    "name": "profile-dashboard"
+  },
+  {
+    "name": "product-view-confirm"
+  },
+  {
+    "name": "product-confirm"
+  },
+  {
+    "name": "orders"
+  },
+  {
+    "name": "filters-radio"
+  },
+  {
+    "name": "order-check"
+  },
+  {
+    "name": "leave-review"
+  },
+  {
+    "name": "rate-value"
+  },
+  {
+    "name": "button"
+  },
+  {
+    "name": "all-reviews"
+  },
+  {
+    "name": "review"
+  },
+  {
+    "name": "shifting-block-controls"
+  },
+  {
+    "name": "catalog-menu"
+  },
+  {
+    "name": "search"
+  },
+  {
+    "name": "header-dropdown"
+  },
+  {
+    "name": "info-indicate"
+  },
+  {
+    "name": "registration"
+  },
+  {
+    "name": "login"
+  },
+  {
+    "name": "restore-password"
+  },
+  {
+    "name": "profile"
+  },
+  {
+    "name": "personal-data"
+  },
+  {
+    "name": "change-password"
+  },
+  {
+    "name": "orders-table"
+  },
+  {
+    "name": "preview-bg"
+  },
+  {
+    "name": "video-block"
+  },
+  {
+    "name": "video"
+  },
+  {
+    "name": "contacts-info"
+  },
+  {
+    "name": "location-item"
+  },
+  {
+    "name": "back-btn"
+  },
+  {
+    "name": "blog-item"
+  },
+  {
+    "name": "two-columns"
+  },
+  {
+    "name": "contacts-modal"
+  },
+  {
+    "name": "info-block-1"
+  },
+  {
+    "name": "buy-onclick"
+  },
+  {
+    "name": "team-card-grid"
+  },
+  {
+    "name": "team-card"
+  },
+  {
+    "name": "morph-block"
+  },
+  {
+    "name": "location-list"
+  },
+  {
+    "name": "sandwich"
+  },
+  {
+    "name": "svg-block"
+  },
+  {
+    "name": "tabs"
+  },
+  {
+    "name": "canvas-indicate"
+  },
+  {
+    "name": "notification"
+  }
+]

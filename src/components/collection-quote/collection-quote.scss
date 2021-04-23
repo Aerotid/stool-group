@@ -1,0 +1,50 @@
+.collection-quote {
+  position: relative;
+  background-color: $color-5;
+  padding: 175px 0;
+  margin: 110px 0 174px;
+
+  &__wrapper {
+    width: calc(#{$col-width} * 10);
+    text-align: center;
+    z-index: 1;
+
+    @include media-breakpoint-down(lg) {
+      width: calc(#{$col-width} * 20);
+    }
+  }
+
+  &__text {
+    @include font-23;
+    margin-bottom: 32px;
+  }
+
+  &__quote {
+    @include font-24;
+    line-height: 1.8;
+  }
+
+  &__morph-svg {
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+
+    @include media-breakpoint-down(sm) {
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 110px 0;
+    margin: 70px 0 100px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 80px 0;
+      margin: 40px 0 120px;
+    }
+  }
+}

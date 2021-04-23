@@ -1,0 +1,59 @@
+.promocode {
+  $root: &;
+
+  display: flex;
+
+  &__label {
+    height: 25px;
+    position: relative;
+    border-bottom: 1px solid $color-5;
+    width: 115px;
+
+    &-placeholder {
+      @include font-16;
+      position: absolute;
+      color: $color-2;
+      bottom: 5px;
+      transition: transform 0.3s;
+    }
+  }
+  &._is-active {
+    #{$root}__label-placeholder{
+      transform: translateY(-30px);
+    }
+  }
+
+  &__input {
+    @include font-19;
+    height: 25px;
+    //padding-bottom: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background: transparent;
+    color: black;
+    width: 100%;
+
+    &:active, &:focus {
+      outline: transparent;
+
+    }
+  }
+  &__btn {
+    @include font-22;
+    width: 115px;
+    //height: 25px;
+    padding-bottom: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: none;
+    background: transparent;
+    outline: transparent;
+  }
+
+
+}

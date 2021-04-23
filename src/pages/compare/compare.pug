@@ -1,0 +1,15 @@
+extends ../../layout/layout
+include ../../components/mobile-navigation/mobile-navigation
+include ../../components/compare-block/compare-block
+
+block content
+    main#barba-wrapper
+        .barba-container(data-namespace='compare')
+            .row.compare__top
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.d-flex.d-xl-block.justify-content-between.justify-content-xl-start
+                    h2.tp_h-2.tp_h-2_with-nav Cравнение товаров
+                    +mobile-navigation.d-flex.d-xl-none.mobile-navigation_compare-slider
+            +compare-block({
+                cards: data.productCards.leaders,
+                tables: data.compareTable
+            })

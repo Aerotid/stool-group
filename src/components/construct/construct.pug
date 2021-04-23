@@ -1,0 +1,10 @@
+include ../spoiler-list/spoiler-list
+
+mixin construct(args)
+    .construct&attributes(attributes)
+        .row.construct__row
+            +spoiler-list({
+                info: args.data,
+                name: args.name,
+                img: args.img
+            })(id=args.name).spoiler-list_construct

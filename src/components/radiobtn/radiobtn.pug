@@ -1,0 +1,16 @@
+mixin radiobtn(args)
+    .radiobtn&attributes(attributes)
+        label.radiobtn__label
+            if(args.checkbox)
+                input(type="checkbox" name=args.name value=args.val ).radiobtn__btn
+            else
+                input(type="radio" name=args.name value=args.val ).radiobtn__btn
+            .radiobtn__emulator
+            .radiobtn__info
+                if(args.title)
+                    p.radiobtn__info-title(class=args.text ? false : 'radiobtn__info-line')!= args.title
+
+                if(args.text)
+                    p.radiobtn__info-text!= args.text
+
+

@@ -1,0 +1,49 @@
+include ../subscribe/subscribe
+
+mixin footer(args)
+    footer.footer&attributes(attributes).offset-0.offset-md-1.col-24.col-md-22
+        .row.offset-2.offset-md-0.col-20.col-md-24
+            .d-none.d-md-block.footer__title Stool Group
+            .row.d-flex.flex-column.flex-md-row.col-24
+                .d-flex.flex-column.footer__column-contact.order-1.order-md-0
+                    .footer__column-title.d-none.d-md-block Контакты
+                    .footer__column-info.d-none.d-md-block г. Москва, <br>пр. Серебрякова, 14, стр. 10 офис 306
+                    .footer__phone
+                        a(href="tel:+74951265327").tp-link +7 (495) 126 5327
+                    .footer__email.d-none.d-md-block
+                        a(href="mailto:info@stoolgroup.ru").tp-link-2 info@stoolgroup.ru
+                    .footer__column-sub-title.d-none.d-md-block Время работы
+                    .footer__column-sub-info.d-none.d-md-block ПН - ПТ | 9:00 - 19:00<br>СБ - ВС | 10:00 - 18:00
+                each item in args.data
+                    .footer__column.d-none.d-xl-block
+                        .footer__column-title!= item.title
+                        ul.footer__column-menu
+                            each menu in item.child
+                                li
+                                    a(href=menu.href)!= menu.name
+                .footer__subscribe
+                    .footer__subscribe-title Подписка
+                    .footer__subscribe-info Чтобы быть в курсе всех акций  и новинок, подпишитесь на нашу рассылку
+                    +subscribe({
+                        place: 'Ваш e-mail',
+                        btn: 'Подписаться'
+                    })
+            .row.d-block.d-md-none.col-24
+                ul.d-flex.justify-content-between.footer__socials
+                    li
+                        a(href='#') Instagram
+                    li
+                        a(href='#') Facebook
+                    li
+                        a(href='#') WhatsApp
+            .row.footer__bottom.d-flex.flex-column.flex-xl-row.align-items-xl-center
+                .footer__bottom-copyright.order-1.order-xl-0 &copy; 2016-2019 Stool Group
+                .footer__bottom-column.d-flex.flex-column.flex-xl-row
+                    a(href="/privacy-policy.html").tp-link-2 Политика конфиденциальности
+                    a(href="/agreement.html").tp-link-2 Пользовательское соглашение
+                .d-flex.align-items-center.order-2.order-xl-0.footer__bottom-only
+                    a(href='https://onlydigital.ru' target='_blank') Design by
+                        +svg({ name: 'only' })
+
+
+

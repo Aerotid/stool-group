@@ -1,0 +1,7 @@
+.project {
+    &__subtitle {
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+extends ../../layout/layout
+include ../../components/mobile-navigation/mobile-navigation
+include ../../components/product-list/product-list
+include ../../components/product-card/product-card
+include ../../components/button-load/button-load
+include ../../components/scroll-up/scroll-up
+include ../../components/button-buy/button-buy
+include ../../components/collection-quote/collection-quote
+include ../../components/collection-list/collection-list
+
+block content
+    main#barba-wrapper
+        .barba-container(data-namespace='collection')
+            .row
+                .col-20.col-md-22.offset-2.offset-md-1.collection__preview
+                    .collection__preview-text
+                        p.tp__p-2 Мировой хит
+                        h2.tp_h-2 Коллекция Eames
+                    .collection__preview-bg
+                        +img({ path: './images/preview.jpg' })(data-object-fit='cover')
+            .row
+                .col-20.col-md-11.col-xl-8.offset-2.offset-md-1.offset-xl-3.d-flex.d-md-block.flex-column.justify-content-between.justify-content-md-start
+                    h2.collection__h-2.tp_h-2 Галерея Eames
+                    p.tp__p-2 Лаконичный и оригинальный дизайн, надежность и долговечность, простота в уходе и универсальность – все это про коллекцию Eames.
+            .row
+                +collection-list({
+                    data: data.collectionList
+                }).col-20.col-md-22.col-xl-20.offset-2.offset-md-1.offset-xl-2
+            .row
+                .col-24.col-xl-22.offset-0.offset-xl-1
+                    +collection-quote({
+                        text: 'Нужен текст к каждой коллекции, возможно SEO. Создаем уют и комфорт в барах, ресторанах, квартирах и загородных домах.',
+                        quote: 'Текст о том, что мебель — важнейшая часть интерьера, задает настроение для любого пространства, «вдыхает в него жизнь». Задает настроение для любого пространства, «вдыхает в него жизнь».'
+                    })
+            .row.offset-bottom-4
+                .offset-2.offset-md-1.offset-xl-8.col-20.col-md-11.col-xl-8.text-xl-center.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Товары коллекции
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_product-list-0
+                    p.d-none.d-md-block.tp__p-2 Природа гамма-всплексов, а&nbsp;там действительно могли быть видны звезды, о&nbsp;чем свидетельствует Фукидид ищет метеорный дождь.
+            .row.overflow-hidden_mobile
+                .offset-2.offset-md-1.offset-xl-3.col-22.col-md-22.col-xl-18.collection__product
+                    +product-list({
+                        data: data.productCards.leaders,
+                        button: true
+                    })
+            .row
+                .col.d-flex.justify-content-center
+                    +scroll-up({
+                        text: 'Наверх',
+                        type: 'scroll'
+                    })

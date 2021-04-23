@@ -1,0 +1,19 @@
+.scroll-gallery {
+
+  &__item {
+    position: relative;
+    margin-bottom: 40px;
+
+    img {
+      width: 100vw;
+    }
+
+    video {
+      width: 100vw;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

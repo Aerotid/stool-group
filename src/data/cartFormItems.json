@@ -1,0 +1,154 @@
+[
+  [
+    {
+    "id": "firstname",
+    "place": "Ваше имя",
+    "required": true,
+    "type": "text",
+    "classLabel": "cm-failed-label"
+    },
+    {
+      "id": "lasttname",
+      "place": "Ваша фамилия",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "id": "email",
+      "place": "Электронная почта",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "id": "phone",
+      "place": "Телефон",
+      "required": true,
+      "type": "tel"
+    }
+  ],
+  [
+    {
+      "id": "s_state",
+      "placeholder": "Область/район",
+      "required": true,
+      "type": "text",
+      "options": [
+        {
+          "text": "Алтайский край"
+        },
+        {
+          "text": "Амурская область"
+        },
+        {
+          "text": "Архангельская область"
+        },
+        {
+          "text": "Астраханская область"
+        },
+        {
+          "text": "Белгородкая область"
+        },
+        {
+          "text": "Брянская область"
+        },
+        {
+          "text": "Владимирская область"
+        },
+        {
+          "text": "Волгоградская область"
+        },
+        {
+          "text": "Воронежская область"
+        }
+      ]
+    },
+    {
+      "id": "s_city",
+      "place": "Город",
+      "required": true,
+      "type": "text"
+    },
+    {
+      "id": "s_address",
+      "place": "Улица, дом, квартира",
+      "required": true,
+      "tagName": "textarea",
+      "classInput": "input__input_textarea",
+      "classLabel": "input__label_textarea"
+    }
+  ],
+  [
+    {
+      "name" : "delivery",
+      "val" : "delivery-1",
+      "title": "Доставка службой CDEK (пункт выдачи)&nbsp;&mdash; 1&nbsp;500&nbsp;Р",
+      "text": "Доставка по&nbsp;России осуществляется в&nbsp;течение 7&nbsp;рабочих дней"
+    },
+    {
+      "name" : "delivery",
+      "val" : "delivery-2",
+      "title": "Доставка службой CDEK (до&nbsp;двери)&nbsp;&mdash; Х&nbsp;ХХХ Р",
+      "text": "Доставка по&nbsp;России осуществляется в&nbsp;течение 7&nbsp;рабочих дней"
+    }
+  ],
+  [
+    {
+      "name" : "payment",
+      "val" : "payment-1",
+      "title": "Банковской картой (онлайн)",
+      "text": "Оплата банковскими картами онлайн через платежные системы Visa, Mastercard, МИР"
+    },
+    {
+      "name" : "payment",
+      "val" : "payment-2",
+      "title": "Банковской картой (при получении)",
+      "text": "Оплата банковской картой при получении заказа"
+    },
+    {
+      "name" : "payment",
+      "val" : "payment-3",
+      "title": "Яндекс. Деньги",
+      "text": "Через онлайн-кошелек при наличии аккаунта"
+    },
+    {
+      "name" : "payment",
+      "val" : "payment-3",
+      "title": "Наличными",
+      "text": "Оплата наличными при получении заказа"
+    }
+  ],
+  [
+    {
+      "image": "../../pages/product/images/collections-yellow.png",
+      "descr": "Стул Frankfurt , белый",
+      "cost": "3 299 Р",
+      "quantity": "2шт.",
+      "totalCost": "6 598 Р",
+      "article": "УТ000000390"
+    },
+    {
+      "image": "../../pages/product/images/collections-black.png",
+      "descr": "Стул Eames DSW,  желтый",
+      "cost": "1 990 Р",
+      "quantity": "1шт.",
+      "totalCost": "1 990 Р",
+      "article": "УТ000000270"
+    },
+    {
+      "image": "../../pages/product/images/collections-white.png",
+      "descr": "Кресло Libra Soft",
+      "cost": "6 990 Р",
+      "quantity": "1шт.",
+      "totalCost": "6 990 Р",
+      "article": "УТ000000859"
+    }
+  ],
+  [
+    {
+      "name" : "payment-method",
+      "val" : "payment-method",
+      "title": "По счету"
+    }
+  ]
+]
+

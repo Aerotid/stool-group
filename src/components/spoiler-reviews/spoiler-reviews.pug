@@ -1,0 +1,52 @@
+include ../../components/rating-star/rating-star
+include ../../components/leave-review/leave-review
+include ../../components/all-reviews/all-reviews
+include ../../components/review/review
+
+mixin spoiler-reviews(args)
+    - var rate = 0;
+    each item in args.data
+        - rate = rate + item.rating;
+    .spoiler-reviews&attributes(attributes)
+        .d-flex.align-items-center.justify-content-between.spoiler-reviews__header.collapsed(data-toggle='collapse' href='#review' aria-expanded='true')
+            .spoiler-reviews__title.d-flex.justify-content-between!= args.title
+                .spoiler-reviews__right
+                    .d-flex.align-items-center.spoiler-reviews__rating
+                        +rating-star({
+                            rate: `${rate / args.data.length}`
+                        })
+                        .spoiler-reviews__quantity!= `(${args.data.length})`
+                    .spoiler-reviews__plus
+        .collapse(id='review' data-parent='#review')
+            .spoiler-reviews__reviews
+                each item in args.data
+                    +review({
+                        rating: item.rating,
+                        name: item.name,
+                        date: item.date,
+                        title: item.title,
+                        review: item.review,
+                        column: true,
+                        smallIcons: true,
+                        more: 'Читать далее'
+                    }).spoiler-reviews__item
+            .d-flex.align-items-center.spoiler-reviews__bottom
+                +button({
+                    title: 'Оставить отзыв',
+                    dataToggle: 'modal',
+                    dataTarget: 'leave-review'
+                }).spoiler-reviews__button
+                .spoiler-reviews__link-content(data-toggle='modal' data-target='#all-reviews') Читать все отзывы
+    +leave-review({
+        title: 'Стул Eames DAW',
+        btnClose: false,
+        header: true,
+        headerGrey: true
+    }).spoiler-reviews__data-rate(data-rate='3.5')
+    +all-reviews({
+        title: 'Стул Eames DAW',
+        btnClose: false,
+        data: args.data,
+        header: true,
+        headerGrey: true
+    })

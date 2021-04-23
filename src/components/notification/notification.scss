@@ -1,0 +1,94 @@
+.cm-notification {
+
+    &-container {
+        $root: &;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        max-width: 520px;
+        opacity: 1;
+        visibility: visible;
+        //pointer-events: none;
+        z-index: 20;
+        transition: max-width .3s, visibility .3s 0.2s, opacity .3s 0.2s;
+
+        strong {
+            display: none;
+        }
+    }
+
+    &-content {
+        @include font-14;
+        background-color: white;
+        line-height: 2;
+        border-radius: 3px;
+        box-shadow: 0 10px 25px rgba(black, .05);
+        padding: 36px 40px;
+
+        &.alert {
+
+            &-error {
+                color: $color-9;
+                background-color: white;
+
+                @include media-breakpoint-down(sm) {
+                    background-color: $color-4;
+                }
+            }
+
+            &-success {
+                color: $color-1;
+                background-color: white;
+
+                @include media-breakpoint-down(sm) {
+                    background-color: $color-5;
+                }
+            }
+        }
+
+        button {
+            display: none;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding: 20px 25px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        left: calc(#{$col-width} * 2);
+        right: auto;
+        max-width: calc(#{$col-width} * 20);
+    }
+}
+
+.cart-opened {
+    .cm-notification-container {
+        right: 530px;
+
+        @include media-breakpoint-between(xl, xxl) {
+            max-width: 530px;
+        }
+
+        @include media-breakpoint-down(xl) {
+            max-width: calc(100vw - (480px + (#{$col-width} * 2)));
+            right: calc(480px + #{$col-width});
+            transition: max-width .3s, visibility .3s 0.2s, opacity .3s 0.2s;
+
+            @include media-breakpoint-down(sm) {
+                max-width: calc(#{$col-width} * 20);
+                left: calc(#{$col-width} * 2);
+                right: auto;
+            }
+        }
+
+    }
+}
+
+.sandwich-open {
+    .cm-notification-container {
+        opacity: 0;
+        visibility: hidden;
+        transition: visibility .3s, opacity .3s;
+    }
+}

@@ -1,0 +1,570 @@
+{
+    "collection": [
+        {
+            "saleType": "3",
+            "sale": "sale -36%",
+            "image": "../../pages/product/images/collections-yellow.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DSW",
+            "newPrice": "1990",
+            "oldPrice": "3099",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        },
+        {
+            "saleType": "4",
+            "sale": "sale -26%",
+            "image": "../../pages/product/images/collections-black.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3199",
+            "oldPrice": "4299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/collections-white.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/collections-brown.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DSW",
+            "newPrice": "1750",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        }
+    ],
+    "recommendations": [
+        {
+            "saleType": "2",
+            "sale": "в шоуруме",
+            "image": "../../pages/product/images/rec-white.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Кресло Libra Soft",
+            "newPrice": "6 999",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/rec-green.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Монарх",
+            "newPrice": "6 499",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/rec-table.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стол барный Tolix",
+            "newPrice": "7 799",
+            "oldPrice": "9 499",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/collections-black.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3 199",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "inStock": true
+        }
+    ],
+    "viewed": [
+        {
+            "saleType": "2",
+            "sale": "в шоуруме",
+            "image": "../../pages/product/images/rec-white.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Кресло Libra Soft",
+            "newPrice": "6 999",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/collections-white.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3 599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        }
+    ],
+    "leaders": [
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/frankfurt.png",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Frankfurt",
+            "newPrice": "3 299",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": false
+        },
+        {
+            "saleType": "4",
+            "sale": "sale <span>-42%</span>",
+            "image": "../../pages/product/images/eames-daw.jpg",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAW",
+            "newPrice": "2 499",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "colors": [
+                {
+                    "imgPreview": "../../pages/product/images/chair-black.png",
+                    "imgMain": "../../pages/product/images/eames-daw.jpg",
+                    "imgHover": "../../pages/product/images/eames-daw-hover.jpg"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-red.png",
+                    "imgMain": "../../pages/product/images/eames-daw-red.png",
+                    "imgHover": "../../pages/product/images/eames-daw-red--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-blue.png",
+                    "imgMain": "../../pages/product/images/eames-daw-blue.png",
+                    "imgHover": "../../pages/product/images/eames-daw-blue--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-yellow.png",
+                    "imgMain": "../../pages/product/images/eames-daw-yellow.png",
+                    "imgHover": "../../pages/product/images/eames-daw-yellow--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-white.png",
+                    "imgMain": "../../pages/product/images/eames-daw-white.png",
+                    "imgHover": "../../pages/product/images/eames-daw-white--hover.png"
+                }
+            ],
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "3",
+            "sale": "sale <span>-26%</span>",
+            "image": "../../pages/product/images/eames-dar.jpg",
+            "imageHover": "../../pages/product/images/eames-dar-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3 199",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "1",
+            "sale": "exclusive",
+            "image": "../../pages/product/images/eames-dsr.jpg",
+            "imageHover": "../../pages/product/images/eames-dsr-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3 599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/frankfurt.png",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Frankfurt",
+            "newPrice": "3 299",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": false
+        },
+        {
+            "saleType": "4",
+            "sale": "sale <span>-42%</span>",
+            "image": "../../pages/product/images/eames-daw.jpg",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAW",
+            "newPrice": "2 499",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "colors": [
+                {
+                    "imgPreview": "../../pages/product/images/chair-black.png",
+                    "imgMain": "../../pages/product/images/eames-daw.jpg",
+                    "imgHover": "../../pages/product/images/eames-daw-hover.jpg"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-red.png",
+                    "imgMain": "../../pages/product/images/eames-daw-red.png",
+                    "imgHover": "../../pages/product/images/eames-daw-red--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-blue.png",
+                    "imgMain": "../../pages/product/images/eames-daw-blue.png",
+                    "imgHover": "../../pages/product/images/eames-daw-blue--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-yellow.png",
+                    "imgMain": "../../pages/product/images/eames-daw-yellow.png",
+                    "imgHover": "../../pages/product/images/eames-daw-yellow--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-white.png",
+                    "imgMain": "../../pages/product/images/eames-daw-white.png",
+                    "imgHover": "../../pages/product/images/eames-daw-white--hover.png"
+                }
+            ],
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "3",
+            "sale": "sale <span>-26%</span>",
+            "image": "../../pages/product/images/eames-dar.jpg",
+            "imageHover": "../../pages/product/images/eames-dar-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3 199",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "1",
+            "sale": "exclusive",
+            "image": "../../pages/product/images/eames-dsr.jpg",
+            "imageHover": "../../pages/product/images/eames-dsr-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3 599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/frankfurt.png",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Frankfurt",
+            "newPrice": "3 299",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": false
+        },
+        {
+            "saleType": "4",
+            "sale": "sale <span>-42%</span>",
+            "image": "../../pages/product/images/eames-daw.jpg",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAW",
+            "newPrice": "2 499",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "colors": [
+                {
+                    "imgPreview": "../../pages/product/images/chair-black.png",
+                    "imgMain": "../../pages/product/images/eames-daw.jpg",
+                    "imgHover": "../../pages/product/images/eames-daw-hover.jpg"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-red.png",
+                    "imgMain": "../../pages/product/images/eames-daw-red.png",
+                    "imgHover": "../../pages/product/images/eames-daw-red--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-blue.png",
+                    "imgMain": "../../pages/product/images/eames-daw-blue.png",
+                    "imgHover": "../../pages/product/images/eames-daw-blue--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-yellow.png",
+                    "imgMain": "../../pages/product/images/eames-daw-yellow.png",
+                    "imgHover": "../../pages/product/images/eames-daw-yellow--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-white.png",
+                    "imgMain": "../../pages/product/images/eames-daw-white.png",
+                    "imgHover": "../../pages/product/images/eames-daw-white--hover.png"
+                }
+            ],
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "3",
+            "sale": "sale <span>-26%</span>",
+            "image": "../../pages/product/images/eames-dar.jpg",
+            "imageHover": "../../pages/product/images/eames-dar-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3 199",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "1",
+            "sale": "exclusive",
+            "image": "../../pages/product/images/eames-dsr.jpg",
+            "imageHover": "../../pages/product/images/eames-dsr-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3 599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "3",
+            "sale": "sale <span>-26%</span>",
+            "image": "../../pages/product/images/eames-dar.jpg",
+            "imageHover": "../../pages/product/images/eames-dar-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3 199",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "color": "Белый",
+            "inStock": true
+        }
+    ],
+    "catalog": [
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/frankfurt.png",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Frankfurt",
+            "newPrice": "3 299",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "4",
+            "sale": "sale <span>-42%</span>",
+            "image": "../../pages/product/images/eames-daw.jpg",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAW",
+            "newPrice": "2 499",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "colors": [
+                {
+                    "imgPreview": "../../pages/product/images/chair-black.png",
+                    "imgMain": "../../pages/product/images/eames-daw.jpg",
+                    "imgHover": "../../pages/product/images/eames-daw-hover.jpg"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-red.png",
+                    "imgMain": "../../pages/product/images/eames-daw-red.png",
+                    "imgHover": "../../pages/product/images/eames-daw-red--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-blue.png",
+                    "imgMain": "../../pages/product/images/eames-daw-blue.png",
+                    "imgHover": "../../pages/product/images/eames-daw-blue--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-yellow.png",
+                    "imgMain": "../../pages/product/images/eames-daw-yellow.png",
+                    "imgHover": "../../pages/product/images/eames-daw-yellow--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-white.png",
+                    "imgMain": "../../pages/product/images/eames-daw-white.png",
+                    "imgHover": "../../pages/product/images/eames-daw-white--hover.png"
+                }
+            ],
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "3",
+            "sale": "sale <span>-26%</span>",
+            "image": "../../pages/product/images/eames-dar.jpg",
+            "imageHover": "../../pages/product/images/eames-dar-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3 199",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "1",
+            "sale": "exclusive",
+            "image": "../../pages/product/images/eames-dsr.jpg",
+            "imageHover": "../../pages/product/images/eames-dsr-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3 599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/frankfurt.png",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Frankfurt",
+            "newPrice": "3 299",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "3",
+            "sale": "sale -36%",
+            "image": "../../pages/product/images/collections-yellow.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DSW",
+            "newPrice": "1990",
+            "oldPrice": "3099",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "4",
+            "sale": "sale -26%",
+            "image": "../../pages/product/images/collections-black.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3199",
+            "oldPrice": "4299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/collections-white.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "",
+            "sale": "",
+            "image": "../../pages/product/images/collections-brown.png",
+            "image-hover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DSW",
+            "newPrice": "1750",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "4",
+            "sale": "sale <span>-42%</span>",
+            "image": "../../pages/product/images/eames-daw.jpg",
+            "imageHover": "../../pages/product/images/eames-daw-hover.jpg",
+            "title": "Стул Eames DAW",
+            "newPrice": "2 499",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391",
+            "colors": [
+                {
+                    "imgPreview": "../../pages/product/images/chair-black.png",
+                    "imgMain": "../../pages/product/images/eames-daw.jpg",
+                    "imgHover": "../../pages/product/images/eames-daw-hover.jpg"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-red.png",
+                    "imgMain": "../../pages/product/images/eames-daw-red.png",
+                    "imgHover": "../../pages/product/images/eames-daw-red--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-blue.png",
+                    "imgMain": "../../pages/product/images/eames-daw-blue.png",
+                    "imgHover": "../../pages/product/images/eames-daw-blue--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-yellow.png",
+                    "imgMain": "../../pages/product/images/eames-daw-yellow.png",
+                    "imgHover": "../../pages/product/images/eames-daw-yellow--hover.png"
+                },
+                {
+                    "imgPreview": "../../pages/product/images/chair-white.png",
+                    "imgMain": "../../pages/product/images/eames-daw-white.png",
+                    "imgHover": "../../pages/product/images/eames-daw-white--hover.png"
+                }
+            ],
+            "color": "Белый",
+            "inStock": true
+        },
+        {
+            "saleType": "3",
+            "sale": "sale <span>-26%</span>",
+            "image": "../../pages/product/images/eames-dar.jpg",
+            "imageHover": "../../pages/product/images/eames-dar-hover.jpg",
+            "title": "Стул Eames DAR",
+            "newPrice": "3 199",
+            "oldPrice": "4 299",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        },
+        {
+            "saleType": "1",
+            "sale": "exclusive",
+            "image": "../../pages/product/images/eames-dsr.jpg",
+            "imageHover": "../../pages/product/images/eames-dsr-hover.jpg",
+            "title": "Стул Eames DSR",
+            "newPrice": "3 599",
+            "oldPrice": "",
+            "size": "50 см  х  50 см  х  95 см",
+            "article": "УТ000001391"
+        }
+    ]
+}

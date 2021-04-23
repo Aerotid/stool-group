@@ -1,0 +1,21 @@
+[
+  {
+    "path": "./images/scroll-gallery/1.jpg"
+  },
+  {
+    "video": true,
+    "path": "./video/eames-black-seat.mp4"
+  },
+  {
+    "path": "./images/scroll-gallery/2.jpg"
+  },
+  {
+    "path": "./images/scroll-gallery/3.jpg"
+  },
+  {
+    "path": "./images/scroll-gallery/4.jpg"
+  },
+  {
+    "path": "./images/scroll-gallery/5.jpg"
+  }
+]

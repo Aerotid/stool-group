@@ -1,0 +1,7 @@
+mixin header-dropdown(args)
+    .header-dropdown&attributes(attributes)(aria-label='submenu')
+        .header-dropdown__wrapper
+            ul.header-dropdown__list
+                each menuItem in args.data
+                    li.header-dropdown__item
+                        a(href=menuItem.href data-title=menuItem.anchor)!= menuItem.anchor

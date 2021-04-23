@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Контактная информация",
+    "content": [
+      {
+        "id": "firstname",
+        "place": "Имя",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "lastname",
+        "place": "Фамилия",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "email",
+        "place": "Электронная почта",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "phone",
+        "place": "Телефон",
+        "required": true,
+        "type": "tel"
+      }
+    ]
+  }
+]

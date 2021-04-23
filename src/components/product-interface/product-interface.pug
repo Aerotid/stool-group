@@ -1,0 +1,80 @@
+include ../button-favorite/button-favorite
+include ../button-compare/button-compare
+include ../characteristics/characteristics
+include ../button-buy/button-buy
+include ../product-slider/product-slider
+include ../morph-svg/morph-svg
+include ../scroll-gallery/scroll-gallery
+
+mixin product-interface(args)
+    -
+        args = args ? args : {};
+        if (args.saleType == '1') {
+            attributes.class = 'product-interface_exclusive';
+        } else if (args.saleType == '2') {
+            attributes.class = 'product-interface_showroom';
+        } else if (args.saleType == '3') {
+            attributes.class = 'product-interface_discount-min';
+        } else if (args.saleType == '4') {
+            attributes.class = 'product-interface_discount-max';
+        }
+    .product-interface&attributes(attributes)
+        .row.d-flex.flex-column
+            .row.justify-content-between.product-interface__header.order-2.order-md-0
+                .product-interface__header-actions
+                    .product-interface__like
+                        +button-favorite.product-interface__icon
+                        .d-block.d-md-none.product-interface__icon-text в избранное
+                    .product-interface__compare
+                        +button-compare.product-interface__icon
+                        .product-interface__icon-text в сравнение
+                if args.sale
+                    .d-none.d-md-block.product-interface__sale!= args.sale
+                        +morph-svg({view: '0 0 81 75'}).product-interface__sale-svg
+            .row.d-md-none.order-1.order-md-0.product-interface__slider
+                +product-slider({
+                    data: data.scrollGallery,
+                    pagination: true,
+                    sliderScroll: true
+                })
+            .row.d-flex.flex-row
+                h2.col-16.col-md-24.tp_h-2.product-interface__title!= args.title
+                .col-8.col-md-24.product-interface__price.d-flex.flex-column.flex-md-row.align-items-end.align-items-md-center
+                    .order-1.order-md-0.product-interface_new-price!= args.newPrice + ' Р'
+                    .align-items-center.product-interface__price-block.d-flex.d-md-block
+                        .product-interface_old-price!= args.oldPrice + ' Р'
+                        .d-block.d-md-none.product-interface__diff -42%
+        .row.d-flex
+            .order-1.order-md-0.d-flex.flex-column.product-interface__info
+                .product-interface__info-transcription!= args.transcription
+                .order-1.order-md-0.product-interface__info-description!= args.desc
+                .row.justify-content-between.product-interface__options
+                    .col-24.col-md-12.order-1.order-md-0.product-interface__options-section
+                        .product-interface__options-title Размеры:
+                        .product-interface__options-text!= args.size
+                    .col-24.col-md-12.product-interface__options-section
+                        .product-interface__options-title Артикул:
+                        .product-interface__options-text!= args.code
+            .row
+                a(href="#").d-none.d-md-block.product-interface__characteristics-link Характеристики
+            .row.product-interface__footer
+                +characteristics({
+                    title: 'Выбор цвета',
+                    data: data.characteristics
+                })
+                .row.d-flex.product-interface__footer-buttons(class= args.inStock ? 'align-items-center' : 'flex-lg-column flex-xl-row align-items-lg-start align-items-xl-center')
+                    +button-buy({
+                        text: 'Купить',
+                        icon: 'bag',
+                        inStock: args.inStock
+                    })
+                    if args.inStock
+                        a(href="#").product-interface__buy Купить в один клик
+                    else
+                        .product-interface__date!= args.date + ' - дата поступления'
+
+    +scroll-gallery({
+        data: data.scrollGallery,
+        btnClose: true,
+        unFade: true
+    })

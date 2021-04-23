@@ -1,0 +1,28 @@
+mixin orders-table(args)
+    .orders-table&attributes(attributes)
+        each item, i in args.data
+            .orders-table__item
+                if i > 0
+                    .d-block.d-md-none.d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center.orders-table__head
+                        each item in args.titles
+                            .orders-table__column(class= item.class)!= item.title
+                else
+                    .d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center.orders-table__head
+                        each item in args.titles
+                            .orders-table__column(class= item.class)!= item.title
+                .d-flex.flex-column.flex-md-row.orders-table__row
+                    .orders-table__column.orders-table__track!= item.number
+                    .orders-table__column.orders-table__status!= item.status
+                    .orders-table__column.orders-table__positions.d-flex.flex-column
+                        each position in item.positions
+                            .d-flex.align-items-start.align-items-md-center.orders-table__positions-item
+                                .orders-table__positions-image
+                                    +img({path: position.path})
+                                .orders-table__positions-text!= `${position.title}, ${position.color}, ${position.quantity} шт., арт. ${position.articul}`
+                    .orders-table__column.d-flex.justify-content-between
+                        .d-flex.align-items-center.orders-table__amount
+                            span.orders-table__amount-text.d-block.d-md-none Сумма:
+                            span.orders-table__amount-num= `${item.amount} Р`
+                        .orders-table__delete
+                            span.d-none.d-md-block удалить
+                            .orders-table__delete-icon

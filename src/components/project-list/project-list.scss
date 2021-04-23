@@ -1,0 +1,11 @@
+.project-list {
+    $root: &;
+
+    &__swiper-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @include media-breakpoint-down(sm) {
+            flex-wrap: nowrap;
+        }
+    }
+}

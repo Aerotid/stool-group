@@ -1,0 +1,3 @@
+mixin button(args)
+    #{(args && args.tagName) ? args.tagName : 'div'}.button(href= args.tagName === 'a' ? args.href : null, data-toggle= args.dataToggle ? args.dataToggle: null, data-target= args.dataTarget ? `#${args.dataTarget}` : null)&attributes(attributes)
+        .button__title!= args.title

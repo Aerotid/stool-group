@@ -1,0 +1,25 @@
+mixin tabs(args)
+    .tabs&attributes(attributes)
+        .d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center.nav.nav-tabs.tabs__nav(role='tablist')
+            each tab in args.data
+                .nav-item.tabs__link(class=tab.active ? 'active' : false id=`${tab.name}-tab` data-toggle='tab' href=`#${tab.name}` role='tab' aria-controls=`${tab.name}` aria-selected=tab.ariaSelected ? 'true' : 'false')!= tab.title
+
+        .tab-content
+            each tab in args.data
+                if(tab.content)
+                    .tab-pane.fade(class=tab.active ? 'show active' : false id=`${tab.name}` role='tabpanel' aria-labelledby=`${tab.name}-tab`)!= tab.content
+
+                if(args.radioData)
+                    .tab-pane.fade(class=tab.active ? 'show active' : false id=`${tab.name}` role='tabpanel' aria-labelledby=`${tab.name}-tab`)
+                        .d-flex.flex-wrap.align-items-start.justify-content-between
+                            each item in args.radioData[tab.dataIndex]
+                                +radiobtn(item).cart-form__item-input
+
+                            if(tab.textarea)
+                                if(args.inputTag)
+                                    +input({
+                                        tagName: args.inputTag,
+                                        place: args.inputPlace,
+                                        type: args.inputType,
+                                        required: args.inputRequired
+                                    }).tabs__textarea

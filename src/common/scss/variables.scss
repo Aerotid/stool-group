@@ -1,0 +1,162 @@
+/* add bootstrap  breakpoints */
+$grid-breakpoints: (
+        xxxs: 0,
+        xxs: 320px,
+        xs: 568px,
+        sm: 667px,
+        md: 768px,
+        new: 823px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px,
+        xxxl: 1600px,
+        fhd: 1920px,
+        rt: 2560px,
+        rt15: 2880px,
+        uhd: 3840px,
+        4k: 4096px,
+        8k: 8192px
+);
+$container-max-widths: (
+        xxxs: 0,
+        xxs: 320px,
+        xs: 568px,
+        sm: 667px,
+        md: 768px,
+        new: 823px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px,
+        xxxl: 1600px,
+        fhd: 1830px,
+        rt: 2470px,
+        rt15: 2790px,
+        uhd: 3810px,
+        4k: 4006px,
+        8k: 8102px
+);
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-md-min-new: 823px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1440px;
+$mobile-breakpoint: 768px;
+$mobile-min-width: 375px;
+$mobile-min-height: 667px;
+$fhd-width: 1920px;
+$fhd-height: 1080px;
+
+$grid-side-offset: smooth-value(30px, 80px, $mobile-min-width, $fhd-width, 'w');
+$grid-columns: 24 !default;
+$grid-gutter-width: 0 !default;
+
+$inner-offset-left: 25px;
+$slider-wrapper-offset-top: smooth-value(100px, 285px, $mobile-min-width, $fhd-width, 'w');
+$slider-wrapper-offset-bottom: smooth-value(179px, 150px, $mobile-min-width, $fhd-width, 'w');
+
+
+//$col-width: calc((100vw - #{$grid-side-offset} * 2) / #{$grid-columns});
+$col-width: calc(100vw / #{$grid-columns});
+
+$logo-height: smooth-value(30px, 54px, $mobile-min-width, $fhd-width, 'w');
+$logo-width: smooth-value(126px, 230px, $mobile-min-width, $fhd-width, 'w');
+$logo-sticky-width: 140px;
+$logo-sticky-height: 33px;
+$logo-width-mobile: 30px;
+$logo-height-mobile: 128px;
+$phone-size: 22px;
+$header-vertical-offset: smooth-value(40px, 50px, $mobile-min-height, $fhd-height, 'h');
+$header-height: 144px;
+$header-sticky-height: 80px;
+$header-height-mobile: 110px;
+$header-sticky-height-mobile: 60px;
+$header-menu-height: 90px;
+$header-menu-height-mobile: 70px;
+$header-submenu-height: 80px;
+$footer-height: 70px;
+$footer-height-big: 15.5vh;
+$sandwich-anim-duration-s: .3s;
+$plus-min-size-point: $screen-lg-min;
+$plus-min-size: 20px;
+$plus-size: smooth-value($plus-min-size, 40px, $plus-min-size-point, $fhd-width, 'w');
+
+$vertical-offset-1: 12.5vh;
+
+@mixin pin-size {
+  $fhd-base-size: 40px;
+  $tablet-base-size: $fhd-base-size * .5;
+  width: calc(
+          #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $screen-md-min, $fhd-width, 'w')}
+          + #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $mobile-min-height, $fhd-height, 'h')}
+  );
+  height: calc(
+          #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $screen-md-min, $fhd-width, 'w')}
+          + #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $mobile-min-height, $fhd-height, 'h')}
+  );
+}
+
+@mixin sandwich-close-size {
+  $fhd-base-size: 80px;
+  $tablet-base-size: $fhd-base-size * .5;
+  width: calc(
+          #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $screen-md-min, $fhd-width, 'w')}
+          + #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $mobile-min-height, $fhd-height, 'h')}
+  );
+  height: calc(
+          #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $screen-md-min, $fhd-width, 'w')}
+          + #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $mobile-min-height, $fhd-height, 'h')}
+  );
+}
+
+@mixin drib-size {
+  $fhd-base-size: 673px;
+  $tablet-base-size: $fhd-base-size * .5;
+  width: calc(
+          #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $screen-md-min, $fhd-width, 'w')}
+          + #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $mobile-min-height, $fhd-height, 'h')}
+  );
+  height: calc(
+          #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $screen-md-min, $fhd-width, 'w')}
+          + #{smooth-value($tablet-base-size / 2, $fhd-base-size / 2, $mobile-min-height, $fhd-height, 'h')}
+  );
+}
+
+/* links */
+$link-hover-opacity: .7;
+$link-hover-transition-duration: .5s;
+$link-icon-margin-right: 8px;
+
+/* svg */
+$arrow-short-width: 11px;
+$arrow-short-height: 8px;
+
+$mobile-slider-height: 13.4vh;
+
+/* titles */
+$subtitle-offset: 28px;
+
+$inner-block-offset: 170px;
+
+$fixed-navigation-slider: smooth-value(2.5vh, $footer-height, $mobile-min-height, $fhd-height, 'h');
+
+$slider-pair-img-height: smooth-value(350px, 490px, $screen-md-min, $fhd-width, 'w');
+
+$cursor-offset: 50px; // Для кастомного курсора на главном слайдере
+
+$product-card-width: 320px; // Ширина карточки товара
+
+
+$transition-product-card: opacity .3s ease-in, visibility .3s ease-in;
+
+@mixin transition-product-card {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in, visibility .3s;
+    will-change: opacity, visibility;
+}
+$compare-slider-image-width: 100px;
+$compare-slider-padding-left: 3px;
+$compare-slider-right-offset: calc(#{$col-width} / 4);
+$compare-slider-offset-left: calc(#{$compare-slider-padding-left} + #{$compare-slider-right-offset});

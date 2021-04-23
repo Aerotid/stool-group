@@ -1,0 +1,14 @@
+extends ../../layout/layout
+include ../../components/cart-form/cart-form
+include ../../components/back-btn/back-btn
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='cart')
+            .row.row_cart.offset-top-140.d-flex.align-items-center
+                h2.offset-2.offset-md-1.offset-xl-3.col-14.col-md-16.col-xl-12.col-xxl-10.tp_h-2 Оформление заказа
+                .col-6.col-md-6.col-xl-6.col-xxl-6.d-flex.justify-content-end
+                    +back-btn({href: '/', text: 'Вернуться в магазин'})
+                .offset-2.offset-md-1.offset-xl-3.offset-xxl-5.col-20.col-md-22.col-xl-18.col-xxl-14
+                    +cart-form
+

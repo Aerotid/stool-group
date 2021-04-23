@@ -1,0 +1,18 @@
+extends ../../layout/layout
+include ../../components/project-list/project-list
+include ../../components/mobile-navigation/mobile-navigation
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='projects')
+            .row.offset-top-140
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-20.d-flex.d-md-block.justify-content-between.justify-content-md-start.flex-wrap
+                    h2.projects__title.tp_h-1 Проекты
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_project-list
+                    p.projects__subtitle.tp__p-4 Мебель Stool Group в лучших интерьерах
+            .row.offset-bottom-1
+                .offset-2.offset-md-1.col-20.col-md-22
+                    +project-list({
+                        data: data.projectsList,
+                        limit: 'more'
+                    })

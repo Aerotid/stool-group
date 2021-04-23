@@ -1,0 +1,14 @@
+extends ../../layout/layout
+include ../../components/info-indicate/info-indicate
+include ../../components/catalog-menu/catalog-menu
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='starting-catalog')
+            .row
+                .offset-2.offset-md-3.offset-xl-4.col-20.col-md-18.col-xl-16
+                    +catalog-menu({items: data.catalogMenu})
+
+            .row
+                .col.d-flex.justify-content-center
+                    +info-indicate

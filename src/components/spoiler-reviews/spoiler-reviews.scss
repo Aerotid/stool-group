@@ -1,0 +1,243 @@
+.spoiler-reviews {
+  $root: &;
+  @include font-6;
+  line-height: 1.7;
+  //color: $color-2;
+  margin-bottom: 80px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    position: relative;
+    border-bottom: 2px solid $color-1;
+
+    &.collapsed {
+      & .spoiler-reviews__plus {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__title {
+    width: 100%;
+    padding: 15px 0;
+    @include font-10;
+    line-height: 1.5;
+    color: $color-1;
+    cursor: pointer;
+    hyphens: auto;
+  }
+
+  &__right {
+    position: relative;
+    padding-right: 44px;
+  }
+
+  &__quantity {
+    @include font-8;
+    margin-left: 10px;
+  }
+
+  &__plus {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 12px;
+      height: 0;
+      border-bottom: 2px solid $color-1;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 0;
+      height: 12px;
+      border-left: 2px solid $color-1;
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+  }
+
+  &__content {
+    padding-top: 8px;
+
+    & p {
+      @include font-14;
+    }
+
+    & a:not(.link) {
+      color: $color-2;
+
+      &:hover, &:focus, &:active {
+        color: $color-2;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__row {
+    margin-bottom: 5vh;
+
+    &_images {
+      margin-bottom: 5.5vh;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-right: calc(#{$col-width} / 8);
+    text-align: center;
+    overflow: hidden;
+
+    &:last-child {
+      padding-left: calc(#{$col-width} / 8);
+      padding-right: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 1.5vh;
+    @include font-6;
+    line-height: 1.2;
+    color: $color-1;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-1;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__image {
+      padding: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        padding: 0;
+        margin-bottom: 0;
+      }
+
+      img {
+        height: auto;
+        //object-fit: none;
+      }
+    }
+  }
+
+  &__review {
+
+    &-item {
+      margin-top: 40px;
+    }
+
+    &-info {
+      @include font-15;
+      color: $color-2;
+      margin-bottom: 14px;
+    }
+
+    &-title {
+      @include font-13;
+      color: $color-1;
+      margin-bottom: 10px;
+    }
+
+    &-content {
+      @include font-14;
+      color: $color-1;
+      margin-bottom: 14px;
+    }
+
+    &-more {
+      @include font-2;
+      color: $color-1;
+    }
+  }
+
+  &__reviews {
+    padding-top: 48px;
+
+    & .rating-star {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 50px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__bottom {
+    margin-top: 18px;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: space-between;
+    }
+  }
+
+  &__button {
+    margin-right: 80px;
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+    }
+  }
+
+  &__link-content {
+    position: relative;
+    @include font-2;
+    color: $color-1;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $color-5;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-right: 18px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,88 @@
+.profile-dashboard {
+    $root: &;
+    border-bottom: 1px solid $color-3;
+    padding: 48px 0 26px;
+    margin-bottom: 76px;
+
+    &__items {
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        @include font-15;
+        color: $color-1;
+        margin-right: 82px;
+        line-height: 1;
+
+        &:hover {
+            @include font-2;
+            color: $color-1;
+        }
+
+        &-counter {
+            margin-left: 4px;
+
+            @include media-breakpoint-down(sm) {
+                font-family: Gilroy-Bold, sans-serif;
+                font-size: 12px;
+                margin-left: 0;
+            }
+        }
+
+        &-icon {
+
+            svg {
+                width: 8px;
+                height: 16px;
+                stroke: black;
+                transform: rotate(180deg);
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            @include font-2;
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            border-bottom: 1px solid $color-3;
+            margin-right: 0;
+            padding: 21px calc(#{$col-width} * 2);;
+
+            &:first-of-type {
+                border-top: 1px solid $color-3;
+            }
+        }
+    }
+
+    &__logout {
+        @include font-15;
+        color: $color-1;
+
+        svg {
+            width: 17px;
+            height: 16px;
+            margin-left: 12px;
+        }
+
+        &:hover {
+            @include font-2;
+            color: $color-1;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+}

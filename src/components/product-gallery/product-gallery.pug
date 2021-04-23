@@ -1,0 +1,17 @@
+include ../../components/scroll-gallery/scroll-gallery
+
+mixin product-gallery(args)
+    .product-gallery&attributes(attributes)
+        each item, i in args.data
+                if item.video
+                    .product-gallery__item
+                        .product-gallery__item-bg
+                            +autoplay-video({
+                                autoplay: true,
+                                path: item.path,
+                                lazy: true
+                            }).product-gallery__video
+                else
+                    .product-gallery__item
+                        .product-gallery__item-bg
+                            +img({ path: item.path })(data-object-fit='cover' data-toggle='modal' data-target='#scroll-gallery' data-image= i).product-gallery__image

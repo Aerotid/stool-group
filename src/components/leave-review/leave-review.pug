@@ -1,0 +1,46 @@
+include ../../components/input/input
+include ../../components/rate-value/rate-value
+include ../../components/button/button
+
+mixin leave-review(args)
+    +modal({
+        id: 'leave-review',
+        btnClose: args.btnClose,
+        unFade: args.unFade,
+        header: args.header,
+        headerGrey: args.headerGrey
+    }).modal_review
+        .leave-review&attributes(attributes)
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                .d-flex.leave-review__product
+                    .order-1.order-md-0.leave-review__product-image
+                        .leave-review__image
+                            +img({ path: './images/review/review.jpg' })
+                    .d-flex.flex-column.leave-review__product-text
+                        .leave-review__product-title!= args.title
+                        .leave-review__product-info В формировании рейтинга будет учитываться только последняя оценка
+
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14
+                .leave-review__form-title Оставьте отзыв
+
+            form(action='' method='POST').offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.d-flex.flex-wrap.flex-column.flex-md-row.justify-content-between.align-items-start
+                .order-1.order-md-0.leave-review__form
+                    +input({
+                        place: 'Название отзыва',
+                        type: 'text',
+                        required: true
+                    }).leave-review__form-input
+                    +input({
+                        tagName: 'textarea',
+                        place: 'Здесь будет очень полезный и интересный отзыв',
+                        type: 'text',
+                        required: true
+                    }).leave-review__form-textarea
+                +rate-value({
+                    rateTitles: [ 'Очень плохо', 'Плохо', 'Сносно', 'Очень хорошо', 'Отлично' ],
+                    rate: 3
+                }).leave-review__rate
+                +button({
+                    title: 'Отправить'
+                }).leave-review__button.order-1.order-md-0
+

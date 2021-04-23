@@ -1,0 +1,39 @@
+mixin contacts-info(args)
+    .contacts-info&attributes(attributes)
+        .row
+            h1.tp_h-1.contacts-info__title Контактная информация
+
+        .contacts-info__info
+            .d-flex.flex-column.flex-md-row.justify-content-between
+                .contacts-info__left
+                    .contacts-info__item
+                        .contacts-info__item-title Свяжитесь с нами
+                        .d-none.d-md-block.contacts-info__text Нужен некий некст о том, в каких случаях звонят и пишут в вотсап, а пока здесь рыба. Многие кометы имеют десять хвостов.
+
+                    .contacts-info__item-phone
+                        a.contacts-info__link(href="tel:+74951265327") +7 (495) 126-53-27
+                        .contacts-info__text Единый контакт-центр по всем вопросам
+
+                    .contacts-info__item
+                        a.contacts-info__link(href="https://web.whatsapp.com/send?phone=74951265327")
+                            +svg({ name: 'icon-whatsapp' }).contacts-info__whatsapp
+                            = "WhatsApp"
+                        .contacts-info__text Написать в WhatsApp
+
+                .contacts-info__right
+                    .contacts-info__item-letter
+                        .contacts-info__item-title Напишите письмо
+                        .d-none.d-md-block.contacts-info__text Нужен некий некст о&nbsp;том, в&nbsp;каких случаях пишут на&nbsp;ту&nbsp;или иную почту, а&nbsp;пока здесь рыба. Многие кометы имеют два хвоста, однако элонгация дает эллиптический Ганимед.
+
+                    .d-flex.flex-wrap.flex-column.flex-xl-row.justify-content-between
+                        .contacts-info__item-half
+                            a.contacts-info__link.contacts-info__link_underline(href="mailto:zakaz@stoolgroup.ru") zakaz@stoolgroup.ru
+                            .contacts-info__text по вопросам заказа
+
+                        .contacts-info__item-half
+                            a.contacts-info__link.contacts-info__link_underline(href="mailto:info@stoolgroup.ru") info@stoolgroup.ru
+                            .contacts-info__text по всем остальным вопросам
+
+                        .contacts-info__item-half
+                            a.contacts-info__link.contacts-info__link_underline(href="mailto:opt@stoolgroup.ru") opt@stoolgroup.ru
+                            .contacts-info__text по сотрудничеству, оптовым заказам

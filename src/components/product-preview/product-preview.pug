@@ -1,0 +1,20 @@
+include ../../components/counter/counter
+
+mixin product-preview(args)
+    .product-preview&attributes(attributes)
+        .product-preview__top
+            +img({ path: args.image }).product-preview__img
+            a(href="#").product-preview__descr!= args.descr
+
+            .product-preview__remove
+
+        .product-preview__bottom
+            +counter({val: args.itemCount}).product-preview__counter
+            .product-preview__cost
+                if(args && args.costItem)
+                    .product-preview__cost-calc
+                        span.product-preview__cost-item!= args.costItem
+                        sapn.product-preview__cost-action х
+                        span.product-preview__const-count!= args.itemCount
+                .product-preview__cost-total!= args.costTotal
+

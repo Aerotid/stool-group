@@ -1,0 +1,17 @@
+mixin contacts-modal(args)
+    .contacts-modal&attributes(attributes)
+        .d-flex.justify-content-center.align-items-center.contacts-modal__close(aria-label='Close' data-dismiss='modal')
+            .contacts-modal__close-icon
+
+        .d-flex.flex-column.flex-md-row
+            .d-flex.flex-column.flex-md-row.order-1.order-md-0
+                .contacts-modal__title
+                .contacts-modal__item
+                    .contacts-modal__item-title
+                    .contacts-modal__item-text
+                .contacts-modal__item
+                    .contacts-modal__item-title
+                    .contacts-modal__item-text
+
+            .contacts-modal__map
+                .contacts-modal__map-container

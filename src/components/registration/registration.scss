@@ -1,0 +1,32 @@
+.registration {
+    $root: &;
+
+    &__form {
+        margin-top: 48px;
+        margin-bottom: 140px;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 30px;
+        }
+    }
+
+    &__login {
+        margin-top: 70px;
+
+        span {
+            @include font-24;
+            color: $color-1;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__link {
+
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
+    }
+}

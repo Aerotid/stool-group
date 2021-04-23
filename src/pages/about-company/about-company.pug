@@ -1,0 +1,48 @@
+extends ../../layout/layout
+include ../../components/preview-bg/preview-bg
+include ../../components/two-columns/two-columns
+include ../../components/team-card-grid/team-card-grid
+include ../../components/scroll-up/scroll-up
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='about-company')
+            .row.offset-top-130
+                h2.offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-1 О компании
+                +preview-bg({bg:'./images/preview.jpg'})
+
+            .row
+                h3.offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-2 Подробности о&nbsp;компании
+                p.offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.tp__p-1.offset-top-25 Stool Group&nbsp;&mdash; производитель, импортер и&nbsp;оптовый поставщик мебели. Создаем уют и&nbsp;комфорт в&nbsp;барах, ресторанах, квартирах и&nbsp;загородных домах.
+                p.offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.tp__p-3 Текст о&nbsp;том, что мебель&nbsp;&mdash; важнейшая часть интерьера, задает настроение для любого пространства, &laquo;вдыхает в&nbsp;него жизнь&raquo;. Текст о&nbsp;том, что мебель&nbsp;&mdash; важнейшая часть интерьера, задает настроение для любого пространства, &laquo;вдыхает в&nbsp;него жизнь&raquo;.
+            .row
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    +two-columns({
+                        title: 'Преимущества',
+                        items: [
+                            [
+                                'Собственное производство и&nbsp;шоурум',
+                                '<p>Рассказ о том, что мы отбираем самые топовые модели — актуальные по дизайну, приятные в использовании, и все это по минимально возможной цене. Если таких моделей нет у поставщиков — мы делаем их сами, на собственном производстве в Москве.</p>'
+                            ],
+                            [
+                                'Работа с&nbsp;ведущими производителями',
+                                '<p>Текст о том, что Stool Group работает напрямую с мебельными фабриками, что позволяет контролировать качество продукции и предлагать самые конкурентные цены.</p>'
+                            ],
+                            [
+                                'Самые актуальные модели',
+                                '<p>Текст о&nbsp;том, что в&nbsp;ассортимент включаются как трендовые модели, так и&nbsp;&laquo;рабочие лошадки&raquo;&nbsp;&mdash; удобные, прочные и&nbsp;универсальные модели. И&nbsp;прочая информация о&nbsp;работе с&nbsp;ассортиментом.</p>'
+                            ]
+                        ]
+                    }).two-columns_about
+
+                    +team-card-grid({
+                        title: 'Наша команда',
+                        p: 'Stool Group&nbsp;&mdash; это команда профессионалов, влюбленных в&nbsp;свое дело. Уверены, что развитие компании начинается с&nbsp;развития ее&nbsp;сотрудников, поэтому мы&nbsp;следим за&nbsp;модными тенденциями ищем современные и&nbsp;экономичные решения.',
+                        cards: data.teamCardGrid
+                    })
+            .row
+                .col.d-flex.justify-content-center
+                    +scroll-up({
+                        text: 'Наверх',
+                        type: 'scroll'
+                    })

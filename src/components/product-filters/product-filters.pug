@@ -1,0 +1,36 @@
+include ../../components/range/range
+include ../../components/filters-checkbox-list/filters-checkbox-list
+
+mixin product-filters(args)
+    .product-filters&attributes(attributes)
+        .product-filters__body(
+            class="cm-product-filters"
+            data-ca-target-id="product_filters_*,products_search_*,category_products_*,product_features_*,breadcrumbs_*,currencies_*,languages_*,selected_filters_*"
+            data-ca-base-url="https://stoolgroup.ru/banketnaya-mebel.html"
+            id="product_filters_31"
+        )
+            .product-filters__title Фильтры
+            +range.product-filters__range
+            each checkbox, i in data.checkboxList
+                +filters-checkbox-list(checkbox).product-filters__filters-checkbox-list
+
+
+            .d-flex.align-items-center.justify-content-between.product-filters__bottom
+                +button({
+                    title: 'Применить'
+                })
+                a.product-filters__reset(
+                    href="#"
+                    rel="nofollow"
+                    class="ty-product-filters__reset-button cm-ajax cm-ajax-full-render cm-history"
+                    data-ca-event="ce.filtersinit"
+                    data-ca-scroll=".ty-mainbox-title"
+                    data-ca-target-id="product_filters_*,products_search_*,category_products_*,product_features_*,breadcrumbs_*,currencies_*,languages_*,selected_filters_*"
+                )
+                    span Сбросить все
+                    +svg({name: 'reset'}).product-filters__reset-icon
+
+
+        .shifting-block__selected-item.product-filters__select.product-filters__select_shablon
+            .product-filters__select-content
+            .product-filters__select-reset

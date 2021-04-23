@@ -1,0 +1,22 @@
+[
+    {
+        "anchor": "Каталог",
+        "href": "/starting-catalog.html"
+    },
+    {
+        "anchor": "О&nbsp;компании",
+        "href": "/about-company.html"
+    },
+    {
+        "anchor": "Проекты",
+        "href": "/projects.html"
+    },
+    {
+        "anchor": "Контакты",
+        "href": "/contacts.html"
+    },
+    {
+        "anchor": "Блог",
+        "href": "/blog.html"
+    }
+]

@@ -1,0 +1,46 @@
+.download-list {
+
+  &__item {
+    border: 1px solid $color-5;
+    color: $color-1;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 24px 26px;
+    margin-bottom: 28px;
+
+    &-title {
+      @include font-14;
+    }
+
+    &-file {
+      @include font-2;
+
+      @include media-breakpoint-down(md) {
+        flex: 0 0 100%;
+        justify-content: flex-end;
+        margin-top: 10px;
+      }
+    }
+
+    &:hover {
+      color: $color-1;
+      background-color: $color-4;
+      border: 1px solid transparent;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 16px 22px;
+    }
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    margin-left: 8px;
+  }
+}

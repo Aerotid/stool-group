@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Физичекое лицо",
+    "name": "physical",
+    "active": true,
+    "ariaSelected": true,
+    "dataIndex": 3
+  },
+  {
+    "title": "Юридическое лицо",
+    "name": "legal",
+    "dataIndex": 5,
+    "textarea": true
+  }
+]

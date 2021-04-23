@@ -1,0 +1,48 @@
+include ../../components/spoiler/spoiler
+include ../../components/filters-checkbox/filters-checkbox
+
+mixin filters-checkbox-list(args)
+    .filters-checkbox-list&attributes(attributes)
+        +spoiler({
+            title: args.spoilerTitle,
+            titleClass: 'ty-product-filters__title',
+            collapseClass: 'spoiler_sorting-collapse',
+            class: 'ty-product-filters__switch cm-combination-filter_31_9 open cm-save-state cm-ss-reverse',
+            id: 'sw_content_31_9',
+            noCollapsed: args.noCollapsed
+        }, false, args.name).filters-checkbox-list__spoiler.ty-product-filters__block
+
+            ul.filters-checkbox-list__container( class="ty-product-filters " id="content_31_9")
+                if(args && args.itemsChecked)
+                    each item in args.itemsChecked
+                        li.filters-checkbox-list__item(class="cm-product-filters-checkbox-container ty-product-filters__group")
+                            +filters-checkbox({
+                                title: item.title,
+                                count: item.count,
+                                checked: false,
+                                value:item.value
+                            })
+
+
+                li.filters-checkbox-list__item.filters-checkbox-list__item_more(class="ty-product-filters__item-more")
+                    ul(
+                        id="ranges_31_9"
+                        class="ty-product-filters__variants cm-filter-table"
+                        data-ca-input-id="elm_search_31_9"
+                        data-ca-clear-id="elm_search_clear_31_9"
+                        data-ca-empty-id="elm_search_empty_31_9"
+                    ).filters-checkbox-list__item_more-container
+                        if(args && args.items)
+                            each item in args.items
+                                li(class="cm-product-filters-checkbox-container ty-product-filters__group")
+                                    +filters-checkbox({
+                                        title: item.title,
+                                        disabled: item.disabled,
+                                        value:item.value
+                                    })(class= item.disabled ? 'disabled': false)
+
+
+
+                    p(id="elm_search_empty_31_9" class="ty-product-filters__no-items-found hidden") По этим критериям поиска ничего не найдено
+
+

@@ -1,0 +1,17 @@
+include ../../components/profile-dashboard/profile-dashboard
+
+mixin personal-data(args)
+    .personal-data&attributes(attributes)
+        .row.offset-modal-top
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-18.tp_h-2 Персональные данные
+
+            .d-none.d-md-block.offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14
+                +profile-dashboard({data: data.profileDashboard})
+
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.personal-data__form
+                +flexible-form({
+                    data: data.personalData,
+                    halfWidth: true,
+                    btnText: 'Сохранить изменения',
+                    btnCancel: 'Отменить'
+                })

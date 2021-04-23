@@ -1,0 +1,11 @@
+.orders {
+    $root: &;
+
+    &__dashboard {
+        margin-bottom: 52px;
+    }
+
+    &__button {
+        margin-bottom: 140px;
+    }
+}

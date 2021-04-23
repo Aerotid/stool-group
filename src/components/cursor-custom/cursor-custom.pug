@@ -1,0 +1,5 @@
+mixin cursor-custom(args)
+    .cursor-custom&attributes(attributes).cursor-custom_small Потянуть
+        +svg({name: 'arrow-left-min'}).cursor-custom__arrow.cursor-custom__arrow_left
+        +svg({name: 'arrow-left-min'}).cursor-custom__arrow.cursor-custom__arrow_right
+    canvas.cursor-custom.cursor-custom_canvas(resize data-paper-resize='true')

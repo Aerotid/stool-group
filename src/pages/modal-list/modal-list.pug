@@ -1,0 +1,75 @@
+extends ../../layout/layout
+include ../../components/modal/modal
+include ../../components/login/login
+include ../../components/registration/registration
+include ../../components/restore-password/restore-password
+include ../../components/profile/profile
+include ../../components/personal-data/personal-data
+include ../../components/change-password/change-password
+include ../../components/orders/orders
+include ../../components/buy-onclick/buy-onclick
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='modal-list')
+            -
+                var list = [
+                    {
+                        title: 'Регистрация',
+                        href: 'registration'
+                    },
+                    {
+                        title: 'Восстановить пароль',
+                        href: 'restore-password'
+                    },
+                    {
+                        title: 'Ваш профиль',
+                        href: 'profile'
+                    },
+                    {
+                        title: 'Персональные данные',
+                        href: 'personal-data'
+                    },
+                    {
+                        title: 'Изменить пароль',
+                        href: 'change-password'
+                    },
+                    {
+                        title: 'Мои заказы',
+                        href: 'orders'
+                    }
+                ];
+
+            .offset-3.col-18.offset-top-140
+                h2.tp_h-2 Модальные окна для личного кабинета
+
+            .offset-4.col-16
+                each item in list
+                    .modal-list__item(data-toggle="modal" data-target=`#${item.href}`)= `${item.title}`
+
+            +modal({id: "registration", search: true, header: true, headerGrey: true})
+                +registration
+
+            +modal({id: "restore-password", search: true, header: true, headerGrey: true})
+                +restore-password
+
+            +modal({id: "profile", search: true, header: true, headerGrey: true})
+                +profile
+
+            +modal({id: "personal-data", search: true, header: true, headerGrey: true})
+                +personal-data
+
+            +modal({id: "change-password", search: true, header: true, headerGrey: true})
+                +change-password
+
+            +modal({id: "orders", search: true, header: true, headerGrey: true})
+                +orders
+
+            .offset-3.col-18.offset-top-140
+                h2.tp_h-2 Купить в один клик
+
+            .row
+                .offset-4.col-16
+                    .modal-list__item(data-toggle="modal" data-target=`#buyOnclick`) купить в один клик
+            +modal({id: "buyOnclick", search: true, header: true, headerGrey: true}).modal_buy-onclik
+                +buy-onclick

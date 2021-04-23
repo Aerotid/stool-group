@@ -1,0 +1,12 @@
+include ../../components/project/project
+
+mixin project-list(args)
+    .project-list.swiper-container.project-list__swiper-container&attributes(attributes)
+        .swiper-wrapper.project-list__swiper-wrapper
+            each item, i in args.data
+                if (args.limit === 'less')
+                    if (i < 2)
+                        +project(item, i).swiper-slide.project-list__swiper-slide
+                else if (args.limit === 'more')
+                    if (i > 1)
+                        +project(item, i).swiper-slide.project-list__swiper-slide

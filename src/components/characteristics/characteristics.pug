@@ -1,0 +1,8 @@
+mixin characteristics(args)
+    .characteristics&attributes(attributes)
+        .d-block.d-md-none.characteristics__title!= args.title
+        .characteristics__items
+            each item in args.data
+                .characteristics__item(class!= item.class)
+                    +img({ path: item.img })
+                    +svg({ name: 'product-select' }).characteristics__check

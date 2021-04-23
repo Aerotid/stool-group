@@ -1,0 +1,130 @@
+.all-reviews {
+    $root: &;
+
+    &__head {
+        height: 100px;
+        background-color: $color-5;
+
+        @include media-breakpoint-down(sm) {
+            height: 70px;
+        }
+    }
+
+    &__close {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: $color-1;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: $color-1;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+
+    &__image {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 110px;
+            height: auto;
+        }
+    }
+
+    &__product {
+        margin: 120px 0 102px;
+
+        &-image {
+            width: 110px;
+            margin-right: calc(#{$col-width} - 30px);
+
+
+            @include media-breakpoint-down(lg) {
+                margin-right: calc(#{$col-width});
+
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &-text {
+            width: 100%;
+
+            @include media-breakpoint-down(sm) {
+                width: 200px;
+            }
+        }
+
+        &-title {
+            @include font-28;
+            color: $color-1;
+            margin-bottom: 4px;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 6px;
+            }
+        }
+
+        &-info {
+            @include font-15;
+            color: $color-1;
+            margin-right: 24px;
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin: 54px 0 20px;
+        }
+    }
+
+    &__rating {
+        border: 1px solid $color-5;
+        border-radius: 3px;
+        padding: 10px 14px;
+
+        &-value {
+            @include font-5;
+            color: $color-1;
+            line-height: 1;
+            margin-bottom: -4px;
+            margin-right: 18px;
+        }
+
+        &-star {
+            margin-bottom: 1px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 70px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 70px;
+    }
+}

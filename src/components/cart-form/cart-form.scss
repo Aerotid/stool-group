@@ -1,0 +1,97 @@
+.cart-form {
+    $root: &;
+    margin-top: 40px;
+    @include media-breakpoint-down(sm) {
+        margin-top: 50px;
+    }
+
+    &__item {
+        margin-bottom: 55px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 35px;
+        }
+        &_argeement {
+            @include media-breakpoint-up(md) {
+                margin-top: 90px;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        &_btn {
+            @include media-breakpoint-up(md) {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 160px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 90px;
+            }
+
+        }
+
+    }
+
+    &__item-title {
+        @include font-10;
+        margin-bottom: 30px;
+    }
+
+    &__item-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item-input {
+        width: calc(50% - #{$col-width} / 2);
+        margin-bottom: 25px;
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &_full-width {
+            width: 100%;
+            @include media-breakpoint-down(sm) {
+                .input__input, .input__label_textarea {
+                    height: 120px;
+                }
+                &.radiobtn_argeement {
+                    margin: 0;
+                }
+            }
+
+        }
+    }
+
+    &__btn {
+        width: 260px;
+        height: 60px;
+        border-radius: 60px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: $color-5;
+        color: black;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        @include font-8;
+
+
+        &:hover {
+            background-color: $color-4;
+            color: black;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 135px;
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+}

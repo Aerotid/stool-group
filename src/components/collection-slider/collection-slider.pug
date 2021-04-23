@@ -1,0 +1,21 @@
+include ../button-favorite/button-favorite
+
+mixin collection-slider(args)
+    .collection-slider&attributes(attributes)
+        .swiper-container.collection-slider__swiper-container
+            .swiper-wrapper.collection-slider__swiper-wrapper
+                each item in args.data
+                    .swiper-slide.collection-slider__slide
+                        .collection-slider__wrapper
+                            .collection-slider__bg-wrapper
+                                +img({ path: item.img }).collection-slider__bg(data-object-fit='cover')
+                            .collection-slider__row
+                                .collection-slider__title!=item.title
+                                .collection-slider__price
+                                    .collection-slider__new-price!=item.newPrice + ' Р'
+                                    if item.oldPrice
+                                        .collection-slider__old-price!=item.oldPrice + ' Р'
+                                if item.text
+                                    .collection-slider__text.tp__p-2!=item.text
+                                .collection-slider__favorite.tp-link В избранное
+                                    +button-favorite.collection-slider__icon

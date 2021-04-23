@@ -1,0 +1,14 @@
+mixin team-card(args)
+    .team-card&attributes(attributes)
+        .team-card__top
+            if(args.path)
+                +img({ path: args.path })(data-object-fit='cover').team-card__img
+            else
+                .team-card__top-place
+                    .team-card__top-place-inner
+                        div.logo Stool Group
+                        div team
+        .team-card__bottom
+            .team-card__descr!=args.descr
+            .team-card__name!= args.name
+        

@@ -1,0 +1,7 @@
+mixin simple-slider(args)
+    .simple-slider&attributes(attributes).carousel.slide(data-ride='carousel' data-interval=args.interval)#simpleSlider
+        .carousel-inner.simple-slider__carousel-inner
+            each item, index in args.data
+                .carousel-item.simple-slider__carousel-item(class=index === 0 ? 'active': '')
+                    .simple-slider__wrapper
+                        p.simple-slider__text!= item.text

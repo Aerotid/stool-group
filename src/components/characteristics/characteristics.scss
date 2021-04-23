@@ -1,0 +1,66 @@
+.characteristics {
+    $root: &;
+    width: 100%;
+    margin-bottom: 54px;
+
+    &__title {
+        @include font-19;
+        color: $color-2;
+        margin-bottom: 34px;
+    }
+
+    &__items {
+        position: relative;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: -20px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 80px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            pointer-events: none;
+        }
+
+        &.active {
+            cursor: default;
+
+            #{$root}__check {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 65px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__check {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 18px;
+        height: 18px;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 16px;
+    }
+}

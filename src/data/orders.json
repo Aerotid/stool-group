@@ -1,0 +1,44 @@
+[
+  {
+    "number": "222 989801",
+    "status": "Оформлен",
+    "positions": [
+      {
+        "path": "../../pages/product/images/frankfurt.png",
+        "title": "Стул Frankfurt",
+        "color": "белый",
+        "quantity": 2,
+        "articul": "УТ000000390"
+      },
+      {
+        "path": "../../pages/product/images/eames-daw-yellow.png",
+        "title": "Стул Frankfurt",
+        "color": "белый",
+        "quantity": 2,
+        "articul": "УТ000000390"
+      },
+      {
+        "path": "../../pages/product/images/eames-daw-white.png",
+        "title": "Стул Frankfurt",
+        "color": "белый",
+        "quantity": 2,
+        "articul": "УТ000000390"
+      }
+    ],
+    "amount": 17684
+  },
+  {
+    "number": "222 989801",
+    "status": "Оформлен",
+    "positions": [
+      {
+        "path": "../../pages/product/images/eames-dsr.jpg",
+        "title": "Стул Frankfurt",
+        "color": "белый",
+        "quantity": 2,
+        "articul": "УТ000000390"
+      }
+    ],
+    "amount": 36790
+  }
+]

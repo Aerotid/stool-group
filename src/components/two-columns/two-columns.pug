@@ -1,0 +1,27 @@
+mixin two-columns(args)
+    .two-columns&attributes(attributes)
+        if(args.title)
+            .two-columns__title
+                h3.tp_h-2!= args.title
+        if(args && args.itemsContent)
+            .two-columns__content
+                each item, i in args.items
+                    if(i % 2 === 0)
+                        .two-columns__col.two-columns__col_left!= item
+                    else
+                        .two-columns__col.two-columns__col_right!= item
+        else
+            .two-columns__content
+                each item, i in args.items
+                    if(i % 2 === 0)
+                        .two-columns__col.two-columns__col_left
+                            p.tp__p-5!= item[0]
+                            if(item[2])
+                                p.tp__p-8!= item[2]
+                            .tp__p-2!= item[1]
+                    else
+                        .two-columns__col.two-columns__col_right
+                            p.tp__p-5!= item[0]
+                            if(item[2])
+                                p.tp__p-8!= item[2]
+                            .tp__p-2!= item[1]

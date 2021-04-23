@@ -1,0 +1,70 @@
+include ../morph-svg/morph-svg
+include ../button-favorite/button-favorite
+include ../button-compare/button-compare
+include ../button-buy/button-buy
+
+mixin product-card(args)
+    -
+        args = args ? args : {};
+        if (args.saleType == '1') {
+            args.morphClass = `product-card_exclusive`;
+        } else if (args.saleType == '2') {
+            args.morphClass = `product-card_showroom`;
+        } else if (args.saleType == '3') {
+            args.morphClass = `product-card_discount-min`;
+        } else if (args.saleType == '4') {
+            args.morphClass = `product-card_discount-max`;
+        }
+    .product-card.swiper-slide.product-card__swiper-slide.product-card_no-init&attributes(attributes)
+        .product-card__top
+            .product-card__actions
+                if !args.closeBtn
+                    +button-favorite.product-card__favorite
+                +button-compare
+            if !args.closeBtn
+                if args.sale
+                    .product-card__sale(class=args.morphClass)!= args.sale
+                        +morph-svg({ view: '0 0 81 75' }).product-card__sale-svg
+            else
+                .product-card__close
+                    +svg({ name: 'close' })
+        a(href='/product.html').product-card__wrapper
+            .product-card__img-wrapper
+                .product-card__img-space
+                +img({ path: args.image }).product-card__img(class=args.imageHover ? 'product-card__img_main': '' data-object-fit="cover")
+                if args.imageHover
+                    +img({ path: args.imageHover }).product-card__img.product-card__img_hover(data-object-fit="cover")
+            .product-card__info
+                .product-card__title!= args.title
+                .product-card__price
+                    .product-card__new-price!= args.newPrice + ' Р'
+                    if args.oldPrice
+                        .product-card__old-price!= args.oldPrice + ' Р'
+        .product-card__hidden
+            if args.colors
+                .product-card__section-carousel
+                    .product-card__carousel.swiper-container.product-card__carousel-swiper-container
+                        .product-card__carousel-wrapper.swiper-wrapper.product-card__carousel-swiper-wrapper
+                            if args.colors
+                                each image, i in args.colors
+                                    .product-card__carousel-slide.swiper-slide.product-card__carousel-swiper-slide
+                                        .product-card__carousel-bgwrapper(data-main-src=image.imgMain data-hover-src=image.imgHover)
+                                            +svg({ name: 'product-select' }).product-card__carousel-check
+                                            +img({ path: image.imgPreview })
+                    .product-card__arrow.product-card__arrow_left
+                        .product-card__arrow-icon
+                            +svg({ name: 'arrow-left-min' })
+                    .product-card__arrow.product-card__arrow_right
+                        .product-card__arrow-icon
+                            +svg({ name: 'arrow-left-min' })
+            if args.size
+                .product-card__size.text-center
+                    span.product-card__article!=args.article
+                    span.product-card__size-value!=args.size
+            .product-card__bottom.row.align-items-baseline
+                +button-buy({
+                    text: 'Купить',
+                    icon: 'bag',
+                    inStock: args.inStock
+                }).button-buy_card.product-card__cart
+                .product-card__buy Купить в один клик

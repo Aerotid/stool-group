@@ -1,0 +1,64 @@
+[
+  {
+    "name": "spoilerCheckbox-1",
+    "spoilerTitle": "Производитель",
+    "noCollapsed": true,
+    "itemsChecked": [{
+      "title": "Китай",
+      "count": 5,
+      "value": 230
+    }],
+    "items": [{
+      "title": "Россия",
+      "count": false,
+      "value": 231
+    }]
+  },
+  {
+    "name": "spoilerCheckbox-2",
+    "spoilerTitle": "Серия",
+    "itemsChecked": [{
+      "title": "Квардо",
+      "count": 5,
+      "value": 232
+    }],
+      "items": [{
+      "title": "Раунд",
+      "count": false,
+        "value": 233
+    }]
+  },
+  {
+    "name": "spoilerCheckbox-3",
+    "spoilerTitle": "Бренд",
+    "itemsChecked": [{
+      "title": "Stool Group",
+      "count": 5,
+      "value": 234
+    }],
+    "items": [
+      {
+      "title": "СhiedoCover",
+      "count": false,
+        "value": 235
+      },
+      {
+        "title": "Сатурн",
+        "count": false,
+        "value": 236
+      },
+      {
+        "title": "Lifetime",
+        "count": false,
+        "disabled": true,
+        "value": 237
+      },
+      {
+        "title": "ZOWN",
+        "count": false,
+        "disabled": true,
+        "value": 238
+      }
+    ]
+  }
+]

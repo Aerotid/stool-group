@@ -1,0 +1,26 @@
+include ../header-dropdown/header-dropdown
+
+mixin header-submenu(args)
+    .header-submenu&attributes(attributes)
+        .header-submenu__left
+            ul.header-submenu__list.header-submenu__list_left
+                each menuItem in data.subMenu.left
+                    li.header-submenu__item
+                        a(href=menuItem.href data-title=menuItem.anchor aria-haspopup=menuItem.subsections ? 'true': 'false')!= menuItem.anchor
+                        if (menuItem.subsections)
+                            +header-dropdown({
+                                title: menuItem.anchor,
+                                data: menuItem.subsections
+                            }).header-submenu__dropdown
+        .header-submenu__right
+            ul.header-submenu__list
+                each menuItem in data.subMenu.right
+                    li.header-submenu__item
+                        a(href=menuItem.href data-title=menuItem.anchor)!= menuItem.anchor
+                        if (menuItem.subsections)
+                            +header-dropdown({
+                                title: menuItem.anchor,
+                                data: menuItem.subsections
+                            }).header-submenu__dropdown
+        svg.header-submenu__bump(viewBox='0 0 400 20' xmlns='http://www.w3.org/2000/svg')
+            path(d='M100 0 C160 0 160 18 200 18 C240 18 240 0 300 0 Z')

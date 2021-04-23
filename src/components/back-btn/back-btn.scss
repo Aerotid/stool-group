@@ -1,0 +1,56 @@
+.back-btn {
+    $root: &;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color: $color-5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+        transition: background-color 0.3s, box-shadow 0.3s;
+
+        @include media-breakpoint-down(sm) {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg {
+            width: 12px;
+            height: 8px;
+            stroke: black;
+            transform: rotate(180deg);
+            transition: transform .3s;
+        }
+    }
+
+    &__text {
+        @include font-8;
+        margin-left: -15px;
+        color: black;
+        position: relative;
+        z-index: 1;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &:hover {
+        .back-btn__text {
+            color: black;
+        }
+        svg {
+            transform: rotate(180deg) translateX(10px);
+        }
+        .back-btn__icon {
+          background-color: $color-4;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+    }
+}

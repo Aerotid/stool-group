@@ -1,0 +1,6 @@
+mixin back-btn(args)
+    #{(args && args.tagName) ? args.tagName : 'a'}.back-btn&attributes(attributes)(href= (args && args.tagName)? false : (args && args.href ? args.href : '#'))
+        .back-btn__icon
+            +svg({ name: 'arrow' })
+        span.back-btn__text!= args.text
+        

@@ -1,0 +1,11 @@
+mixin spoiler-menu(args)
+    .spoiler-menu&attributes(attributes).row.justify-content-between
+        each item, i in args.data
+            .spoiler-menu__item
+                .spoiler-menu__header.collapsed(data-toggle="collapse" href="#" + args.name + "-" + i aria-expanded="true")
+                    .spoiler-menu__title!= item.title
+                .collapse(id=args.name + "-" + i)
+                    ul.spoiler-menu__content
+                        each menu in item.child
+                            li
+                                a(href=menu.href)!= menu.name

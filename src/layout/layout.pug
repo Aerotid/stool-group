@@ -1,0 +1,16 @@
+include ../common/pug/mixins
+include ../common/pug/helpers
+include ../components/header/header
+include ../components/footer/footer
+include ../components/preloader/preloader
+
+doctype html
+html(lang='ru')
+    head
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(charset='utf-8')
+    body.preloading.no-cs-cart
+        +header
+        block content
+        +footer({ data: data.footerMenu })
+        +preloader

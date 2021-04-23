@@ -1,0 +1,22 @@
+include ../../components/cursor/cursor
+
+mixin modal(args)
+    .modal(class= (args && args.unFade) ? false : 'fade' aria-labelledby= args.id id= args.id role='dialog' aria-hidden='true' data-backdrop="static" data-keyboard="false")&attributes(attributes)
+        if(args && args.cart)
+            .modal__cursor-area.modal-cursor__area(aria-label='Close' data-dismiss='modal')
+                +cursor.modal__cursor.modal-cursor
+        .modal-dialog.modal__container(role='document' class= args.centered ? 'modal-dialog-centered' : null)
+            .modal-content
+                if(args && args.btnClose)
+                    button.modal__close(type='button' aria-label='Close' data-dismiss='modal')
+                        +svg({ name: 'close' })(aria-hidden='true')
+                if(args && args.header)
+                    .d-flex.align-items-center.modal-content__top(class= args.mobileHeader ? 'd-block d-md-none' : null, class= args.headerGrey ? 'modal-content_grey' : null)
+                        .offset-2.offset-md-1.col-20.col-md-22.d-flex.align-items-center.justify-content-between
+                            .modal-content__logo
+                                a(href='/').logo Stool <span>Group</span>
+                            .modal-content__close(aria-label='Close' data-dismiss='modal')
+                if(args && args.subHeader)
+                    .d-flex.align-items-center.justify-content-between
+                .modal-body
+                    block

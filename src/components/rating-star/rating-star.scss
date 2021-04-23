@@ -1,0 +1,69 @@
+.rating-star {
+  $root: &;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    position: relative;
+    display: flex;
+    fill: $color-3;
+    margin-right: 4px;
+
+    svg {
+      vertical-align: baseline;
+    }
+
+    &-color {
+      fill: $color-1;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__short {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    i {
+      display: block;
+      height: 100%;
+      overflow: hidden;
+
+      svg {
+        display: block;
+        fill: $color-1;
+      }
+    }
+  }
+
+  &__small-icons {
+
+    & #{$root}__icon {
+
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    & #{$root}__short {
+
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  &__between {
+
+    & #{$root}__icon {
+      margin-right: 0;
+    }
+  }
+}

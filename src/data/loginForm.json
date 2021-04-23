@@ -1,0 +1,18 @@
+[
+  {
+    "content": [
+      {
+        "id": "login-email",
+        "place": "Электронная почта",
+        "required": true,
+        "type": "email"
+      },
+      {
+        "id": "login-password",
+        "place": "Пароль",
+        "required": true,
+        "type": "password"
+      }
+    ]
+  }
+]

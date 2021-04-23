@@ -1,0 +1,8 @@
+mixin full-collection(args)
+    .full-collection&attributes(attributes).d-flex.flex-column
+        .d-none.d-md-block.full-collection__collection Коллекция
+        h2.tp_h-2.full-collection__title!= args.title
+        a(href="").full-collection__more Подробнее
+        a(href="#").full-collection__preview
+            .full-collection__preview-bg
+                +img({ path: args.path })(data-object-fit='cover')

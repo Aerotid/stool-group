@@ -1,0 +1,72 @@
+{
+  "titleColor": "Technologies",
+  "title": "Effective Advanced",
+  "cols": [
+    {
+      "title":"Houstion",
+      "middle": {
+        "p": "22955 State Hwy.&nbsp;249, Suite&nbsp;33 Tomball, Texas 77375"
+      },
+      "bottom": {
+        "phones": [
+          {
+            "name": "Ph: ",
+            "num": "832-559-1608"
+          },
+          {
+            "name": "Fax: ",
+            "num": "832-559-1610"
+          }
+        ]
+      }
+    },
+    {
+      "title":"Midland",
+      "middle": {
+        "p": "2206W. New Jersey Ave.Midland, TX 79701"
+      },
+      "bottom": {
+        "phones": [
+          {
+            "name": "Ph: ",
+            "num": "32-789-1080"
+          }
+        ]
+      }
+    },
+    {
+      "title":"Connect",
+      "middle": {
+        "p": "Какой-то рыбный текст про возможность связаться"
+      },
+      "bottom": {
+        "links": [
+          {
+            "href": "#",
+            "text": "Contact US"
+          }
+        ]
+      }
+    },
+    {
+      "middle": {
+        "socials": [
+          {
+            "href": "#",
+            "text": "Facebook"
+          },
+          {
+            "href": "#",
+            "text": "Instagram"
+          },
+          {
+            "href": "#",
+            "text": "Twitter"
+          }
+        ]
+      }
+    }
+
+  ]
+
+}

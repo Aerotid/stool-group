@@ -1,0 +1,22 @@
+[
+  {
+    "class": "active",
+    "img": "../../pages/product/images/chair-black.png"
+  },
+  {
+    "class": "",
+    "img": "../../pages/product/images/chair-white.png"
+  },
+  {
+    "class": "",
+    "img": "../../pages/product/images/chair-red.png"
+  },
+  {
+    "class": "",
+    "img": "../../pages/product/images/chair-blue.png"
+  },
+  {
+    "class": "",
+    "img": "../../pages/product/images/chair-yellow.png"
+  }
+]

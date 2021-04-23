@@ -1,0 +1,103 @@
+.cursor {
+  position: fixed;
+  opacity: 1;
+  width: 100px;
+  height: 100px;
+  left: -50px;
+  top: -50px;
+  transform: translate(-100%, -100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1600000;
+  pointer-events: none;
+  will-change: transform;
+
+  &.has-blend-mode {
+    mix-blend-mode: exclusion;
+  }
+
+  // Blend mode fix for Microsoft Edge
+  @supports (-ms-ime-align: auto) {
+    &.has-blend-mode.is-outside {
+      .custom-cursor {
+        &__outer {
+          border-color: $color-2;
+        }
+
+        &__inner {
+          &:before,
+          &:after {
+            background: $color-2;
+          }
+        }
+      }
+    }
+  }
+
+  //&-area {
+  //  cursor: none;
+  //}
+
+
+  &__item {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    &_outer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 0;
+      height: 0;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      will-change: width, height;
+    }
+
+    &_inner {
+      color: #fff;
+      text-transform: uppercase;
+
+      &::after, &::before {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+  }
+}
+
+._show {
+  .cursor-area {
+    cursor: none;
+
+    &.shifting-block__hide {
+      @include media-breakpoint-down(sm) {
+        cursor: auto;
+      }
+    }
+  }
+}
+.show {
+  .modal__cursor-area {
+    cursor: none;
+  }
+}
+
+//.ie .cursor {
+//  display: none !important;
+//}

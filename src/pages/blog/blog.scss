@@ -1,0 +1,19 @@
+.blog {
+    &__top {
+        padding-top: 140px;
+        margin-bottom: 40px;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 18px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__bottom {
+        margin-bottom: 185px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 100px;
+        }
+    }
+}

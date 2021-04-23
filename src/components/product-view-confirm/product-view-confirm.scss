@@ -1,0 +1,125 @@
+.product-view-confirm {
+    $root: &;
+    @include font-19;
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+        border: 1px solid $color-5;
+        border-radius: 3px;
+        padding: 15px 15px 15px 7px;
+    }
+
+    &__img {
+        width: 130px;
+        height: 125px;
+        object-fit: contain;
+        display: block;
+
+        @include media-breakpoint-between(md, lg) {
+            width: 70px;
+            height: 70px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-right: 20px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% - 130px);
+        //@include media-breakpoint-down(lg) {
+        //    width: calc(100% - 100px);
+        //}
+        @include media-breakpoint-down(lg) {
+            width: calc(100% - 70px);
+        }
+        @include media-breakpoint-down(sm) {
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: calc(100% - 100px);
+        }
+
+        &-item {
+            text-align: center;
+            width: calc((100% - (#{$col-width} * 5 )) / 4 + 130px / 4);
+
+
+            @include media-breakpoint-between(md, lg) {
+                //width: calc( (100% - (#{$col-width} * 5)) / 4 + 100px / 4);
+                width: calc( (100% - (#{$col-width} * 5)) / 4 + 70px / 4);
+            }
+            @include media-breakpoint-down(sm) {
+                text-align: left;
+                width: calc( (100% - (#{$col-width} * 5)) / 4 + 100px / 4);
+            }
+        }
+
+    }
+
+    &__descr {
+        color: black;
+        padding: 0 10px;
+        width: calc(#{$col-width} * 5 - 130px) ;
+        //min-width: calc(300px - 130px);
+        min-width: calc(250px - 130px);
+        text-align: left;
+
+        @include media-breakpoint-between(md, lg) {
+            //width: calc(#{$col-width} * 5 - 100px) ;
+            width: calc(#{$col-width} * 5 - 70px) ;
+            //min-width: calc(300px - 70px);
+            min-width: calc(250px - 70px);
+        }
+        @include media-breakpoint-down(sm) {
+            width: auto;
+            padding: 0 5px 0 0;
+            order: 1;
+            min-width: 0;
+        }
+
+        &:hover {
+            color: black;
+        }
+
+
+        &-quantity {
+            display: none;
+            @include media-breakpoint-down(sm) {
+                display: inline-block;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    &__article {
+        @include media-breakpoint-down(sm) {
+           width: 100%;
+            order: 3;
+            margin-top: 20px;
+        }
+    }
+    &__cost {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+    &__quantity {
+        @include media-breakpoint-down(sm) {
+           order: 2;
+           width: auto;
+        }
+    }
+    &__total-cost {
+        @include font-5;
+        @include media-breakpoint-down(sm) {
+            text-align: right;
+            order: 3;
+            width: 100%;
+            margin-top: 18px;
+        }
+    }
+}

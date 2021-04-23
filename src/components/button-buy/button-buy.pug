@@ -1,0 +1,25 @@
+mixin button-buy(args)
+    -
+        args = args ? args : {};
+        if (!args.inStock) {
+            attributes.class = 'button-buy__disabled';
+        }
+
+        if (args.btnType == '1') {
+            attributes.class = 'button-buy_exclusive';
+        } else if (args.btnType == '2') {
+            attributes.class = 'button-buy_showroom';
+        } else if (args.btnType == '3') {
+            attributes.class = 'button-buy_discount-min';
+        } else if (args.btnType == '4') {
+            attributes.class = 'button-buy_discount-max';
+        }
+
+    button.button-buy&attributes(attributes)(type='submit')
+        if args.inStock
+            .button-buy__text!= args.text
+        else
+            .button-buy__text Нет в наличии
+        if args.inStock
+            .button-buy__icon
+                +svg({ name: args.icon })

@@ -1,0 +1,109 @@
+.table {
+    $root: &;
+    margin-bottom: 0;
+    border-bottom: 1px solid $color-5;
+
+    tr {
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-5;
+        }
+
+        td, th {
+            padding: 19px 14px 12px 0;
+            line-height: 1.75;
+            color: $color-1;
+            border: none;
+
+            @include media-breakpoint-down(sm) {
+                padding: 20px 14px 21px 0;
+            }
+        }
+        th {
+            @include font-5;
+            &.different {
+                background-color: rgba($color-5, .2);
+            }
+        }
+        td {
+            @include font-24;
+
+            @include media-breakpoint-down(sm) {
+                line-height: 1.66;
+                color: $color-2;
+            }
+
+            #{$root}__title {
+                margin-bottom: 8px;
+                @include font-3;
+                color: $color-1;
+            }
+        }
+    }
+
+    &-product {
+        width: 100%;
+
+        &__title {
+            display: block;
+            width: 100%;
+            @include font-5;
+            border-bottom: 1px solid $color-1;
+            padding-bottom: 14px;
+            margin-top: 38px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid $color-3;
+
+            td {
+                @include font-14;
+                padding: 18px 14px 14px;
+
+                &:first-of-type {
+                    padding-left: 0;
+                }
+            }
+
+        }
+    }
+
+    &_text {
+        border: 1px solid $color-3;
+
+        #{$root}__text {
+
+        }
+
+        tr {
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-3;
+            }
+
+            td, th {
+                padding-left: calc(#{$col-width} / 2);
+
+                @include media-breakpoint-down(sm) {
+                    padding: 10px;
+                }
+            }
+
+            th {
+                width: calc(#{$col-width} * 4);
+                background-color: rgba($color-5, .5);
+
+                @include media-breakpoint-between(md, lg) {
+                    width: calc(#{$col-width} * 8);
+                }
+
+                @include media-breakpoint-down(sm) {
+                    width: auto;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

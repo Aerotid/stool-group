@@ -1,0 +1,9 @@
+include ../morph-svg/morph-svg
+
+mixin morph-block(args)
+    .morph-block&attributes(attributes)
+        +morph-svg({ view: '0 0 808 484' }).morph-block__morph-svg(data-morph-svg=0)
+        +morph-svg({ view: '0 0 184 130' }).morph-block__morph-svg(data-morph-svg=1)
+        +morph-svg({ view: '0 0 183 186' }).morph-block__morph-svg(data-morph-svg=2)
+        +morph-svg({ view: '0 0 108 94' }).morph-block__morph-svg(data-morph-svg=3)
+        +morph-svg({ view: '0 0 242 211' }).morph-block__morph-svg(data-morph-svg=4)

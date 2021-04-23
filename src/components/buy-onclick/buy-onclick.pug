@@ -1,0 +1,23 @@
+include ../../components/flexible-form/flexible-form
+
+mixin buy-onclick(args)
+    .buy-onclick&attributes(attributes)
+        .row.offset-modal-top
+            .d-flex.align-items-start.justify-content-between.offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-16.buy-onclick__head
+                .d-flex.buy-onclick__product
+                    .order-1.order-md-0.buy-onclick__product-image
+                        .buy-onclick__image
+                            +img({ path: '../../pages/product/images/collections-white.png' })(data-object-fit='contain')
+                    .d-flex.flex-column.buy-onclick__product-text
+                        .buy-onclick__product-title Cтул Eames DAW, черный
+                .buy-onclick__head-info
+                    p.tp__p-7 Вскоре после нажатия кнопки &laquo;Отправить&raquo; с&nbsp;вами свяжется менеджер для уточнения деталей заказа.
+
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.registration__form
+                +flexible-form({
+                    data: data.buyOnClick,
+                    btnText: 'Отправить',
+                    agreement: true,
+                    loginWith: false,
+                    halfInput: true
+                })

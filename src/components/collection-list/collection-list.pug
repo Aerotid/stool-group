@@ -1,0 +1,25 @@
+include ../../components/product-slider/product-slider
+
+mixin collection-list(args)
+    .collection-list&attributes(attributes)
+        .d-flex.d-md-none.flex-column
+            +product-slider({
+                data: data.gallerySlider,
+                pagination: true
+            })
+        each item in args.data
+            .d-none.d-md-flex.align-items-center.justify-content-between.collection-list__row
+                .collection-list__preview(class= item.rowReverse ? 'order-1' : null)
+                    +img({
+                        path: item.img
+                    })
+                .d-flex.flex-column.align-items-center.collection-list__card
+                    +img({
+                        path: item.imgSmall
+                    })
+                    +button-buy({
+                        text: item.text,
+                        icon: item.icon,
+                        inStock: true,
+                        btnType: item.btnType
+                    }).collection-list__button

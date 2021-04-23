@@ -1,0 +1,19 @@
+mixin order-check(args)
+    .order-check&attributes(attributes)
+        .order-check__title!= args.title
+        .order-check__table
+            each item in args.items
+                .order-check__product
+                    .order-check__product-title!= item.descr
+                    .order-check__product-article!= item.article
+                    .order-check__product-quantity!= item.quantity
+
+        .order-check__info
+            .order-check__info-item
+                p.order-check__info-text!= args.orderNumText
+                p.order-check__info-number!= args.orderNum
+
+            .order-check__info-item
+                each text in args.infoTexts
+                    p.order-check__info-text!= text
+

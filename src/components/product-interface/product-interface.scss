@@ -1,0 +1,390 @@
+.product-interface {
+    $root: &;
+    transition: transform .6s;
+    will-change: transform;
+
+    &.header-show {
+        transform: translateY($header-menu-height);
+    }
+
+    &__header {
+        position: relative;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 3px 0 20px;
+
+        &-actions {
+            display: flex;
+            justify-content: flex-start;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 0 36px;
+        }
+    }
+
+    &__sale {
+        @include font-14;
+        margin-right: 10px;
+
+        &-svg {
+            top: 0;
+            right: 0;
+            z-index: -1;
+            width: $col-width;
+            height: $col-width;
+            transform: translate(5%, -25%);
+        }
+
+        &-bold {
+            @include font-5;
+        }
+    }
+
+    &__icon {
+        @include media-breakpoint-down(sm) {
+            box-shadow: none;
+        }
+
+        &:hover {
+            & +#{$root}__icon-text {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__icon-text {
+        @include font-20;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        margin-left: 10px;
+        transition: all 0.3s;
+
+        @include media-breakpoint-down(sm) {
+            margin-left: 0;
+            line-height: 1.7;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+
+    &__like {
+        margin-right: 15px;
+
+        @include media-breakpoint-down(sm) {
+            margin-right: 0;
+        }
+    }
+
+    &__like, &__compare {
+        position: relative;
+        display: flex;
+        align-items: baseline;
+
+        @include media-breakpoint-down(sm) {
+            align-items: center;
+            flex: 0 1 45%;
+            padding: 0 3px;
+            //justify-content: center;
+            border-radius: 3px;
+            border: 1px solid $color-3;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+        margin-top: 22px;
+    }
+
+    &__title {
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+
+    &__price {
+        margin-bottom: 28px;
+
+        &-block {
+            margin-left: 30px;
+            margin-bottom: 6px;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 0;
+
+                @include media-breakpoint-down(sm) {
+                    margin-left: 0;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            align-items: flex-end;
+            margin-bottom: 0;
+        }
+    }
+
+    &_new-price {
+        @include font-10;
+    }
+
+    &_old-price {
+        position: relative;
+        @include font-24;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            content: '';
+            background-color: $color-1;
+            transform: translateY(-50%);
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-left: 0;
+        }
+    }
+
+    &__diff {
+        @include font-2;
+        margin-left: 10px;
+        border-radius: 20px;
+        background-color: $color-4;
+        padding: 1px 5px;
+    }
+
+    &__info {
+        width: 100%;
+        margin-bottom: 40px;
+
+        &-transcription {
+            @include font-14;
+            color: $color-2;
+            margin-bottom: 20px;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 24px;
+            }
+        }
+
+        &-description {
+            @include font-14;
+            color: $color-2;
+            line-height: 1.8;
+            margin-bottom: 30px;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__options {
+
+        &-title {
+            @include font-22;
+            margin-bottom: 12px;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 8px;
+            }
+        }
+
+        &-text {
+            @include font-19;
+        }
+
+        &-section {
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 24px;
+
+                &:first-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 40px;
+        @include font-8;
+        background: $color-4;
+        box-shadow: 0 10px 20px rgba(0, 0, 0,.05);
+        padding-left: 34px;
+        cursor: pointer;
+    }
+
+    &_bag-icon {
+        background-color: white;
+        border-radius: 50%;
+        margin: 6px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            margin: 16px;
+        }
+    }
+
+    &__buy {
+        position: relative;
+        @include font-19;
+        color: $color-2;
+        margin-left: 4.2vw;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $color-1;
+
+            &:before {
+                background-color: $color-1;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $color-3;
+            transition: background-color 0.3s;
+        }
+
+        @include media-breakpoint-down(xl) {
+            margin-left: 20px;
+
+            @include media-breakpoint-down(sm) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__date {
+        position: relative;
+        @include font-19;
+        color: $color-2;
+        margin-left: 4.2vw;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $color-1;
+
+            &:before {
+                background-color: $color-1;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $color-3;
+            transition: background-color 0.3s;
+        }
+
+        @include media-breakpoint-down(xl) {
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        &-buttons {
+            width: 100%;
+
+            @include media-breakpoint-down(md) {
+                justify-content: space-between;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &_discount-min {
+        #{$root}__sale-svg {
+            fill: $color-4;
+        }
+    }
+
+    &_discount-max {
+        #{$root}__sale-svg {
+            fill: $color-5;
+        }
+    }
+
+    &_exclusive {
+        #{$root}__sale-svg {
+            fill: $color-6;
+        }
+    }
+
+    &_showroom {
+        #{$root}__sale-svg {
+            fill: $color-7;
+        }
+    }
+
+    &__characteristics-link {
+        position: relative;
+        @include font-2;
+        color: $color-1;
+        margin-bottom: 40px;
+
+        &:before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $color-3;
+            transition: background-color 0.3s;
+        }
+
+        &:hover {
+            color: $color-1;
+
+            &:before {
+                background-color: $color-1;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding-left: 3vw;
+
+        @include media-breakpoint-down(sm) {
+            padding-left: 0;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+include ../../components/product-card/product-card
+include ../../components/button-load/button-load
+
+
+mixin catalog(args)
+    .row.catalog&attributes(attributes)
+        .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.catalog__wrapper(class= args.closeBtn ? 'justify-content-between' : null)
+            each card in args.cards
+                +product-card({
+                    saleType: card.saleType,
+                    sale: card.sale,
+                    image: card.image,
+                    imageHover: card.imageHover,
+                    title: card.title,
+                    newPrice: card.newPrice,
+                    oldPrice: card.oldPrice,
+                    size: card.size,
+                    article: card.article,
+                    colors: card.colors,
+                    closeBtn: args.closeBtn
+                })(class= args.closeBtn ? 'product-card_close catalog__item': 'catalog__product-card product-card_catalog catalog__item')
+        .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+            +button-load.button-load_mobile
+
+

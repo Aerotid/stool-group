@@ -1,0 +1,61 @@
+.tabs {
+    $root: &;
+
+    &__nav {
+        border-bottom: none;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        @include font-14;
+        color: $color-2;
+        cursor: pointer;
+        margin-right: 60px;
+        padding: 0;
+        transition: color 0.2s, font-weight 0.2s;
+
+        &.active {
+            @include font-5;
+            color: $color-1;
+            transition: color 0.2s, font-weight 0.2s;
+        }
+
+        &:hover {
+            color: $color-1;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin: 0 0 14px 0 !important;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__textarea {
+        width: calc(50% - #{$col-width} / 2);
+
+        textarea {
+            min-height: 114px;
+            border: 1px solid $color-3;
+
+            &:hover {
+                border: 1px solid $color-1;
+            }
+
+            &:focus {
+                border: 1px solid $color-1;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            min-height: 98px;
+        }
+    }
+}

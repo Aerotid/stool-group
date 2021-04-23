@@ -1,0 +1,97 @@
+[
+  {
+    "title": "Контактная информация",
+    "content": [
+      {
+        "id": "personaldata-firstname",
+        "place": "Имя",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "personaldata-lastname",
+        "place": "Фамилия",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "personaldata-phone",
+        "place": "Телефон",
+        "required": true,
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "title": "Информация об учетной записи",
+    "content": [
+      {
+        "id": "personaldata-email",
+        "place": "Email",
+        "required": true,
+        "type": "email"
+      },
+      {
+        "id": "personaldata-password",
+        "place": "Пароль",
+        "required": true,
+        "type": "password",
+        "href": "#",
+        "link": "Изменить пароль"
+      }
+    ]
+  },
+  {
+    "title": "Адрес доставки",
+    "content": [
+      {
+        "id": "personaldata-region",
+        "placeholder": "Регион",
+        "required": true,
+        "type": "text",
+        "select": true,
+        "options": [
+          {
+            "text": "Алтайский край"
+          },
+          {
+            "text": "Амурская область"
+          },
+          {
+            "text": "Архангельская область"
+          },
+          {
+            "text": "Астраханская область"
+          },
+          {
+            "text": "Белгородкая область"
+          },
+          {
+            "text": "Брянская область"
+          },
+          {
+            "text": "Владимирская область"
+          },
+          {
+            "text": "Волгоградская область"
+          },
+          {
+            "text": "Воронежская область"
+          }
+        ]
+      },
+      {
+        "id": "personaldata-city",
+        "place": "Город",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "personaldata-street",
+        "place": "Улица, дом, квартира",
+        "required": true,
+        "type": "text"
+      }
+    ]
+  }
+]

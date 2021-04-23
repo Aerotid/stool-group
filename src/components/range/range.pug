@@ -1,0 +1,62 @@
+include ../../components/spoiler/spoiler
+
+mixin range(args)
+    .range&attributes(attributes)
+        +spoiler({
+            title: 'Диапазон цены',
+            titleClass: 'ty-product-filters__title',
+            collapseClass: 'spoiler_sorting-collapse',
+            class: 'ty-product-filters__switch cm-combination-filter_31_3 cm-save-state cm-ss-reverse',
+            id: 'sw_content_31_3',
+            noCollapsed: true
+        }, false, 'spoilerRange').sorting__spoiler.ty-product-filters__block
+
+            //.ty-product-filters__switch.cm-combination-filter_31_3.cm-save-state.cm-ss-reverse(id='sw_content_31_3')
+            //    .ty-product-filters__title Диапазон цены, руб
+            //        a.cm-ajax.cm-ajax-full-render.cm-history(href="#" data-ca-event="ce.filtersinit"
+            //        data-ca-target-id="product_filters_*,products_search_*,category_products_*,product_features_*,breadcrumbs_*,currencies_*,languages_*,selected_filters_*"
+            //        data-ca-scroll=".ty-mainbox-title")
+            //        i.ty-icon-cancel-circle
+
+            .cm-product-filters-checkbox-container.ty-price-slider(id="content_31_3")
+                .range__header
+                    a.range__clear.cm-ajax.cm-ajax-full-render.cm-history(href="#" data-ca-event="ce.filtersinit"
+                                    data-ca-target-id="product_filters_*,products_search_*,category_products_*,product_features_*,breadcrumbs_*,currencies_*,languages_*,selected_filters_*"
+                                    data-ca-scroll=".ty-mainbox-title")
+                                    i.ty-icon-cancel-circle
+                    .range__header__title выбрано:
+                    span от
+                    label.range__input-label.range__input-label_low
+                        input.range__input-low.hidden.range__header-selected.ty-price-slider__input-text(type="text" id="slider_31_3_left" name="left_31_3" value="5830.07")
+                        .range__input-label-place
+                            span.range__input-label-val.range__input-val_low
+                            span.ty-rub Р
+                    span по
+                    label.range__input-label.range__input-label_up
+                        input.range__input-up.hidden.range__header-selected.ty-price-slider__input-text(type="text" id="slider_31_3_right" name="right_31_3" value="14667")
+                        .range__input-label-place
+                            span.range__input-label-val.range__input-val_up
+                            span.ty-rub Р
+
+                .range__identify.ty-range-slider.cm-range-slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all(id="slider_31_3")
+                    ul.range__identify-wrapper.ty-range-slider__wrapper
+                        li.range__identify-val.range__identify-val_min.ty-range-slider__item
+                            span.ty-range-slider__num 1290
+                            span.ty-rub Р
+
+                        li.range__identify-val.range__identify-val_max.ty-range-slider__item
+                            span.ty-range-slider__num 14667
+                            span.ty-rub Р
+                    .range__identify-slect.ui-slider-range.ui-widget-header.ui-corner-all
+                    span.range__identify-btn.range__identify-btn_low.ui-slider-handle.ui-state-default.ui-corner-all(tabindex="0" style="left: 20%")
+                        .range__identify-val_selected.range__identify-val_selected-low
+                            span.ty-range-slider__num.range__input-val_low 7300
+                            span.ty-rub Р
+                    span.range__identify-btn.range__identify-btn_up.ui-slider-handle.ui-state-default.ui-corner-all(tabindex="0" style="left: 100%")
+                        .range__identify-val_selected.range__identify-val_selected-up
+                            span.ty-range-slider__num.range__input-val_up 7300
+                            span.ty-rub Р
+
+                    input.cm-product-filters-checkbox.hidden(id="elm_checkbox_slider_31_3" data-ca-filter-id="3" type="checkbox" name="product_filters[3]" value="5830.07-14667-RUB")
+
+

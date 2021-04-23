@@ -1,0 +1,129 @@
+.shifting-block {
+  $root: &;
+  &__hide {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(100% - 400px);
+
+    @include media-breakpoint-down(sm) {
+      bottom: auto;
+      width: 100%;
+      height: 70px;
+      background-color: $color-5;
+      z-index: 1;
+
+      .shifting-block__cursor {
+        display: none;
+
+        @include media-breakpoint-down(sm) {
+          cursor: auto;
+        }
+      }
+
+      &-logo {
+        width: 70%;
+      }
+
+    }
+
+    &-top {
+      height: 100%;
+      @include container-fluid;
+      align-items: center;
+      justify-content: space-between;
+      display: none;
+
+      @include media-breakpoint-down(sm) {
+        display: flex;
+      }
+
+
+      .logo {
+        color: black;
+      }
+
+      &-btn {
+        width: 12px;
+        height: 12px;
+        //pointer-events: none;
+        position: relative;
+        cursor: pointer;
+        &::after, &::before {
+          content: '';
+          display: block;
+          width: 12px;
+          //height: 2px;
+          //background-color: black;
+          border-top: medium solid black;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+        }
+        &::after {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::before {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+  }
+
+
+  &__wrapper {
+    position: fixed;
+    background: rgba(0,0,0,.45098);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    //bottom: 0;
+    //z-index: 10;
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: -10;
+
+    transition: opacity 0.30s, visibility 0.30s, z-index 0.30s 0.2s;
+
+  }
+
+  &__container {
+    width: 400px;
+    background-color: white;
+    height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    //@include container-fluid;
+    padding-left: calc(#{$col-width} / 2);
+    padding-right: calc(#{$col-width} / 2);
+
+    position: absolute;
+    transition: transform 0.3s;
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      width: 100%;
+      padding-top: 100px;
+      @include container-fluid;
+
+    }
+
+  }
+
+  &._show {
+    #{$root}__wrapper {
+      opacity: 1;
+      visibility: visible;
+      z-index: 12;
+      transition: opacity 0.25s, visibility 0.25s, z-index 0.1s;
+    }
+    #{$root}__container {
+
+    }
+  }
+}

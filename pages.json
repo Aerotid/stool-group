@@ -1,0 +1,106 @@
+[
+  {
+    "name": "index",
+    "title": "Главная"
+  },
+  {
+    "name": "product",
+    "title": "product"
+  },
+  {
+    "name": "catalog",
+    "title": "Каталог"
+  },
+  {
+    "name": "collection",
+    "title": "Коллекции"
+  },
+  {
+    "name": "compare",
+    "title": "Сравнение"
+  },
+  {
+    "name": "favorites",
+    "title": "Избранное"
+  },
+  {
+    "name": "cart",
+    "title": "Корзина"
+  },
+  {
+    "name": "order-processing",
+    "title": "Обработка-заказа"
+  },
+  {
+    "name": "starting-catalog",
+    "title": "Разводящая-каталог"
+  },
+  {
+    "name": "search",
+    "title": "Поиск"
+  },
+  {
+    "name": "about-company",
+    "title": "О-компании"
+  },
+  {
+    "name": "modal-list",
+    "title": "Список-модальных-окон"
+  },
+  {
+    "name": "projects",
+    "title": "Проекты"
+  },
+  {
+    "name": "project",
+    "title": "Страница-проекта"
+  },
+  {
+    "name": "contacts",
+    "title": "Контакты"
+  },
+  {
+    "name": "blog",
+    "title": "Блог"
+  },
+  {
+    "name": "collections",
+    "title": "Коллекции"
+  },
+  {
+    "name": "article",
+    "title": "Статья"
+  },
+  {
+    "name": "error",
+    "title": "404"
+  },
+  {
+    "name": "delivery",
+    "title": "Доставка"
+  },
+  {
+    "name": "payment",
+    "title": "Процесс-оплаты"
+  },
+  {
+    "name": "return",
+    "title": "Возврат-товара"
+  },
+  {
+    "name": "agreement",
+    "title": "Пользовательское-соглашение"
+  },
+  {
+    "name": "privacy-policy",
+    "title": "Политика-конфиденциальности"
+  },
+  {
+    "name": "wholesalers",
+    "title": "Оптовикам"
+  },
+  {
+    "name": "requisites",
+    "title": "Реквизиты"
+  }
+]

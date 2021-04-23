@@ -1,0 +1,68 @@
+.rate-value {
+    $root: &;
+
+    &__rating {
+        border: 1px solid $color-3;
+        border-radius: 3px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+
+        &-check {
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &-label {
+            margin-top: -4px;
+            cursor: pointer;
+            z-index: 10;
+
+            svg {
+                width: 15px;
+                height: 15px;
+                fill: $color-5;
+                transition: fill 0.2s 0.1s;
+            }
+
+            &:hover {
+                svg {
+                    fill: $color-1;
+                }
+            }
+
+            &.colored {
+                svg {
+                    fill: $color-1;
+                    transition: fill 0.2s;
+                }
+            }
+
+            &.checked {
+                svg {
+                    fill: $color-1;
+                    transition: fill 0.2s;
+                }
+            }
+        }
+
+        &-value {
+            @include font-13;
+            color: $color-1;
+            width: 10px;
+            margin-top: 4px;
+            margin-left: 10px;
+        }
+    }
+
+    &__text {
+        @include font-15;
+        color: $color-1;
+    }
+
+    &__value {
+        margin: 0 3px;
+    }
+}

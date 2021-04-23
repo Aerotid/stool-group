@@ -1,0 +1,26 @@
+include ../button-load/button-load
+
+mixin product-list(args)
+    -
+        args = args ? args : {};
+        if (args.twoCards) {
+            attributes.class = 'product-list_product';
+        }
+    .product-list.swiper-container.product-list__swiper-container&attributes(attributes)(data-visible-count='4')
+        .swiper-wrapper.product-list__swiper-wrapper
+            each card in args.data
+                +product-card({
+                    saleType: card.saleType,
+                    sale: card.sale,
+                    image: card.image,
+                    imageHover: card.imageHover,
+                    title: card.title,
+                    newPrice: card.newPrice,
+                    oldPrice: card.oldPrice,
+                    size: card.size,
+                    article: card.article,
+                    colors: card.colors,
+                    inStock: card.inStock
+                }).product-list__product-card.product-list__product-card_hidden
+            if args.button
+                +button-load.product-list__button-load(data-total-product=args.total ? args.total: '0')

@@ -1,0 +1,194 @@
+[
+  {
+    "menuTitle": "Стулья",
+    "typeMenu": 1,
+    "subMenu": [
+      {
+        "subMenuTitle": "Стулья",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Кресла",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Барные стулья",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Табуреты",
+        "subHref": "#"
+      }
+    ]
+  },
+  {
+    "menuTitle": "Столы",
+    "typeMenu": 1,
+    "subMenu": [
+      {
+        "subMenuTitle": "Обеденные",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Барные",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Журнальные",
+        "subHref": "#"
+      }
+    ]
+  },
+  {
+    "menuTitle": "Компьютерные кресла",
+    "typeMenu": 1,
+    "subMenu": [
+      {
+        "subMenuTitle": "Игровые кресла",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Кресла руководителя",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Офисные кресла",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Офисные стулья",
+        "subHref": "#"
+      }
+    ]
+  },
+  {
+    "menuTitle": "Банкетная мебель",
+    "typeMenu": 1,
+    "subMenu": [
+      {
+        "subMenuTitle": "Банкетные складные стулья",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Банкетные стопируемые стулья",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Банкетные столы для ресторана",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Склодные столы для кайтеринга",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Скамейки",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Текстиль",
+        "subHref": "#"
+      }
+    ]
+  },
+  {
+    "menuTitle": "Другие товары",
+    "typeMenu": 1,
+    "subMenu": [
+      {
+        "subMenuTitle": "Консоли",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Банкетки",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Пуфы",
+        "subHref": "#"
+      }
+    ]
+  },
+  {
+    "menuTitle": "Коллекции",
+    "typeMenu": 2,
+    "subMenu": [
+      {
+        "subMenuTitle": "Eames",
+        "subHref": "/collections.html"
+      },
+      {
+        "subMenuTitle": "Tolix",
+        "subHref": "/collections.html"
+      },
+      {
+        "subMenuTitle": "Дизайнерская коллекция",
+        "subHref": "/collections.html"
+      },
+      {
+        "subMenuTitle": "Мягкие кресла",
+        "subHref": "/collections.html"
+      }
+    ]
+  },
+  {
+    "menuTitle": "Скидки",
+    "typeMenu": 2,
+    "subMenu": [
+      {
+        "subMenuTitle": "Распродажа",
+        "subHref": "#"
+      },
+      {
+        "subMenuTitle": "Уцененные товары",
+        "subHref": "#"
+      }
+    ]
+  },
+  {
+    "menuTitle": "Новинки",
+    "typeMenu": 2,
+    "href": "#"
+  },
+  {
+    "menuTitle": "О компании",
+    "href": "/about-company.html"
+  },
+  {
+    "menuTitle": "Проекты",
+    "href": "/projects.html"
+  },
+  {
+    "menuTitle": "Блог",
+    "href": "/blog.html"
+  },
+  {
+    "menuTitle": "Контакты",
+    "href": "/contacts.html"
+  },
+  {
+    "menuTitle": "Помощь",
+    "subMenu": [
+      {
+        "subMenuTitle": "Доставка",
+        "subHref": "/delivery.html"
+      },
+      {
+        "subMenuTitle": "Процесс оплаты",
+        "subHref": "/payment.html"
+      },
+      {
+        "subMenuTitle": "Возврат",
+        "subHref": "/return.html"
+      },
+      {
+        "subMenuTitle": "Оптовикам",
+        "subHref": "/wholesalers.html"
+      },
+      {
+        "subMenuTitle": "Реквизиты",
+        "subHref": "/requisites.html"
+      }
+    ]
+  }
+]

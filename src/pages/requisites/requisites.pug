@@ -1,0 +1,17 @@
+extends ../../layout/layout
+include ../../components/table/table
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='text')
+            .row.offset-top-140
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-20
+                    h2.offset-bottom-75.tp_h-2 Реквизиты
+            .row.offset-bottom-160
+                .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14
+                    div
+                        h3.tp_h-4 ООО «Стул Груп»
+                        +table({
+                            data: data.requisites,
+                            requisites: true
+                        }).table_text

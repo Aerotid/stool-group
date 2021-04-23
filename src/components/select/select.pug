@@ -1,0 +1,11 @@
+mixin select(args)
+    .select&attributes(attributes)
+        .select__arrow-container
+            +svg({name: 's-arrow'}).select__arrow
+        if(args && args.error)
+            .select__error!= args.error
+        select.select__select(name!=args.name)
+            if(args.placeholder)
+                option(placeholder)!= args.placeholder
+            each elem, index in args.options
+                option(value=elem.value)!= elem.text

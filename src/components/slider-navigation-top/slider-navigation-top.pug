@@ -1,0 +1,10 @@
+mixin slider-navigation-top(args)
+    .slider-navigation-top&attributes(attributes)
+        .slider-navigation-top__wrapper.swiper-wrapper
+            each item, index in args.data
+                if index == 0
+                    .slider-navigation-top__item.swiper-slide.slider-navigation-top__item_active(data-id= index)
+                        span(data-title=item.anchor)!= item.anchor
+                else
+                    .slider-navigation-top__item.swiper-slide(data-id= index)
+                        span(data-title=item.anchor)!= item.anchor

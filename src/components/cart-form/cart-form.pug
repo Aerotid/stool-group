@@ -1,0 +1,73 @@
+include ../../components/input/input
+include ../../components/radiobtn/radiobtn
+include ../../components/product-confirm/product-confirm
+include ../../components/filters-checkbox/filters-checkbox
+include ../../components/tabs/tabs
+include ../../components/select/select
+
+mixin cart-form(args)
+    form.cart-form&attributes(attributes)
+        .cart-form__item.cart-form__item_inputs
+            .cart-form__item-title Контактная информация
+            .cart-form__item-content
+                each item in data.cartFormItems[0]
+                    +input(item).cart-form__item-input
+
+
+        .cart-form__item.cart-form__item_inputs
+            .cart-form__item-title Адрес доставки
+            .cart-form__item-content
+                each item, i in data.cartFormItems[1]
+                    if(i === data.cartFormItems[1].length - 1)
+                        +input(item).cart-form__item-input.cart-form__item-input_full-width
+                    else
+                        if item.options
+                            .cart-form__item-input
+                                +select({
+                                    placeholder: 'Область/регион',
+                                    options: item.options
+                                }).select_cart
+                        else
+                            +input(item).cart-form__item-input
+
+        .cart-form__item.cart-form__item_radiobtn
+            .cart-form__item-title Способ доставки
+            .cart-form__item-content
+                each item, i in data.cartFormItems[2]
+                    +radiobtn(item).cart-form__item-input
+
+        .cart-form__item.cart-form__item_radiobtn
+            .cart-form__item-title Оплата
+            +tabs({
+                data: data.cartTabs,
+                radioData: data.cartFormItems,
+                inputTag: 'textarea',
+                inputPlace: 'Введите реквизиты для выставления счета на оплату',
+                inputType: 'text',
+                inputRequired: true
+            })
+
+        .cart-form__item.cart-form__item_product-confirm
+            .cart-form__item-title Подтверждение
+            .cart-form__item-content
+                +product-confirm({
+                    titles: [
+                        'Товар', 'Артикул', 'Цена за шт.', 'Количество', 'Общая цена'
+                    ],
+                    items: data.cartFormItems[4],
+                    deliverInfo: 'Стоимость доставки рассчитана <a class="tp-link" href="#">в зависимости от веса</a> посылки:',
+                    deliverCost: '1 500 Р',
+                    totalInfo: 'Сумма: ',
+                    totalCost: '17 087 Р'
+                }).cart-form__product-confirm
+
+        .cart-form__item.cart-form__item_argeement
+            .cart-form__item-content
+                +filters-checkbox({
+                    value: 'accept',
+                    checked: true,
+                    title: 'Я даю согласие на обработку своих персональных данных и соглашаюсь с <a class="tp-link" href="#">Условиями использования</a> и <a class="tp-link" href="#">Политикой конфиденциальности</a>'
+                }).cart-form__item-input.cart-form__item-input_full-width.filters-checkbox_argeemen
+
+        .cart-form__item.cart-form__item_btn
+            a(href="#").cart-form__btn Оформить заказ

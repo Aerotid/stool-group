@@ -1,0 +1,15 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function smooth-value($firstValue, $secondValue, $firstPoint, $secondPoint, $dimension) {
+  @return calc(
+    #{$firstValue}
+    + (#{strip-unit($secondValue)} - #{strip-unit($firstValue)})
+    * (100v#{$dimension} - #{$firstPoint})
+    / (#{strip-unit($secondPoint)} - #{strip-unit($firstPoint)})
+  );
+}

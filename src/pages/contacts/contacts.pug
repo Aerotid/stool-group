@@ -1,0 +1,21 @@
+extends ../../layout/layout
+include ../../components/contacts-info/contacts-info
+include ../../components/contacts-modal/contacts-modal
+include ../../components/location-list/location-list
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='contacts')
+            .offset-2.offset-md-1.col-20.col-md-22
+                +contacts-info
+
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                h2.tp_h-2.contacts__location Местоположение
+
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.contacts__location-items
+                +location-list({
+                    data: data.contactLocations
+                })
+
+            +modal({id: "location", centered: true}).modal_contacts
+                +contacts-modal.modal_contacts

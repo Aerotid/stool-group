@@ -1,0 +1,12 @@
+mixin info-block-1(args)
+    .info-block-1&attributes(attributes)
+        .info-block-1__title
+            h3.tp_h-2!= args.title
+        .info-block-1__content
+            if(args.text1)
+                .info-block-1__text-1!= args.text1
+            if(args.text2)
+                .info-block-1__text-2!= args.text2
+            if(args.image)
+                .info-block-1__bg-wrapper
+                    +img({path: args.image}).info-block-1__image(data-object-fit='cover')

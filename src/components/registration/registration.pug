@@ -1,0 +1,18 @@
+include ../../components/flexible-form/flexible-form
+
+mixin registration(args)
+    .registration&attributes(attributes)
+        .row.offset-modal-top
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-2 Регистрация
+
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.registration__form
+                +flexible-form({
+                    data: data.registrationForm,
+                    btnText: 'Зарегистрироваться',
+                    agreement: true,
+                    loginWith: true,
+                    halfInput: true
+                })
+                .d-flex.d-md-none.align-items-center.justify-content-between.registration__login
+                    span Постоянный покупатель?
+                    .registration__link.link-content Войти

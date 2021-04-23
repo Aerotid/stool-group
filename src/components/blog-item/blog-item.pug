@@ -1,0 +1,11 @@
+mixin blog-item(args)
+    .blog-item&attributes(attributes)
+        noindex.d-block.d-md-none
+            h3.blog-item__title.no-i!= args.title
+        .blog-item__left
+            .blog-item__bg-wrapper
+                +img({path: args.image})(data-object-fit='cover').blog-item__image
+        .blog-item__right
+            h3.blog-item__title.d-none.d-md-block!= args.title
+            p.blog-item__text!= args.text
+            a(href='/article.html').blog-item__link.tp-link Подробнее

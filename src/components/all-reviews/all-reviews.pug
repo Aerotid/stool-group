@@ -1,0 +1,45 @@
+include ../../components/rating-star/rating-star
+include ../../components/sorting/sorting
+include ../../components/review/review
+
+mixin all-reviews(args)
+    - var rate = 0;
+        each item in args.data
+            - rate = rate + item.rating;
+    .all-reviews&attributes(attributes)
+        +modal({
+            id: 'all-reviews',
+            btnClose: args.btnClose,
+            unFade: args.unFade,
+            header: args.header,
+            headerGrey: args.headerGrey
+        }).modal_all-reviews
+            .all-reviews&attributes(attributes)
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    .d-flex.all-reviews__product
+                        .order-1.order-md-0.all-reviews__product-image
+                            .all-reviews__image
+                                +img({ path: './images/review/review.jpg' })
+                        .d-flex.flex-column.all-reviews__product-text
+                            .all-reviews__product-title!= args.title
+                            .d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center.justify-content-between
+                                .d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center
+                                    .all-reviews__product-info Общий рейтинг из 20 отзывов
+                                    .d-flex.align-items-center.all-reviews__rating
+                                        .all-reviews__rating-value= `${rate / args.data.length}`
+                                        +rating-star({
+                                            rate: `${rate / args.data.length}`
+                                        }).all-reviews__rating-star
+                                +sorting({items: data.sortingList})
+
+                .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-13
+                    each item in args.data
+                        +review({
+                            rating: item.rating,
+                            name: item.name,
+                            date: item.date,
+                            title: item.title,
+                            review: item.review,
+                            justifyBetween: true,
+                            smallIcons: true
+                        }).all-reviews__item

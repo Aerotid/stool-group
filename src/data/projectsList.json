@@ -1,0 +1,32 @@
+[
+    {
+        "text": "Мебель для диджитал-агенства Today",
+        "location": "Москва",
+        "img": "./images/projects/1.jpg"
+    },
+    {
+        "text": "Мебель для диджитал-агенства Today",
+        "location": "Москва",
+        "img": "./images/projects/2.jpg"
+    },
+    {
+        "text": "Мебель для диджитал-агенства Today",
+        "location": "Москва",
+        "img": "../../pages/projects/images/1.jpg"
+    },
+    {
+        "text": "Ресторан-пивоварня «Обломов»",
+        "location": "Санкт-Петербург",
+        "img": "../../pages/projects/images/2.jpg"
+    },
+    {
+        "text": "Мебель для диджитал-агенства Today",
+        "location": "Москва",
+        "img": "../../pages/projects/images/3.jpg"
+    },
+    {
+        "text": "Мебель для диджитал-агенства Today",
+        "location": "Москва",
+        "img": "../../pages/projects/images/4.jpg"
+    }
+]

@@ -1,0 +1,59 @@
+.counter {
+  $root: &;
+
+  display: flex;
+
+  &__btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    position: relative;
+    background-color: $color-5;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      background-color: $color-4;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      display: none;
+      width: 8px;
+      border-top: medium solid black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+
+    &_more {
+      &::before {
+        display: block;
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      &::after {
+        display: block;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &_low {
+      &::after {
+        display: block;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__value {
+    margin: 0 25px;
+    @include font-5;
+    border: none;
+    outline: none;
+    max-width: 2em;
+    text-align: center;
+    background: transparent;
+  }
+}

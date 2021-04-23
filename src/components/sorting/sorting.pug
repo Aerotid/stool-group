@@ -1,0 +1,15 @@
+include ../../components/select/select
+include ../../components/spoiler/spoiler
+
+mixin sorting(args)
+    .sorting&attributes(attributes)(class= args.favoriteType ? 'sorting_favorite' : null)
+        +spoiler({
+            title: args.title ? args.title : 'Цена по возрастанию',
+            arrow: true,
+            collapseClass:'spoiler_sorting-collapse',
+        }, false, 'spoilerSorting').sorting__spoiler.spoiler_sorting
+            ul.sorting__list
+                each item, i in args.items
+                    li.sorting__list-item
+                        a(href="#" rel="nofollow" class= (i === 0) ? '_active' : false).sorting__list-item-link.cm-ajax!= item.text
+

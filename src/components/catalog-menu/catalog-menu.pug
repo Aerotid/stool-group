@@ -1,0 +1,8 @@
+mixin catalog-menu(args)
+    .catalog-menu&attributes(attributes)
+        each item in args.items
+            a.catalog-menu__item(href= args.href ? args.href: '#' data-color!=item.color)
+                span!= item.linkText
+                .catalog-menu__item-wrapper
+                    +img({ path: item.image }).catalog-menu__item-img
+

@@ -1,0 +1,31 @@
+.button-close {
+    $root: &;
+    position: absolute;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+
+    &:hover, &:focus, &:active {
+        &::before, &::after {
+            background-color: $color-1;
+        }
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 14px;
+        background-color: $color-3;
+    }
+
+    &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}

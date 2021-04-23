@@ -1,0 +1,6 @@
+mixin bread-crumbs(args)
+    .bread-crumbs&attributes(attributes)
+        each link in args.links
+            a(href=link.href).bread-crumbs__link!= link.title
+            span.bread-crumbs__separator /
+        

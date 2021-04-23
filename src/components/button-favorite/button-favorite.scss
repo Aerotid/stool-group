@@ -1,0 +1,24 @@
+.button-favorite {
+    display: inline-block;
+    fill: none;
+    stroke: $color-1;
+    stroke-width: 1.8;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: all .3s;
+
+    &:hover,
+    &.active {
+        fill: $color-1;
+        background-color: $color-4;
+    }
+
+    & > svg {
+        width: 16px;
+        height: 16px;
+        margin: 12px;
+    }
+}

@@ -1,0 +1,9 @@
+include  ../svg-block/svg-block
+
+mixin preloader(args)
+    .preloader&attributes(attributes)
+        +svg({ name: 'logo' }).preloader__logo.smooth-show
+        .preloader__progress-wrapper.smooth-show
+            .preloader__progress-bar
+            .preloader__progress-text Пожалуйста, подождите..
+        +svg-block.svg-block_preloader

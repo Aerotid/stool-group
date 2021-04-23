@@ -1,0 +1,8 @@
+mixin counter(args)
+    .counter&attributes(attributes)
+        .counter__btn.counter__btn_low
+        //- .counter__value!= args.val
+        input(type='text' value!= args.val disabled).counter__value
+        .counter__btn.counter__btn_more
+
+        

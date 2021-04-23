@@ -1,0 +1,108 @@
+$sandwich-line-height: 2px;
+$sandwich-line-gap: 5px;
+$sandwich-line-width: 18px;
+$sandwich-width: 18px;
+$sandwich-width-max: 80px;
+$sandwich-width-min: 18px;
+
+$sandwich-inner-height: 16px;
+
+.sandwich-btn {
+    $root: &;
+    cursor: pointer;
+    width: $sandwich-width;
+    height: $header-menu-height-mobile;
+    min-height: $sandwich-width-min;
+    min-width: $sandwich-width-min;
+    margin-left: calc(#{$col-width} * 0.4375);
+    //max-width: $sandwich-width-max;
+    //max-height: $sandwich-width-max;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    @include media-breakpoint-between(md, lg) {
+        margin-left: $col-width;
+    }
+
+    &__inner {
+        width: $sandwich-line-width;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        position: relative;
+
+        height: 14px;
+    }
+
+    &__line {
+        width: $sandwich-line-width;
+        border-top: $sandwich-line-height solid #000;
+        will-change: transform, top, bottom;
+        transition: transform 0.4s, transform-origin 0.4s, top 0.4s, bottom 0.4s;
+
+        position: absolute;
+        left: 0;
+
+        &_top {
+            top: 0;
+            transform: rotate(0);
+        }
+
+        &_middle {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &_bottom {
+            bottom: 0;
+            transform: rotate(0);
+        }
+
+
+    }
+
+    //.ie & {
+    //  #{$root}__line {
+    //    border-top-width: 2px;
+    //  }
+    //}
+
+    //&:hover {
+    //    #{$root}__line_middle {
+    //        width: 0;
+    //    }
+    //
+    //    #{$root}__line_top {
+    //        top: 50%;
+    //        transform: translateY(-50%) rotate(45deg);
+    //    }
+    //
+    //    #{$root}__line_bottom {
+    //        bottom: 50%;
+    //        transform: translateY(50%) rotate(-45deg);
+    //
+    //    }
+    //}
+
+    &_opened {
+        #{$root}__line_middle {
+            width: 0;
+        }
+
+        #{$root}__line_top {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        #{$root}__line_bottom {
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }
+    }
+}
+

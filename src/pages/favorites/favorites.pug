@@ -1,0 +1,27 @@
+extends ../../layout/layout
+include ../../components/sorting/sorting
+include ../../components/catalog/catalog
+include ../../components/favorites-counter/favorites-counter
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='favorites')
+            .row.offset-top-140
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-2.favorites__title Избранное
+
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.d-flex.flex-column.flex-md-row.justify-content-between.favorites__counter
+                    +favorites-counter({
+                        title: 'Сохранено',
+                        productType: 'товаров'
+                    })
+                    +sorting({
+                        title: 'Добавлено недавно',
+                        items: data.sortingFavorites,
+                        favoriteType: true
+                    })
+
+            +catalog({
+                cards: data.productCards.catalog,
+                closeBtn: true
+            }).favorites__catalog
+

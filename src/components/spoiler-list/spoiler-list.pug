@@ -1,0 +1,9 @@
+include ../spoiler/spoiler
+
+mixin spoiler-list(args)
+    .col.spoiler-list&attributes(attributes)
+        if args.info
+            each item, i in args.info
+                +spoiler(item, i, args.name).spoiler-list__item
+        else
+            +spoiler(item)

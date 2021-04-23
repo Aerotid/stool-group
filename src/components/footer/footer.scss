@@ -1,0 +1,226 @@
+.footer {
+  $root: &;
+  background-color: $color-5;
+
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    width: calc(#{$col-width} * 4);
+    margin-bottom: 62px;
+
+    &-title {
+      @include font-10;
+      color: $color-1;
+      margin-bottom: 10px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+        margin-top: 38px;
+      }
+    }
+
+    &-info {
+      @include font-19;
+      line-height: 1.7;
+      margin-bottom: 34px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: calc(#{$col-width} * 9);
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    width: calc(#{$col-width} * 10);
+    margin-left: calc(#{$col-width} * 2);
+    @include font-12;
+    padding: 80px 0 70px;
+  }
+
+  &__phone {
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__email {
+    margin-bottom: 20px;
+  }
+
+  &__column {
+    width: calc(#{$col-width} * 3);
+
+    &-title {
+      display: block;
+      @include font-10;
+      margin-bottom: 12px;
+    }
+
+    &-sub {
+      &-title {
+        @include font-2;
+        color: $color-1;
+        margin-bottom: 10px;
+      }
+
+      &-info {
+        @include font-16;
+        color: $color-1;
+      }
+    }
+
+    &-info {
+      @include font-20;
+      line-height: 1.8;
+      margin-bottom: 26px;
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        margin-bottom: 8px;
+
+        a {
+          @include font-20;
+          color: $color-1;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $color-2;
+          }
+        }
+      }
+    }
+
+    &-contact {
+      width: calc(#{$col-width} * 5);
+      margin-left: calc(#{$col-width} * 2);
+
+      @include media-breakpoint-down(lg) {
+        width: calc(#{$col-width} * 9);
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 110px 0 50px;
+
+    &-copyright {
+      @include font-8;
+      width: calc(#{$col-width} * 3);
+      margin-left: calc(#{$col-width} * 2);
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-column {
+      @include font-17;
+      width: calc(#{$col-width} * 7);
+
+      a {
+        color: $color-2;
+        margin-right: calc(#{$col-width});
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 14px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+
+    &-only {
+      width: calc(#{$col-width} * 8);
+      justify-content: flex-end;
+
+      & > a {
+        @include font-15;
+        color: $color-1;
+
+        svg {
+          width: 52px;
+          height: 14px;
+          fill: $color-1;
+          margin-top: 2px;
+          transition: fill .3s ease;
+        }
+
+        &:hover, &:focus, &:active {
+          svg {
+            fill: $color-2;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(lg) {
+        justify-content: flex-start;
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 40px 0 40px;
+      margin-left: calc(#{$col-width} * 2);
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__socials {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+
+      a {
+        @include font-20;
+        color: $color-1;
+      }
+    }
+  }
+
+  //@include media-breakpoint-down(xs) {
+  //  width: calc(100% + #{$grid-side-offset} * 2);
+  //  margin-left: calc(#{$grid-side-offset} * -1);
+  //}
+}

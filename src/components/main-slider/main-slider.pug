@@ -1,0 +1,33 @@
+include ../cursor-custom/cursor-custom
+
+mixin main-slider(args)
+    -
+        args = args ? args : {};
+        if (args.type == 'banner') {
+            attributes.class = 'main-slider_banner';
+        } else if (args.type == 'collection') {
+            attributes.class = 'main-slider_collection';
+        }
+    .main-slider&attributes(attributes)
+        +cursor-custom
+        .swiper-container.main-slider__swiper-container
+            .swiper-wrapper.main-slider__swiper-wrapper
+                each item in args.data
+                    .swiper-slide.main-slider__slide(data-title=item.anchor)
+                        .main-slider__wrapper
+                            .main-slider__bg-wrapper
+                                +img({ path: item.img, lazy: false }).main-slider__bg(data-object-fit='cover')
+                            .main-slider__top-space
+                            .main-slider__row
+                                if item.text
+                                    .main-slider__text!=item.text
+                                if item.title
+                                    h3.main-slider__title!=item.title
+                                .main-slider__link
+                                    a(href="#").main-slider__more Подробнее
+                            .main-slider__bottom-space
+                            if (args.pagination)
+                                .main-slider__bottom
+                                    .main-slider__anchor!=item.anchor
+        if (args.pagination)
+            .swiper-pagination.main-slider__swiper-pagination

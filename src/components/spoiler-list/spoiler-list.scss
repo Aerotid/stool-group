@@ -1,0 +1,13 @@
+.spoiler-list {
+
+  &_construct {
+    margin-bottom: 124px;
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    &_construct {
+      margin-bottom: 6vh;
+    }
+  }
+}

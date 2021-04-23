@@ -1,0 +1,88 @@
+.header-dropdown {
+    $root: &;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    width: 100vw;
+    background-color: $color-4;
+    transform: translateY(0);
+    transition: transform .5s ease;
+    transition-delay: .9s;
+
+    &__wrapper {
+        display: flex;
+        //align-items: baseline;
+        height: 90px;
+        padding: 20px 0;
+        margin-left: calc(#{$col-width} * 4);
+        box-sizing: content-box;
+    }
+
+    &__title, &__list {
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+
+    &__title {
+        width: calc(#{$col-width} * 3);
+        @include font-27;
+        line-height: 1.33;
+        color: $color-1;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        //margin: 0 0 0 $col-width;
+        padding: 0;
+        width: calc(#{$col-width} * 16);
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: calc(#{$col-width} * 0.7875);
+        font-size: 0;
+        transition-duration: 0.5s;
+        cursor: pointer;
+
+        &:focus, &:hover, &:active {
+
+            & > a {
+                font-family: Gilroy-Bold,sans-serif;
+            }
+        }
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: calc(0 - #{$col-width} * 0.4125);
+            width: 3px;
+            height: 3px;
+            background-color: $color-1;
+            transform: translateY(-50%);
+        }
+
+        & > a {
+            display: inline-block;
+            //padding: 28px 0;
+            @include font-26;
+            line-height: 1.5;
+            text-align: center;
+            color: $color-1;
+
+            &::before {
+                display: block;
+                content: attr(data-title);
+                font-family: Gilroy-Bold, sans-serif;
+                height: 0;
+                overflow: hidden;
+                visibility: hidden;
+            }
+        }
+    }
+}

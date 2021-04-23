@@ -1,0 +1,128 @@
+.filters-checkbox {
+    $root: &;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    @include font-17;
+    margin-bottom: 0.5rem;
+
+    &__info {
+        display: flex;
+        width: 100%;
+        order: 1;
+        color: rgba($color-1, 0.7);
+
+        &-title {
+            margin-right: 5px;
+        }
+
+        &#{$root}__info-left {
+            margin-left: 24px;
+        }
+    }
+
+    &__checkbox {
+        order: 2;
+        //position: relative;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        opacity: 0;
+
+        &:checked ~ .filters-checkbox__checkbox-emulator {
+            background-color: $color-1;
+            border-color: $color-1;
+            .filters-checkbox__checkbox-emulator-icon {
+                opacity: 1;
+            }
+        }
+
+        &:checked ~ .filters-checkbox__info {
+            color: $color-1;
+        }
+
+    }
+
+    &__checkbox-emulator {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        right: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 3px;
+        border: 1px solid $color-3;
+
+        @include media-breakpoint-down(sm) {
+            width: 16px;
+            height: 16px;
+        }
+
+        &-icon {
+            width: 10px;
+            height: 7px;
+            opacity: 0;
+        }
+
+        &.filters-checkbox__checkbox-emulator-left {
+            left: 0 !important;
+        }
+    }
+
+    &.disabled {
+        opacity: 0.6;
+
+        .filters-checkbox__checkbox-emulator {
+            cursor: auto;
+        }
+    }
+
+    &_argeemen {
+        border-radius: 3px;
+        //border: 1px solid $color-3;
+        background-color: rgba($color-5, 0.5);
+        padding-left: #{$col-width};
+        @include font-24;
+        a {
+            @include font-2;
+        }
+
+        @include media-breakpoint-down(lg) {
+            padding-left:  50px;
+        }
+
+        .filters-checkbox__checkbox-emulator {
+            right: auto;
+            left: calc(#{$col-width} / 2);
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            @include media-breakpoint-down(lg) {
+                left: 25px;
+            }
+        }
+        .filters-checkbox__info {
+
+            @include media-breakpoint-up(md) {
+                padding: 20px 25px;
+                padding-right: calc(#{$col-width} * 1.5);
+                border-left: 1px solid $color-3;
+            }
+            @include media-breakpoint-down(sm) {
+                padding: 15px 15px 15px 4px;
+            }
+
+        }
+        .filters-checkbox__info-title {
+            margin-right: 0;
+        }
+
+
+    }
+}

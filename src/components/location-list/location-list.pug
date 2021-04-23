@@ -1,0 +1,6 @@
+include ../../components/location-item/location-item
+
+mixin location-list(args)
+    .location-list&attributes(attributes)
+        each locationItem in args.data
+            +location-item(locationItem)

@@ -1,0 +1,36 @@
+.button {
+    $root: &;
+    display: inline-block;
+    min-width: 120px;
+    border-radius: 80px;
+    background-color: rgba($color-5, .5);
+    border: none;
+    text-align: center;
+    box-shadow: none;
+    padding: 18px 28px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &__title {
+        @include font-2;
+        color: $color-1;
+    }
+
+    &:hover {
+        background-color: $color-4;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
+
+        &__title {
+            color: $color-1;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 10px 24px;
+    }
+}

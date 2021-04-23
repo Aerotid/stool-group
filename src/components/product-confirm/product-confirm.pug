@@ -1,0 +1,18 @@
+include ../../components/product-view-confirm/product-view-confirm
+
+mixin product-confirm(args)
+    .product-confirm&attributes(attributes)
+        .product-confirm__content
+            .product-confirm__table
+                .product-confirm__head
+                    each title in args.titles
+                        .product-confirm__title!= title
+                each item in args.items
+                    +product-view-confirm(item).product-confirm__content-item
+
+                .product-confirm__delivery
+                    .product-confirm__delivery-info!=args.deliverInfo
+                    .product-confirm__delivery-cost!=args.deliverCost
+            .product-confirm__total
+                .product-confirm__tota-info!= args.totalInfo
+                .product-confirm__total-cost!= args.totalCost

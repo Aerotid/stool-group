@@ -1,0 +1,39 @@
+include ../../components/profile-dashboard/profile-dashboard
+include ../../components/orders-table/orders-table
+include ../../components/button/button
+
+mixin orders(args)
+    .orders&attributes(attributes)
+        .row.offset-modal-top
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-2 Мои заказы
+
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.d-none.d-md-block
+                +profile-dashboard({data: data.profileDashboard}).orders__dashboard
+
+        .row
+            +orders-table({
+                titles: [
+                    {
+                        title: 'Номер заказа',
+                        class: 'order-1 order-md-0'
+                    },
+                    {
+                        title: 'Статус'
+                    },
+                    {
+                        title: 'Позиции',
+                        class: 'd-none d-md-block'
+                    },
+                    {
+                        title: 'Сумма',
+                        class: 'd-none d-md-block'
+                    }
+                    ],
+                data: data.orders
+            }).offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14
+
+        .row
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.d-flex.justify-content-end
+                +button({
+                    title: 'Очистить историю'
+                }).orders__button

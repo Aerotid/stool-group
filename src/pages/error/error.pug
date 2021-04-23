@@ -1,0 +1,10 @@
+extends ../../layout/layout
+include  ../../components/svg-block/svg-block
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='error')
+            .error__container
+                h2.error__title Страница не найдена
+                p.tp-404 404
+                a(href='/').link-content.error__link Перейти на главную
+            +svg-block

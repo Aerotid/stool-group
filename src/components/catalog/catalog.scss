@@ -1,0 +1,42 @@
+.catalog {
+    $root: &;
+    //position: relative;
+    //z-index: 0;
+
+    margin-bottom: 150px;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 15px;
+
+        @include media-breakpoint-between(md, lg) {
+            justify-content: space-between;
+        }
+    }
+
+    &__product-card {
+        margin-bottom: 53px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 0;
+
+            .product-card__img-space {
+                padding-top: 212px;
+            }
+
+            .product-card__hidden {
+                display: none;
+            }
+
+            .product-card_catalog:nth-child(n+3) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+}

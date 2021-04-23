@@ -1,0 +1,10 @@
+.product {
+
+    &__info {
+        margin-bottom: 82px;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 110px;
+        }
+    }
+}

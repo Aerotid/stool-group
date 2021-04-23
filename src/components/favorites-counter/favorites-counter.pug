@@ -1,0 +1,9 @@
+mixin favorites-counter(args)
+    .favorites-counter.d-flex.align-items-center&attributes(attributes)
+        .d-flex.align-items-center.favorites-counter__counter
+            .favorites-counter__title!= args.title
+            .favorites-counter__count
+            .favorites-counter__product!= args.productType
+        .d-flex.align-items-center.favorites-counter__clear
+            .favorites-counter__clear-text Очистить список
+            .product-filters__select-reset.favorites-counter__reset

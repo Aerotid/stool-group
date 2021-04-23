@@ -1,0 +1,45 @@
+include ../filters-radio/filters-radio
+include ../compare-slider/compare-slider
+include ../table/table
+
+mixin compare-block(args)
+    .compare-block&attributes(attributes)
+        .row.compare-block__row
+            .offset-2.offset-md-1.offset-xl-3.col-13.col-md-5.col-xl-3.order-2.order-md-0
+                .compare-block__filters
+                    +filters-radio({
+                        title: "Показывать все характеристики",
+                        checked: true,
+                        disabled: false
+                    })
+                    +filters-radio({
+                        title: "Показывать только похожие",
+                        disabled: false
+                    })
+                    +filters-radio({
+                        title: "Показывать только различия",
+                        disabled: false
+                    })
+            .offset-2.offset-md-1.offset-xl-2.col-20.col-md-16.col-xl-13.order-1.order-md-0
+                .compare-block__compare-slider
+                    +compare-slider({ data: args.cards })
+        each item, index in args.tables
+            section.compare-block__section
+                .row
+                    .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.compare-block__title!=item.tSection
+                .row.compare-block__tables
+                    .offset-md-1.offset-xl-3.col-md-6.col-xl-5.d-none.d-md-block
+                        +table({
+                            data: item.tHead,
+                            title: true
+                        }).compare-block__table-head
+                    .offset-2.offset-md-0.col-20.col-md-16.col-lg-16.col-xl-13
+                        +compare-slider({
+                            data: item.slides,
+                            dataTitle: item.tHead,
+                            table: true
+                        })
+        .row
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.d-flex.justify-content-start.justify-content-md-end
+                .compare-block__button-clear
+                    .compare-block__button-clear-text Очистить список

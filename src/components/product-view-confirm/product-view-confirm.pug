@@ -1,0 +1,13 @@
+mixin product-view-confirm(args)
+    .product-view-confirm&attributes(attributes)
+        +img({path: args.image}).product-view-confirm__img
+        .product-view-confirm__wrapper
+            a(href="#").product-view-confirm__descr.product-view-confirm__wrapper-item!= args.descr
+
+            .product-view-confirm__wrapper-item.product-view-confirm__article!=args.article
+            .product-view-confirm__wrapper-item.product-view-confirm__cost!=args.cost
+            .product-view-confirm__wrapper-item.product-view-confirm__quantity!=args.quantity
+            .product-view-confirm__wrapper-item.product-view-confirm__total-cost!=args.totalCost
+
+
+

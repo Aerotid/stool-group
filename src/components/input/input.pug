@@ -1,0 +1,41 @@
+mixin input(args)
+    .input&attributes(attributes)(class="ty-control-group")
+        label(
+            for=args.id
+            class= `ty-control-group__title ${args && args.classLabel ? args.classLabel : ''} ${args && args.required ? 'cm-required': ''}`
+        ).input__label
+            if(args.type === 'tel')
+                #{(args && args.tagName) ? args.tagName : 'input'}(
+                type=args.type ? args.type : false
+                id=args.id
+                data-inputmask="'mask': '+79999999999', 'clearIncomplete': 'true'"
+                maxlength="12"
+                x-autocompletetype="phone-full"
+                name=`user_data[${args.id}]`
+                value= args && args.val ? args.val : ""
+                class=`ty-input-text ab__mpn ${args && args.classInput ? args.classInput : ''}`
+                placeholder= args.place
+                required= args && args.required ? 'required' : false
+                autocomplete= args && args.autocomplete ? "off" : false
+                aria-autocomplete= args && args.ariaAutocomplete ? args.ariaAutocomplete : false
+                ).input__input
+            else
+                #{(args && args.tagName) ? args.tagName : 'input'}(
+                    type=args.type ? args.type : false
+                    id=args.id
+                    name=`user_data[${args.id}]`
+                    value= args && args.val ? args.val : ""
+                    class=`ty-input-text ${args && args.classInput ? args.classInput : ''}`
+                    placeholder= args.place
+                    required= args && args.required ? 'required': false
+                    autocomplete= args && args.autocomplete ? "off" : false
+                    aria-autocomplete= args && args.ariaAutocomplete ? args.ariaAutocomplete : false
+                ).input__input
+                if args.type === 'password'
+                    +svg({ name: 'eye' }).input__show-icon
+                    +svg({ name: 'eye-close' }).d-none.input__hidden-icon
+        if args.href
+            a(href= args.href).input__link!= args.link
+
+            if(args && args.required)
+                span.input__label-requir(id="elm_21_error_message" class="help-inline") обязательное поле

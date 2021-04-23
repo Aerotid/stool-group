@@ -1,0 +1,4 @@
+mixin canvas-indicate(args)
+    .canvas-indicate&attributes(attributes)(data-color=args.color class= args.type === 'button' ? 'canvas-indicate_button' : false)
+        .canvas-indicate__title!= args.title
+        canvas.canvas-indicate__canvas(resize)

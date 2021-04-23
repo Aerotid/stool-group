@@ -1,0 +1,69 @@
+include ../../components/input/input
+include ../../components/button/button
+include ../../components/filters-checkbox/filters-checkbox
+include ../../components/back-btn/back-btn
+include ../../components/select/select
+
+mixin flexible-form(args)
+    -
+        args = args ? args : {};
+        if (args.halfInput) {
+            attributes.class = 'flexible-form__half-input'
+        } else if (args.halfWidth) {
+            attributes.class = 'd-flex justify-content-between flexible-form__half-width'
+        }
+    form(name= args.nameForm ? args.nameForm : 'popup148_form' action=args.action method='get').flexible-form&attributes(attributes).cm-processed-form
+        each item in args.data
+            .flexible-form__item
+                if item.title
+                    .flexible-form__title!= item.title
+                .flexible-form__content(class= args.halfInput ? 'd-flex justify-content-between': null)
+                    each child in item.content
+                        if child.options
+                            +select({
+                                placeholder: child.placeholder,
+                                options: child.options
+                            }).select_cart.flexible-form__select
+                        else
+                            +input(child).flexible-form__input
+
+
+        if args.agreement
+            .flexible-form__agreement Нажимая на кнопку, вы принимаете условия
+                a(href='#')  Политики
+                |  и даете согласие  на
+                a(href='#')  Обработку персональных данных
+
+        if args.passwordAgreement
+            .flexible-form__agreement(class= args.btnBack ? 'flexible-form__agreement-half' : null) Вскоре после нажатия кнопки «Отправить» вы получите электронное письмо с инструкциями по созданию нового пароля.
+
+        if args.btnText
+            .d-flex.align-items-start.align-items-md-center.w-100.flexible-form__bottom(class= args.btnBack ? 'justify-content-between' : 'flex-column flex-md-row')
+                if args.mobileRemember
+                    label(for='remember_me_popup').ty-login__remember-me-label.d-flex.d-md-none.align-items-center.flexible-form__remember
+                        +filters-checkbox({
+                            title: 'Запомнить',
+                            value: 'Y',
+                            invert: true
+                        })
+                +button({
+                    tagName: 'button',
+                    title: args.btnText
+                }).flexible-form__button
+                if args.btnCancel
+                    a(href='#').d-none.d-md-block.flexible-form__cancel.link-content!= args.btnCancel
+                if args.forgotPassword
+                    a(href='#').flexible-form__restore Забыли пароль?
+                if args.btnBack
+                    +back-btn({ text: args.btnBack })
+
+        if args.loginWith
+            .flexible-form__social
+                .flexible-form__social-text Вы можете войти с помощью
+                .d-flex
+                    .flexible-form__icon
+                        +svg({ name: 'facebook' })
+                    .flexible-form__icon
+                        +svg({name: 'vk'})
+                    .flexible-form__icon
+                        +svg({name: 'google'})

@@ -1,0 +1,255 @@
+.main-slider {
+    $root: &;
+    position: relative;
+    cursor: none;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+        cursor: grab;
+    }
+
+    &_banner {
+        margin-bottom: $col-width;
+
+        @include media-breakpoint-between(md, lg) {
+            margin-top: $col-width;
+        }
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: calc(#{$col-width} * 2);
+        }
+
+        #{$root}__swiper-pagination {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: calc(#{$col-width} * 2);
+            height: 110px;
+            border-right: 1px solid rgba(255, 255, 255, .3);
+            color: #fff;
+
+            @include media-breakpoint-down(sm) {
+                width: calc(#{$col-width} * 3.647);
+            }
+
+            &_current {
+                position: relative;
+                @include font-13;
+                line-height: 1;
+                padding-bottom: 10px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 12px;
+                    height: 0;
+                    border-bottom: 2px solid #fff;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &_total {
+                padding-top: 10px;
+                @include font-14;
+                line-height: 1;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &_collection {
+        height: 100%;
+        margin-right: calc(#{$col-width} / 2);
+
+        @include media-breakpoint-down(lg) {
+            margin-right: 0;
+        }
+
+        #{$root}__wrapper {
+            //padding: 335px 0 calc(315px - (#{$cursor-offset} * 2));
+            display: flex;
+            flex-direction: column;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: auto;
+            height: 100%;
+            padding: 0;
+
+            @include media-breakpoint-between(md, lg) {
+                height: 500px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                height: 400px;
+            }
+        }
+
+        #{$root}__top-space {
+            flex-grow: 5;
+            flex-shrink: 0;
+            flex-basis: 1px;
+        }
+
+        #{$root}__bottom-space {
+            flex-grow: 4;
+            flex-shrink: 0;
+            flex-basis: 1px;
+        }
+
+        #{$root}__bg-wrapper {
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                opacity: .1;
+            }
+        }
+    }
+
+    &__swiper-container {
+        height: inherit;
+    }
+
+    &__slide {
+        display: block;
+        height: auto;
+    }
+    &__wrapper {
+        position: relative;
+        display: block;
+        height: 100%;
+        padding: $slider-wrapper-offset-top 0 $slider-wrapper-offset-bottom;
+
+        @include media-breakpoint-down(sm) {
+            //padding: 100px 0 179px;
+        }
+    }
+
+    &__bg-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__row {
+        position: relative;
+        padding-left: calc(#{$col-width} * 2);
+        width: calc(#{$col-width} * 8);
+
+        @include media-breakpoint-between(md, lg) {
+            width: calc(#{$col-width} * 16);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-left: $inner-offset-left;
+            width: calc(100% - #{$inner-offset-left});
+        }
+    }
+
+    &__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 110px;
+        padding-left: calc(#{$col-width} * 3);
+        border-top: 1px solid rgba(255, 255, 255, .3);
+
+        @include media-breakpoint-down(sm) {
+            padding-left: calc(#{$col-width} * 5.18);
+        }
+    }
+
+    &__text {
+        margin-bottom: 27px;
+        @include font-6;
+        line-height: 1.4;
+        color: #fff;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 22px;
+            line-height: 2;
+        }
+    }
+
+    &__title {
+        margin-bottom: 32px;
+        @include font-7;
+        line-height: 1.06;
+        color: #fff;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 42px;
+            line-height: 1.125;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: $cursor-offset;
+        transform: translate(-#{$cursor-offset}, -#{$cursor-offset});
+
+        @include media-breakpoint-down(sm) {
+            padding: 0;
+            transform: none;
+        }
+
+        &:focus, &:hover, &:active {
+            #{$root}__more {
+                background-color: transparent;
+                color: #fff;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__more {
+        display: inline-block;
+        padding: 11.5px 23px;
+        @include font-8;
+        line-height: 1.215;
+        color: $color-2;
+        background-color: #fff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+        border-radius: 20px;
+        cursor: none;
+        transition: all .1s;
+    }
+
+    &__anchor {
+        @include font-10;
+        line-height: 1.4;
+        color: #fff;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 20px;
+        }
+    }
+}

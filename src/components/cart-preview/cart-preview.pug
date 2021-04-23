@@ -1,0 +1,15 @@
+include ../../components/product-preview/product-preview
+include ../../components/promocode/promocode
+
+mixin cart-preview(args)
+    .cart-preview&attributes(attributes)
+        .cart-preview__top
+            .cart-preview__title Ваша корзина
+            +promocode({place: 'Есть промокод?'}).cart-preview__promocode
+        form(metod="post" action="/").cart-preview__body
+            each prodPrev in args.prodPrevs
+                +product-preview(prodPrev)
+            .cart-preview__bottom
+                a(href="#").cart-preview__btn-order Оформить заказ
+                .cart-preview__cost Всего:
+                    span.cart-preview__cost-total 15 587 Р

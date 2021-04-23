@@ -1,0 +1,75 @@
+.scroll-up {
+    $root: &;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    @include font-8;
+    color: #fff;
+    cursor: pointer;
+
+    &_scroll {
+        margin-top: 115px;
+        margin-bottom: 105px;
+        color: $color-1;
+
+        &:hover {
+
+            #{$root}__canvas {
+                opacity: 1;
+            }
+        }
+
+        //#{$root}__canvas {
+        //    opacity: .7;
+        //}
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 21px;
+            margin-bottom: 34px;
+        }
+    }
+
+    &_button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__canvas {
+        //position: absolute;
+        //top: 0;
+        //left: 0;
+        width: 100%;
+        height: 100%;
+        //z-index: -1;
+        //opacity: 1;
+        opacity: .2;
+        transition: opacity 0.3s;
+
+        @include media-breakpoint-down(lg) {
+            opacity: 1;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+    }
+
+    &__arrow {
+        margin-bottom: 5px;
+        width: 8px;
+        height: 15px;
+        transform: rotate(90deg);
+        stroke: $color-1;
+        stroke-width: 2px;
+    }
+}

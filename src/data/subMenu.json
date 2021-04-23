@@ -1,0 +1,161 @@
+{
+    "left": [
+        {
+            "anchor": "Стулья",
+            "href": "/catalog.html",
+            "subsections": [
+                {
+                    "anchor": "Стулья",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Кресла",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Барные стулья",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Табуреты",
+                    "href": "#"
+                }
+            ]
+        },
+        {
+            "anchor": "Столы",
+            "href": "#",
+            "subsections": [
+                {
+                    "anchor": "Обеденные",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Барные",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Журнальные",
+                    "href": "#"
+                }
+            ]
+        },
+        {
+            "anchor": "Компьютерные кресла",
+            "href": "#",
+            "selected": true,
+            "subsections": [
+                {
+                    "anchor": "Игровые кресла",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Кресла руководителя",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Офисные кресла",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Офисные стулья",
+                    "href": "#"
+                }
+            ]
+        },
+        {
+            "anchor": "Банкетная мебель",
+            "href": "#",
+            "subsections": [
+                {
+                    "anchor": "Банкетные складные стулья",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Банкетные стопируемые стулья",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Банкетные столы для ресторана",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Складные столы для кейтеринга",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Скамейки",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Текстиль",
+                    "href": "#"
+                }
+            ]
+        },
+        {
+            "anchor": "Другие товары",
+            "href": "#",
+            "subsections": [
+                {
+                    "anchor": "Консоли",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Банкетки",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Пуфы",
+                    "href": "#"
+                }
+            ]
+        }
+    ],
+    "right": [
+        {
+            "anchor": "Коллекции",
+            "href": "/collections.html",
+            "subsections": [
+                {
+                    "anchor": "Eames",
+                    "href": "/collection.html"
+                },
+                {
+                    "anchor": "Tolix",
+                    "href": "/collection.html"
+                },
+                {
+                    "anchor": "Дизайнерская коллекция",
+                    "href": "/collection.html"
+                },
+                {
+                    "anchor": "Мягкие кресла",
+                    "href": "/collection.html"
+                },
+                {
+                    "anchor": "Малайзия",
+                    "href": "/collection.html"
+                }
+            ]
+        },
+        {
+            "anchor": "Скидки",
+            "href": "#",
+            "subsections": [
+                {
+                    "anchor": "Распродажа",
+                    "href": "#"
+                },
+                {
+                    "anchor": "Уцененные товары",
+                    "href": "#"
+                }
+            ]
+        },
+        {
+            "anchor": "Новинки",
+            "href": "#"
+        }
+    ]
+}

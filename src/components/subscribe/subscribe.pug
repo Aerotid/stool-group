@@ -1,0 +1,4 @@
+mixin subscribe(args)
+    form.subscribe&attributes(attributes)(action='/subscribe.json' method='GET')
+        input(placeholder=args.place).subscribe__input
+        button.subscribe__button!= args.btn

@@ -1,0 +1,21 @@
+[
+  {
+    "image": "../../pages/product/images/collections-yellow.png",
+    "descr": "Стул Frankfurt  <br/> белый",
+    "costItem": "3 299 Р",
+    "itemCount": "2",
+    "costTotal": "6 598 Р"
+  },
+  {
+    "image": "../../pages/product/images/collections-black.png",
+    "descr": "Стул Eames DSW <br/>  желтый",
+    "itemCount": "1",
+    "costTotal": "1 990 Р"
+  },
+  {
+    "image": "../../pages/product/images/collections-white.png",
+    "descr": "Кресло Libra Soft",
+    "itemCount": "1",
+    "costTotal": "6 999 Р"
+  }
+]

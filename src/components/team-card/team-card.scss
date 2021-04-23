@@ -1,0 +1,63 @@
+.team-card {
+    $root: &;
+
+    &__top {
+        position: relative;
+        padding-top: 140%;
+        min-height: 150px;
+
+        &-place {
+            position: absolute;
+            top:0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            &-inner {
+                &> div:last-of-type {
+                    text-align: right;
+                    @include font-15;
+                }
+                .logo {
+                    @include media-breakpoint-down(sm) {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top:0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__descr {
+        @include font-24;
+    }
+    &__name {
+        @include font-25;
+        margin-top: 10px;
+    }
+
+    &__bottom {
+        padding-top: 35px;
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 10px;
+        }
+
+
+    }
+}

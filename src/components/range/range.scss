@@ -1,0 +1,162 @@
+.range {
+
+  $root: &;
+
+  &__identify-val {
+    &_min {
+
+    }
+
+    &_max {
+
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+
+    @include font-16;
+
+    &-selected {
+      border: none;
+      background-color: transparent;
+      outline: transparent;
+      padding: 0;
+      margin-left: 5px;
+
+      &:active {
+        outline: transparent;
+      }
+
+    }
+
+    span:not(.ty-rub) {
+      margin-left: 5px;
+    }
+
+    span {
+      font-family: Gilroy-Medium, sans-serif;
+    }
+  }
+
+  &__input-label {
+    margin: 0;
+  }
+
+  &__identify {
+    position: relative;
+    height: 1px;
+    border: none;
+    background: $color-5;
+    @include font-15;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__identify-wrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__identify-val_selected-container {
+
+  }
+
+  &__identify-val_selected {
+    border: none;
+    background: transparent;
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 27px;
+  }
+
+  &__identify-slect {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    height: 2px;
+    background-color: black;
+
+    //временные стили
+    left: 20%;
+    width: 80%;
+
+  }
+
+  &__identify-btn {
+    position: absolute;
+    z-index: 2;
+    border-radius: 100%;
+    height: 12px;
+    width: 12px;
+    top: -4px;
+    cursor: pointer;
+    border: 2px solid black;
+    transform: translateX(-100%);
+    background-color: white;
+
+    &:hover {
+      background-color: black;
+    }
+
+    &_low {
+      //background-color: black;
+
+      //временные стили
+      //left: 20%;
+    }
+
+    &_up {
+      //временные стили
+      //left: 100%;
+    }
+  }
+
+  &__clear {
+    width: 8px;
+    height: 8px;
+    position: relative;
+    margin-right: 10px;
+
+    &::after, &::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  .ty-icon-cancel-circle {
+
+  }
+
+  .hidden {
+    display: none;
+    visibility: hidden;
+  }
+
+
+  .spoiler__title {
+    font-size: 14px;
+  }
+
+}

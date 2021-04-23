@@ -1,0 +1,32 @@
+include ../../components/button-buy/button-buy
+include ../../components/video-block/video-block
+
+mixin product-slider(args)
+    -
+        if (args.sliderScroll) {
+            attributes.class = 'product-slider__scroll'
+        }
+    .product-slider&attributes(attributes)
+        .swiper-container.product-slider__swiper-container
+            .swiper-wrapper.product-slider__swiper-wrapper
+                each item, i in args.data
+                    .swiper-slide.product-slider__slide.d-flex.flex-column.align-items-center
+                        .product-slider__wrapper
+                            if !item.video
+                                .product-slider__bg-wrapper
+                                    +img({ path: item.path }).product-slider__bg(data-toggle='modal', data-target='#scroll-gallery', data-object-fit='cover', data-image= i)
+                            else
+                                +video-block({
+                                    type: "inner",
+                                    path: item.path
+                                })
+                            if (args.pagination)
+                                .product-slider__pagination
+                        if (item.btnSlide)
+                            .product-slider__button
+                                +button-buy({
+                                    btnType: item.btnType,
+                                    text: item.text,
+                                    inStock: true,
+                                    icon: item.icon
+                                })

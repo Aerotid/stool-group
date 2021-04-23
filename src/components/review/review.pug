@@ -1,0 +1,15 @@
+mixin review(args)
+    .d-flex.review&attributes(attributes)(class= args.column ? 'review__column flex-column' : 'review__row')
+        .review__rating
+            +rating-star({
+                rate: args.rating,
+                justifyBetween: args.justifyBetween,
+                smallIcons: args.smallIcons
+            })
+        .review__review
+            .review__info!= `${args.name}, ${args.date}`
+            .review__title!= args.title
+            .review__content!= args.review
+
+            if args.more
+                a(href='#').review__more!= args.more

@@ -1,0 +1,58 @@
+{
+    "main": [
+        {
+            "img": "./images/collection-slider/1.jpg",
+            "title": "Мебель Eames",
+            "text": "",
+            "anchor": "Eames"
+        },
+        {
+            "img": "./images/collection-slider/2.jpg",
+            "title": "Мебель Tolix",
+            "text": "",
+            "anchor": "Tolix"
+        },
+        {
+            "img": "./images/collection-slider/3.jpg",
+            "title": "Дизайнерская коллекция",
+            "text": "",
+            "anchor": "Дизайнерская коллекция"
+        },
+        {
+            "img": "./images/collection-slider/4.jpg",
+            "title": "Мягкие стулья",
+            "text": "",
+            "anchor": "Мягкие стулья"
+        }
+    ],
+    "item": [
+        {
+            "title": "Стул Eames DSW",
+            "text": "Лаконичный дизайн, простота в&nbsp;уходе и&nbsp;универсальность&nbsp;&mdash; все это стул Eames DAW из&nbsp;коллекции Eames.",
+            "img": "./images/collection-item-slider/1.jpg",
+            "newPrice": "1 990",
+            "oldPrice": "3 099"
+        },
+        {
+            "title": "Cтул Tolix Wood",
+            "text": "Индустриальная классика для современного офиса, кафе, кухни, бара и продвинутого интерьера лофт.",
+            "img": "./images/collection-item-slider/2.jpg",
+            "newPrice": "2 350",
+            "oldPrice": "3 799"
+        },
+        {
+            "title": "Журнальный стол Арт Деко",
+            "text": "Этот небольшой предмет мебели делает помещение более уютным, завершенным и даже оригинальным.",
+            "img": "./images/collection-item-slider/3.jpg",
+            "newPrice": "24 999",
+            "oldPrice": ""
+        },
+        {
+            "title": "Стул Венера Вельвет",
+            "text": "Интересное сочетание современного дизайна  и вневременной мебельной классики.",
+            "img": "./images/collection-item-slider/4.jpg",
+            "newPrice": "8 499",
+            "oldPrice": ""
+        }
+    ]
+}

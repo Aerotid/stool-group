@@ -1,0 +1,26 @@
+[
+  {
+    "rowReverse": "",
+    "img": "./images/collections/1.jpg",
+    "imgSmall": "./images/collections/2.jpg",
+    "text": "Eames DSW",
+    "icon": "heart",
+    "btnType": 3
+  },
+  {
+    "rowReverse": true,
+    "img": "./images/collections/3.jpg",
+    "imgSmall": "./images/collections/4.jpg",
+    "text": "Eames DAW",
+    "icon": "heart",
+    "btnType": 1
+  },
+  {
+    "rowReverse": "",
+    "img": "./images/collections/5.jpg",
+    "imgSmall": "./images/collections/6.jpg",
+    "text": "Eames DSR",
+    "icon": "heart",
+    "btnType": 2
+  }
+]

@@ -1,0 +1,19 @@
+.button-compare {
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.07);
+    transition: all .3s;
+
+    &:hover,
+    &.active {
+        background-color: $color-4;
+        box-shadow: none;
+    }
+
+    & > svg {
+        width: 16px;
+        height: 16px;
+        margin: 12px;
+    }
+}

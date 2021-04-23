@@ -1,0 +1,21 @@
+mixin table(args)
+    table.table&attributes(attributes)
+        tbody.table__body
+            each row, index in args.data
+                if(args.requisites)
+                    tr
+                        th(scope='row')
+                            .table__text!= row.title
+                        td
+                            .table__text!= row.text
+                else
+                    if(args.title)
+                        tr
+                            th(class=row.different ? 'different': '' scope="row")
+                                .table__text(data-order=index)!= row.title
+                    else
+                        tr
+                            td
+                                noindex.d-block.d-md-none
+                                    .table__title!= args.dataTitle[index].title
+                                .table__text(data-order=index)!= row

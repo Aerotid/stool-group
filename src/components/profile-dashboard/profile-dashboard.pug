@@ -1,0 +1,18 @@
+mixin profile-dashboard(args)
+    .profile-dashboard.d-flex.align-items-center.justify-content-between&attributes(attributes)
+        .d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center.profile-dashboard__items
+            each item in args.data
+                a(href= item.href).d-flex.justify-content-between.justify-content-md-start.profile-dashboard__item!= item.title
+                    if item.count
+                        .d-flex.align-items-center.profile-dashboard__item-counter
+                            span.d-none.d-md-block (
+                            span= `${item.count}`
+                            span.d-none.d-md-block )
+                    else
+                        .d-block.d-md-none.profile-dashboard__item-icon
+                            +svg({ name: 'arrow-left-min' })
+            a(href='#').d-flex.d-md-none.justify-content-between.justify-content-md-start.profile-dashboard__item История заказов
+                .d-block.d-md-none.profile-dashboard__item-icon
+                    +svg({name: 'arrow-left-min'})
+        a(href='#').d-none.d-md-block.profile-dashboard__logout Выход
+            +svg({ name: 'logout' })

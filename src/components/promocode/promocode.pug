@@ -1,0 +1,8 @@
+mixin promocode(args)
+    form.promocode&attributes(attributes)(action='/' metod='POST')
+        label(for="coupon_field").promocode__label
+            .promocode__label-placeholder!=args.place
+            input(id="coupon_field" type='text').promocode__input
+
+        button.promocode__btn Применить
+        

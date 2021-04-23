@@ -1,0 +1,45 @@
+include ../button-favorite/button-favorite
+include ../button-buy/button-buy
+include ../button-close/button-close
+
+mixin compare-slider(args)
+    -
+        if (args.table)
+            attributes.class = 'compare-slider_table'
+        else
+            attributes.class = 'compare-slider_main'
+    .compare-slider&attributes(attributes)
+        if (args.table)
+            .swiper-container.compare-slider__swiper-container
+                .swiper-wrapper.compare-slider__swiper-wrapper
+                    each slide in args.data
+                        .swiper-slide.compare-slider__item
+                            +table({ data: slide, dataTitle: args.dataTitle }).compare-slider__table
+        else
+            .swiper-container.compare-slider__swiper-container
+                .swiper-wrapper.compare-slider__swiper-wrapper
+                    each item in args.data
+                        .swiper-slide.compare-slider__item
+                            .d-flex.flex-sm-row.flex-lg-column.flex-xl-row.compare-slider__wrapper
+                                +button-close.compare-slider__button-close
+                                .compare-slider__bg-wrapper
+                                    +img({ path: item.image }).compare-slider__image(data-object-fit='cover')
+                                .compare-slider__right
+                                    .compare-slider__title!=item.title
+                                    .compare-slider__color!=item.color
+                                    .compare-slider__bottom
+                                        .compare-slider__price
+                                            .compare-slider__new-price!= item.newPrice + ' Р'
+                                            if item.oldPrice
+                                                .compare-slider__old-price!= item.oldPrice + ' Р'
+                                        .compare-slider__buttons
+                                            +button-buy({
+                                                text: 'Купить',
+                                                icon: 'bag',
+                                                inStock: true
+                                            }).button-buy_min
+                                            +button-favorite
+            .compare-slider__navigation.compare-slider__navigation_prev
+                +svg({ name: 'arrow-left-min' })
+            .compare-slider__navigation.compare-slider__navigation_next
+                +svg({ name: 'arrow-left-min' })

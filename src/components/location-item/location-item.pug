@@ -1,0 +1,22 @@
+include ../button/button
+
+mixin location-item(args)
+    .location-item&attributes(attributes).d-flex.flex-column.flex-md-row.align-items-start.align-items-md-center
+        .d-flex.flex-column.location-item__text
+            .location-item__title= args.title
+            .location-item__type= args.type
+            .location-item__hidden
+                .location-item__modal-title=args.titleModal
+                if(args.distances)
+                    each distance, index in args.distances
+                        .location-item__distance(data-distance=index)
+                            .location-item__distance-title=distance.title
+                            .location-item__distance-text=distance.text
+        if (args.button)
+            +button({
+                tagName: 'a',
+                href: '#',
+                title: 'Как добраться',
+                dataTarget: 'location',
+                dataToggle: 'modal'
+            }).location-item__show-map(data-lat= args.lat data-lng= args.lng data-address= args.address)

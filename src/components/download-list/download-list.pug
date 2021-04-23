@@ -1,0 +1,7 @@
+mixin download-list(args)
+    .download-list&attributes(attributes)
+         each item in args.data
+             a(href=item.href).row.align-items-center.justify-content-between.download-list__item
+                 .download-list__item-title!= item.title
+                 .d-flex.align-items-center.download-list__item-file!= item.type + ', ' + item.size
+                     +svg({name: 'download-arrow'}).download-list__icon

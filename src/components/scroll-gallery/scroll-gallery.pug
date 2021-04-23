@@ -1,0 +1,19 @@
+include ../../components/modal/modal
+
+mixin scroll-gallery(args)
+    +modal({
+        id: 'scroll-gallery',
+        btnClose: args.btnClose,
+        unFade: args.unFade
+    }).modal-scroll
+        .scroll-gallery&attributes(attributes)
+            each item in args.data
+                .scroll-gallery__item
+                    if item.video
+                        +autoplay-video({
+                            autoplay: true,
+                            path: item.path,
+                            lazy: true
+                        })
+                    else
+                        +img({ path: item.path })

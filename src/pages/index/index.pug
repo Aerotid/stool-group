@@ -1,0 +1,97 @@
+extends ../../layout/layout
+include ../../components/main-slider/main-slider
+include ../../components/product-list/product-list
+include ../../components/product-card/product-card
+include ../../components/button-load/button-load
+include ../../components/slider-navigation-top/slider-navigation-top
+include ../../components/collection-slider/collection-slider
+include ../../components/project-list/project-list
+include ../../components/mobile-navigation/mobile-navigation
+include ../../components/instagram-list/instagram-list
+include ../../components/scroll-up/scroll-up
+include ../../components/spoiler-menu/spoiler-menu
+
+block content
+    main#barba-wrapper
+        .barba-container(data-namespace='index')
+            .row.offset-bottom-2
+                .offset-2.offset-md-1.col-20.col-md-22
+                    +main-slider({
+                      data: data.mainSlider,
+                      type: 'banner',
+                      pagination: true
+                    })
+            .row.offset-bottom-4
+                .offset-2.offset-md-1.offset-xl-8.col-20.col-md-11.col-xl-8.text-xl-center.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Лидеры продаж
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_product-list-0
+                    p.d-none.d-md-block.tp__p-2 Природа гамма-всплексов, а&nbsp;там действительно могли быть видны звезды, о&nbsp;чем свидетельствует Фукидид ищет метеорный дождь.
+            .row.overflow-hidden_mobile
+                .offset-2.offset-md-1.offset-xl-3.col-22.col-md-22.col-xl-18.offset-bottom-1
+                    +product-list({
+                        data: data.productCards.leaders,
+                        button: true,
+                        total: data.productCards.leaders.length
+                    })
+            .row
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-11.col-xl-8.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Коллекции
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_main-slider-collection
+            .row
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-20
+                    +slider-navigation-top({ data: data.collectionSlider.main })
+            .row.offset-bottom-1
+                .offset-2.offset-md-1.col-20.col-md-22.col-xl-15
+                    +main-slider({
+                        data: data.collectionSlider.main,
+                        type: 'collection',
+                        pagination: false
+                    })
+                .offset-2.offset-md-1.offset-xl-0.col-20.col-md-22.col-xl-7
+                    +collection-slider({ data: data.collectionSlider.item })
+            .row
+                .offset-2.offset-md-1.offset-xl-8.col-20.col-md-11.col-xl-8.text-xl-center.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Новинки
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_product-list-1
+                    p.d-none.d-md-block.tp__p-2 Земная группа формировалась ближе к&nbsp;Солнцу, однако засветка неба иллюстрирует нулевой меридиан.
+            .row.overflow-hidden_mobile
+                .offset-2.offset-md-1.offset-xl-3.col-22.col-md-22.col-xl-18.offset-bottom-1
+                    +product-list({
+                        data: data.productCards.recommendations,
+                        button: true,
+                        total: data.productCards.recommendations.length
+                    })
+            .row.offset-bottom-3
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-11.col-xl-8.d-flex.d-md-block.justify-content-between.justify-content-md-start
+                    h2.tp_h-2 Проекты
+                    +mobile-navigation.d-flex.d-md-none.mobile-navigation_project-list
+                    p.d-none.d-md-block.tp__p-2 Земная группа формировалась ближе к&nbsp;Солнцу, однако засветка неба иллюстрирует нулевой меридиан.
+                    a(href='/projects.html').d-none.d-md-block.tp-link Перейти к&nbsp;проектам
+            .row.offset-bottom-1
+                .offset-2.offset-md-1.col-20.col-md-22
+                    +project-list({ data: data.projectsList, limit: 'less' })
+            section
+                .row
+                    .offset-2.offset-md-1.offset-xl-0.col-20.col-md-22.col-xl-24.order-1.d-flex.justify-content-between.justify-content-xl-center
+                        h2.tp_h-2 Instagram
+                        +mobile-navigation.d-flex.d-md-none.mobile-navigation_instagram-list
+                    .offset-2.offset-md-1.offset-xl-8.col-20.col-md-11.col-xl-8.order-3.order-md-1.text-xl-center
+                        p.tp__p-2.offset-bottom-4 Добавь хэштэг #stool в Instagram, лучшие фотографии мы  опубликуем в своём профиле и на сайте
+                        a(href='#' target='_blank').instagram-link
+                            +svg({ name: 'insta' })
+                            span @stoolgroup.ru
+                            span 22300 подписчиков
+                    .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.order-2.order-md-1
+                        +instagram-list({ data: data.instagramList })
+            .row
+                .col.d-flex.justify-content-center
+                    +scroll-up({
+                        text: 'Наверх',
+                        type: 'scroll'
+                    })
+            .row
+                .col-20.col-md-18.col-xl-15.offset-2.offset-md-3.offset-xl-5
+                    +spoiler-menu({
+                        data: data.categories,
+                        name: 'category'
+                    })

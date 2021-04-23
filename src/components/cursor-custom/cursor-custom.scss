@@ -1,0 +1,52 @@
+.cursor-custom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+
+    @include media-breakpoint-down(lg) {
+        display: none;
+        pointer-events: auto;
+    }
+
+    &_small {
+        left: -25.5px;
+        top: -2.5px;
+        z-index: 3;
+        @include font-2;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &_canvas {
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        opacity: 0;
+        visibility: hidden;
+
+        &[resize] {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        width: 8px;
+        height: 15px;
+        transform: translate(-270%, -50%);
+        stroke: white;
+        stroke-width: 2px;
+
+        &_left {
+            left: 0;
+        }
+        &_right {
+            right: 0;
+            transform: translate(270%, -50%) rotate(180deg);
+        }
+    }
+}

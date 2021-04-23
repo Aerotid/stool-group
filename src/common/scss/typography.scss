@@ -1,0 +1,1047 @@
+@import "./fonts.scss";
+
+/* h1 */
+@mixin font-1 {
+    $fhd-base-size: 60px;
+    $tablet-base-size: $fhd-base-size * 0.6;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 38px;
+    }
+}
+
+@mixin font-2 {
+    $fhd-base-size: 14px;
+    $tablet-base-size: $fhd-base-size * 0.857;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+
+@mixin font-3 {
+    $fhd-base-size: 14px;
+    $tablet-base-size: $fhd-base-size * 0.857;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+
+@mixin font-4 {
+    $fhd-base-size: 16px;
+    $tablet-base-size: $fhd-base-size * 0.875;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-5 {
+    $fhd-base-size: 16px;
+    $tablet-base-size: $fhd-base-size * 0.875;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-6 {
+    $fhd-base-size: 20px;
+    $tablet-base-size: $fhd-base-size * 0.8;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+}
+
+@mixin font-7 {
+    $fhd-base-size: 60px;
+    $tablet-base-size: $fhd-base-size * 0.66;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 40px;
+    }
+}
+
+@mixin font-8 {
+    $fhd-base-size: 14px;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: $fhd-base-size;
+}
+
+@mixin font-9 {
+    $fhd-base-size: 40px;
+    $tablet-base-size: $fhd-base-size * 0.6;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 24px;
+    }
+}
+
+@mixin font-10 {
+    $fhd-base-size: 20px;
+    $tablet-base-size: $fhd-base-size * 0.8;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+}
+
+@mixin font-11 {
+    $fhd-base-size: 18px;
+    $tablet-base-size: $fhd-base-size * 0.89;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+}
+
+@mixin font-12 {
+    $fhd-base-size: 30px;
+    font-family: Gilroy-Extrabold, sans-serif;
+    font-size: $fhd-base-size;
+}
+
+@mixin font-13 {
+    $fhd-base-size: 16px;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: $fhd-base-size;
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+    }
+}
+
+@mixin font-14 {
+    $fhd-base-size: 16px;
+    $tablet-base-size: $fhd-base-size * 0.875;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-15 {
+    $fhd-base-size: 14px;
+    $tablet-base-size: $fhd-base-size * 0.857;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+
+@mixin font-16 {
+    $fhd-base-size: 12px;
+    $tablet-base-size: $fhd-base-size * 0.857;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+
+@mixin font-17 {
+    $fhd-base-size: 14px;
+    $tablet-base-size: $fhd-base-size * 0.857;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+
+@mixin font-18 {
+    $fhd-base-size: 28px;
+    $tablet-base-size: $fhd-base-size * 0.71;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 20px;
+    }
+}
+
+@mixin font-19 {
+    $fhd-base-size: 14px;
+    $tablet-base-size: $fhd-base-size;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-20 {
+    $fhd-base-size: 14px;
+    $tablet-base-size: $fhd-base-size;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-21 {
+    $fhd-base-size: 40px;
+    $tablet-base-size: $fhd-base-size * 0.5;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 20px;
+    }
+}
+
+@mixin font-22 {
+    $fhd-base-size: 14px;
+    $tablet-base-size: $fhd-base-size;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-23 {
+    $fhd-base-size: 20px;
+    $tablet-base-size: $fhd-base-size * 0.7;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-24 {
+    $fhd-base-size: 16px;
+    $tablet-base-size: $fhd-base-size * 0.75;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+@mixin font-25 {
+    $fhd-base-size: 16px;
+    $tablet-base-size: $fhd-base-size * 0.75;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+    }
+}
+
+@mixin font-26 {
+    $fhd-base-size: 16px;
+    $tablet-base-size: $fhd-base-size * 0.625;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 10px;
+    }
+}
+
+@mixin font-27 {
+    $fhd-base-size: 30px;
+    $tablet-base-size: $fhd-base-size * 0.8;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+}
+
+@mixin font-28 {
+    $fhd-base-size: 40px;
+    $tablet-base-size: $fhd-base-size * 0.5;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 20px;
+    }
+}
+
+@mixin font-29 {
+    $fhd-base-size: 16px;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: $fhd-base-size;
+}
+
+@mixin font-30 {
+    $fhd-base-size: 20px;
+    $tablet-base-size: $fhd-base-size * 0.7;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 14px;
+    }
+}
+
+@mixin font-31 {
+    $fhd-base-size: 40px;
+    $tablet-base-size: $fhd-base-size * 0.6;
+    font-family: Gilroy-Regular, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 24px;
+    }
+}
+
+/*Logo*/
+.logo {
+    $fhd-base-size: 24px;
+    font-family: Gilroy-ExtraBold, sans-serif;
+    font-size: $fhd-base-size;
+    line-height: 1.2;
+}
+
+.tp_cnt {
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 10px;
+    line-height: 3;
+    color: $color-1;
+}
+
+.tp_h-1 {
+    margin-bottom: 25px;
+    @include font-7;
+    line-height: 1.16;
+    color: $color-1;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 24px;
+    }
+}
+
+.tp_h-2 {
+    margin-bottom: 20px;
+    @include font-9;
+    line-height: 1.125;
+    color: $color-1;
+
+    @include media-breakpoint-down(sm) {
+        //margin-bottom: 35px;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    &_with-nav {
+        margin-bottom: 0;
+    }
+}
+
+.tp_h-3 {
+    margin-bottom: 45px;
+    @include font-28;
+    line-height: 1;
+    color: $color-1;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 25px;
+    }
+}
+
+.tp_h-4 {
+    margin-bottom: 30px;
+    @include font-10;
+    line-height: 1.4;
+    color: $color-1;
+}
+
+.tp__p-1 {
+    margin-bottom: 22px;
+    @include font-23;
+    line-height: 1.6;
+    color: $color-1;
+    @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        line-height: 1.8125;
+        margin-bottom: 8px;
+    }
+}
+//$fhd-base-size: 16px; font-family: Gilroy-Regular, sans-serif;
+//mobile: 14
+.tp__p-2 {
+    margin-bottom: 30px;
+    @include font-14;
+    line-height: 1.75;
+    color: $color-1;
+    @include media-breakpoint-down(sm) {
+        line-height: 24px;
+    }
+}
+//$fhd-base-size: 16px;
+.tp__p-3 {
+    margin-bottom: 30px;
+    @include font-29;
+    line-height: 1.8125;
+    color: $color-1;
+    @include media-breakpoint-down(sm) {
+        line-height: 1.8125;
+    }
+}
+//$fhd-base-size: 20px;
+//mobile: 14
+.tp__p-4 {
+    margin-bottom: 22px;
+    @include font-23;
+    line-height: 1.6;
+    color: $color-1;
+
+    @include media-breakpoint-down(sm) {
+        line-height: 1.715;
+        margin-bottom: 8px;
+    }
+}
+//$fhd-base-size: 16px; font-family: Gilroy-Bold, sans-serif;
+//mobile: 14
+.tp__p-5 {
+    margin-bottom: 5px;
+    @include font-5;
+    line-height: 1.2;
+    color: $color-1;
+}
+
+//$fhd-base-size: 14px;
+//mobile: 14
+.tp__p-6 {
+    margin-bottom: 30px;
+    @include font-19;
+    line-height: 1.8;
+    color: $color-1;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 5px;
+    }
+}
+//$fhd-base-size: 16px; font-family: Gilroy-Regular, sans-serif;
+//mobile: 14
+.tp__p-7 {
+    margin-bottom: 30px;
+    @include font-14;
+    line-height: 1.75;
+    color: $color-1;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+        line-height: 1.786;
+    }
+}
+
+.tp__p-8 {
+    @include font-14;
+    line-height: 1.75;
+    color: $color-1;
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+        line-height: 1.786;
+    }
+}
+
+.tp-link {
+    @include font-8;
+    line-height: 1.715;
+    text-decoration: none;
+    color: $color-1;
+    transition: color .3s ease;
+
+    &:hover, &:focus, &:active {
+        color: $color-2;
+        text-decoration: none;
+    }
+}
+
+.tp-link-2 {
+    @include font-15;
+    line-height: 1.715;
+    text-decoration: none;
+    color: $color-2;
+    transition: color .3s ease;
+
+    &:hover, &:focus, &:active {
+        color: $color-1;
+        text-decoration: none;
+    }
+}
+
+.tp-404 {
+    $fhd-base-size: 250px;
+    $tablet-base-size: $fhd-base-size * 0.4;
+    margin: 0;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: calc(
+            #{smooth-value(
+                $tablet-base-size / 2,
+                $fhd-base-size / 2,
+                $screen-md-min,
+                $fhd-width,
+                "w"
+              )} + #{smooth-value(
+        $tablet-base-size / 2,
+        $fhd-base-size / 2,
+        $mobile-min-height,
+        $fhd-height,
+        "h"
+      )}
+    );
+    line-height: 1;
+    color: $color-1;
+    @include media-breakpoint-up(fhd) {
+        font-size: $fhd-base-size;
+    }
+    @include media-breakpoint-between(md, md) {
+        @media screen and (orientation: landscape) {
+            font-size: 120px;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        font-size: 120px;
+    }
+}
+
+.link-content {
+    position: relative;
+    @include font-2;
+    color: $color-1;
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $color-3;
+    }
+
+    &:hover {
+        color: $color-1;
+
+        &:before {
+            background-color: $color-1;
+        }
+    }
+
+    &__bold {
+        &:before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: $color-3;
+        }
+    }
+}
+
+p {
+    & > a {
+        font-family: Gilroy-Bold, sans-serif;
+        line-height: 1.75;
+        color: $color-1;
+
+        &:hover, &:focus, &:active {
+            color: $color-2;
+        }
+    }
+}
+
+.tp__ul-1 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & > li {
+        position: relative;
+        padding-left: calc(#{$col-width} / 2);
+        @include font-14;
+        line-height: 1.75;
+        color: $color-1;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: calc(#{$col-width} / 4);
+            height: 1px;
+            background-color: $color-1;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+strong {
+    font-family: Gilroy-Bold, sans-serif;
+}

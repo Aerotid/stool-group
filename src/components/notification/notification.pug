@@ -1,0 +1,8 @@
+mixin notification(args)
+    .notification.cm-notification-container.notification-container&attributes(attributes)
+        if(args.error)
+            strong ffas
+            .notification__content.cm-notification-content.notification-content.alert.alert-error.cm-auto-hide(data-notification-key='001-228-1488-XD')!= args.text
+        else
+            strong ffas
+            .notification__content.cm-notification-content.notification-content.alert.alert-success.cm-auto-hide(data-notification-key='001-228-1488-XD')!= args.text

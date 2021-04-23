@@ -1,0 +1,21 @@
+extends ../../layout/layout
+include ../../components/order-check/order-check
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='order-processing')
+            .row.row_cart.offset-top-140
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-2 Оформление завершено
+                .offset-2.offset-md-1.offset-xl-3.offset-xxl-5.col-20.col-md-22.col-xl-18.col-xxl-14.offset-top-60
+                    +order-check({
+                        title: 'Спасибо! Ваш заказ оформлен',
+                        btn: 'На главную',
+                        items: data.cartFormItems[4],
+                        orderNumText: 'Номер заказа',
+                        orderNum: '222 989801',
+                        infoTexts: ['Зака   з поступил в&nbsp;обработку.','Позвоним вам, когда заказ будет собран, чтобы подтвердить способ и&nbsp;время доставки товара.']
+                    })
+                .offset-2.offset-md-1.offset-xl-3.offset-xxl-5.col-20.col-md-22.col-xl-18.col-xxl-14
+                    +button({
+                        title: 'На главную'
+                    }).order-processing__btn

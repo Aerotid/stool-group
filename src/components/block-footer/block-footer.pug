@@ -1,0 +1,97 @@
+include ../link-more/link-more
+include ../button/button
+
+mixin block-footer(args)
+    .block-footer&attributes(attributes)
+        if(args.title)
+            .row.block-footer__head
+                .offset-2.offset-md-2.offset-lg-4.col-20.col-md-18.col-lg-16.tp__acnt.block-footer__title!= args.title
+                    if(args.titleColor)
+                        br
+                        span!= args.titleColor
+
+        .row
+            each col, index in args.cols
+
+                if(index == 0)
+                    .offset-2.offset-md-2.offset-lg-4.col-20.col-md-6.col-lg-5.block-footer__col
+                        .block-footer__col-top.tp__sub-tl-2!= col.title ? col.title : ''
+                        .block-footer__col-middle
+                            if(col.middle.p)
+                                .tp__p-2!= col.middle.p
+                            if(col.middle.socials)
+                                each social in col.middle.socials
+                                    a(href=social.href).block-footer__social.tp__p-2!= social.text
+                        if(col.bottom)
+                            .block-footer__col-bottom
+                                if(col.bottom.links)
+                                    each link in col.bottom.links
+                                        +link-more({
+                                            href: link.href,
+                                            title: link.text
+                                        }).block-footer__link.tp__sm-up
+
+                                        +button({
+                                            text: link.text
+                                        })(href=link.href).block-footer__link-button
+
+                                if(col.bottom.phones)
+                                    each phone in col.bottom.phones
+                                        a(href='tel:' + phone.num).block-footer__phone.tp__p-2
+                                            span!= phone.name
+                                            span!= phone.num
+
+                if(index > 0 && index < 2)
+                    .offset-2.offset-md-0.col-20.col-md-6.col-lg-5.block-footer__col
+                        .block-footer__col-top.tp__sub-tl-2!= col.title ? col.title : ''
+                        .block-footer__col-middle
+                            if(col.middle.p)
+                                .tp__p-2!= col.middle.p
+                            if(col.middle.socials)
+                                each social in col.middle.socials
+                                    a(href=social.href).block-footer__social.tp__p-2!= social.text
+                        if(col.bottom)
+                            .block-footer__col-bottom
+                                if(col.bottom.links)
+                                    each link in col.bottom.links
+                                        +link-more({
+                                            href: link.href,
+                                            title: link.text
+                                        }).block-footer__link.tp__sm-up
+
+                                        +button({
+                                            text: link.text
+                                        })(href=link.href).block-footer__link-button
+                                if(col.bottom.phones)
+                                    each phone in col.bottom.phones
+                                        a(href='tel:' + phone.num).block-footer__phone.tp__p-2
+                                            span!= phone.name
+                                            span!= phone.num
+
+                if(index > 1)
+                    .offset-2.offset-md-0.col-20.col-md-5.col-lg-4.block-footer__col
+                        .block-footer__col-top.tp__sub-tl-2(class= col.title ? '' : '_no-mobile' )!= col.title ? col.title : ''
+                        .block-footer__col-middle
+                            if(col.middle.p)
+                                .tp__p-2!= col.middle.p
+                            if(col.middle.socials)
+                                each social in col.middle.socials
+                                    a(href=social.href).block-footer__social.tp__p-2!= social.text
+
+                        if(col.bottom)
+                            .block-footer__col-bottom
+                                if(col.bottom.links)
+                                    each link in col.bottom.links
+                                        +link-more({
+                                            href: link.href,
+                                            title: link.text
+                                        }).block-footer__link.tp__sm-up
+
+                                        +button({
+                                            text: link.text
+                                        })(href=link.href).block-footer__link-button
+                                if(col.bottom.phones)
+                                    each phone in col.bottom.phones
+                                        a(href='tel:' + phone.num).block-footer__phone.tp__p-2
+                                            span!= phone.name
+                                            span!= phone.num

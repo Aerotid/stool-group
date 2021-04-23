@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Новый пользователь",
+    "content": [
+      {
+        "id": "registration-firstname",
+        "place": "Имя",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "registration-lastname",
+        "place": "Фамилия",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "registration-email",
+        "place": "Электронная почта",
+        "required": true,
+        "type": "text"
+      },
+      {
+        "id": "registration-phone",
+        "place": "Пароль",
+        "required": true,
+        "type": "password"
+      }
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+mixin header-menu(args)
+    .header-menu&attributes(attributes)
+        each menuItem in data.menu
+            a.header-menu__item(href=menuItem.href)!= menuItem.anchor

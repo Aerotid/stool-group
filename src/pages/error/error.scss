@@ -1,0 +1,53 @@
+.error {
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        margin: 27.5vh calc(#{$col-width} * 4) 13.8vh;
+
+        @include media-breakpoint-between(md, lg) {
+            margin: 27.5vh 0 13.8vh;
+
+            @include media-breakpoint-between(md, md) {
+                @media screen and (orientation: landscape) {
+                    margin: 30.5vh 0 13.8vh;
+                }
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            margin: 30.5vh 0 15.7vh;
+        }
+    }
+    &__title {
+        @include font-31;
+        margin-bottom: 65px;
+        @include media-breakpoint-between(md, md) {
+            @media screen and (orientation: landscape) {
+                font-size: 24px;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 30px;
+
+            @media screen and (orientation: landscape) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link {
+        margin-top: auto;
+        @include media-breakpoint-between(md, md) {
+            @media screen and (orientation: landscape) {
+                font-size: 12px;
+            }
+        }
+    }
+}

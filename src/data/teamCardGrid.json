@@ -1,0 +1,47 @@
+[
+  {
+    "path":"../../components/team-card-grid/images/lebedev.jpg",
+    "descr": "Директор",
+    "name": "Кирилл Лебедев"
+  },
+  {
+    "path":"../../components/team-card-grid/images/Curbatov.jpg",
+    "descr": "Заместитель директора",
+    "name": "Пётр Курбатов"
+  },
+  {
+    "path":"../../components/team-card-grid/images/Bogpvik.jpg",
+    "descr": "Руководитель отдела продаж",
+    "name": "Александр Боговик"
+  },
+  {
+    "path":"../../components/team-card-grid/images/Bezvesilnaya.jpg",
+    "descr": "Маркетолог",
+    "name": "Валерия Безвесильная"
+  },
+  {
+    "descr": "Руководитель отдела менеджмента",
+    "name": "Ирина Преображенская"
+  },
+  {
+    "descr": "Менеджер высшего звена",
+    "name": "Константин Константинопольский"
+  },
+  {
+    "descr": "Менеджер среднего звена",
+    "name": "Иван Петров"
+  },
+  {
+    "descr": "Менеджер",
+    "name": "Валерия Безвесильная"
+  },
+  {
+    "descr": "Дизайнер",
+    "name": "Роман Носов"
+  },
+  {
+    "path":"",
+    "descr": "Персональный вдохновитель",
+    "name": "Тим Рот"
+  }
+]

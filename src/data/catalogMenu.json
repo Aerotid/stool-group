@@ -1,0 +1,50 @@
+[
+  {
+    "linkText": "Стулья",
+    "image": "../../components/catalog-menu/images/chairs.jpg",
+    "href": "#",
+    "color": "color1"
+  },
+  {
+    "linkText": "Столы",
+    "image": "../../components/catalog-menu/images/table.jpg",
+    "href": "#",
+    "color": "color2"
+  },
+  {
+    "linkText": "Компьютерные кресла",
+    "image": "../../components/catalog-menu/images/copmChairs.jpg",
+    "href": "#",
+    "color": "color3"
+  },
+  {
+    "linkText": "Банкетная мебель",
+    "image": "../../components/catalog-menu/images/banquet.jpg",
+    "href": "#",
+    "color": "color4"
+  },
+  {
+    "linkText": "Другие товары",
+    "image": "../../components/catalog-menu/images/another.jpg",
+    "href": "#",
+    "color": "color2"
+  },
+  {
+    "linkText": "Коллекции",
+    "image": "../../components/catalog-menu/images/collection.jpg",
+    "href": "#",
+    "color": "color2"
+  },
+  {
+    "linkText": "Новинки",
+    "image": "../../components/catalog-menu/images/news.jpg",
+    "href": "#",
+    "color": "color4"
+  },
+  {
+    "linkText": "Скидки",
+    "image": "../../components/catalog-menu/images/sale.jpg",
+    "href": "#",
+    "color": "color3"
+  }
+]

@@ -1,0 +1,262 @@
+.search {
+    $root: &;
+
+    margin-top: smooth-value(110px, 240px, $mobile-min-height, $fhd-height, 'h');
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 110px;
+    }
+
+
+    .search__form {
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        &-input-label {
+            width: 100%;
+            //display: flex;
+            //justify-content: flex-end;
+            @include font-19;
+            position: relative;
+
+            &-info {
+                position: absolute;
+                right: 0;
+                bottom: -52px;
+                @include font-15;
+
+                @include media-breakpoint-down(sm) {
+                    bottom: -41px;
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &-input {
+            width: 100%;
+            @include font-7;
+            line-height: 1.7;
+            padding-bottom: 15px;
+            border: none;
+            outline: transparent;
+            border-bottom: 1px solid $color-3;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 24px;
+                line-height: 1.9;
+                padding-bottom: 7px;
+            }
+
+            &::-webkit-input-placeholder {
+                color: $color-5;
+            }
+            &:-ms-input-placeholder{
+                color: $color-5;
+            }
+            &::-ms-input-placeholder{
+                color: $color-5;
+            }
+            &::placeholder {
+                color: $color-5;
+            }
+
+        }
+
+        &-btn {
+            width: 60px;
+            height: 60px;
+            background-color: $color-5;
+            border-radius: 100%;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            svg {
+                stroke: $color-1;
+                width: 18px;
+                height: 14px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: 30px;
+                height: 30px;
+
+                svg {
+                    width: 10px;
+                    height: 8px;
+                }
+            }
+        }
+    }
+
+    &__popular {
+        //display: none;
+
+        &-title {
+            @include font-15;
+            margin-bottom: 25px;
+            padding-top: 28px;
+
+            @include media-breakpoint-down(sm) {
+                padding-top: 21px;
+            }
+        }
+
+        &-container {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        &-item {
+            margin-bottom: 10px;
+        }
+
+        &-item-link {
+            @include font-23;
+            color: $color-1;
+
+            &:hover, &:focus, &:active {
+                color: $color-1;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__result {
+        display: none;
+        &-title {
+            @include font-15;
+            margin-bottom: 75px;
+            padding-top: 28px;
+            @include media-breakpoint-down(sm) {
+                padding-top: 21px;
+                margin-bottom: 30px;
+            }
+
+            &-count, a {
+                color: $color-1;
+
+                &:hover, &:focus, &:active {
+                    color: $color-1;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &-item-title {
+            margin-bottom: 10px;
+
+            @include media-breakpoint-down(sm) {
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+
+        }
+
+        &-container {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            @include media-breakpoint-down(sm) {
+                justify-content: space-between;
+            }
+        }
+
+        &-item-wrapper {
+            //width: 400px;
+            //width: calc(#{$col-width} * 5);
+            width: 28%;
+            min-height: 130px;
+            margin-bottom: 30px;
+            border: none!important;
+            &:not(:nth-of-type(3n)) {
+                margin-right: calc((100% - 3 * 28%) / 2);
+                @include media-breakpoint-between(md, lg) {
+                    margin-right: calc((100% - 3 * 30%) / 2);
+                }
+                @include media-breakpoint-down(sm) {
+                    margin-right: 0;
+                }
+            }
+            @include media-breakpoint-between(md, lg) {
+                width: 30%;
+            }
+
+            @include media-breakpoint-down(sm) {
+                width: calc(50% - #{$col-width} * 0.5);
+                min-width: 150px;
+            }
+            &:hover {
+                background: transparent!important;
+                border: none!important;
+            }
+        }
+        &-item {
+            width: 100%;
+            display: flex!important;
+            padding: 15px;
+            border: 1px solid $color-5;
+            box-sizing: border-box;
+            border-radius: 3px;
+            color: $color-1;
+            transition: border-color 0.3s;
+            height: 100%;
+
+            &:hover {
+                color: $color-1;
+                border-color: $color-1;
+            }
+
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+            }
+
+            .old-price, .search__result-cost_old {
+                margin-left: 20px;
+                text-decoration: line-through;
+
+            }
+        }
+        &-cost {
+            @include font-8;
+        }
+
+
+        &-item-img, img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+
+            @include media-breakpoint-between(md, lg) {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        &-item-cost {
+            display: flex;
+            @include font-19;
+        }
+
+    }
+
+    &._is-fill {
+        #{$root}__popular {
+            display: none;
+        }
+        #{$root}__result {
+            display: block;
+        }
+    }
+
+}

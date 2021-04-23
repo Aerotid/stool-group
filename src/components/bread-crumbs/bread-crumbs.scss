@@ -1,0 +1,35 @@
+.bread-crumbs {
+    margin: 70px 0 40px;
+
+    &__link {
+        @include font-15;
+        color: $color-2;
+        transition: color 0.3s;
+
+        & .active {
+            @include  font-2;
+            color: $color-1;
+        }
+
+        &:hover {
+            color: $color-1;
+        }
+    }
+
+    &__separator {
+        color: $color-2;
+        margin: 0 9px;
+
+        &:last-child {
+            display: none;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        margin: 50px 0;
+
+        @include media-breakpoint-down(sm) {
+            margin: 22px 0 44px;
+        }
+    }
+}

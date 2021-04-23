@@ -1,0 +1,20 @@
+include ../../components/profile-dashboard/profile-dashboard
+
+mixin profile(args)
+    .profile&attributes(attributes)
+        .row.d-flex.offset-modal-top
+            .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18.tp_h-2 Ваш профиль
+
+            .offset-0.offset-md-1.offset-xl-5.col-24.col-md-22.col-xl-14.order-1.order-md-0
+                +profile-dashboard({data: data.profileDashboard})
+
+            .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14.d-flex.profile__data
+                .profile__info
+                    .profile__title Константин Константинопольский
+                    .profile__email xxxxxxxxxxx@gmail.com
+                    a(href='#').d-none.d-md-inline-block.link-content Редактировать
+
+                .d-none.d-md-block.profile__history
+                    .profile__title История заказов
+                    .profile__text Это рыба! Нет ни одного осуществленного заказа.  А может и есть, нужно написать об этом.
+                    a(href='#').link-content Посмотреть

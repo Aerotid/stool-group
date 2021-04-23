@@ -1,0 +1,11 @@
+mixin shifting-block-controls(args)
+    .shifting-block-controls&attributes(attributes)
+        .shifting-block-controls__top
+            .d-flex.align-items-center.shifting-block-controls__btn
+                .shifting-block-controls__btn-icon
+                    +svg({ name: 'filters' })
+                .shifting-block-controls__btn-text.tp-link Фильтрация
+
+
+            if(args && args.selected)
+                .shifting-block-controls__selected.shifting-block__selected

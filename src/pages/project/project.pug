@@ -1,0 +1,48 @@
+extends ../../layout/layout
+include ../../components/preview-bg/preview-bg
+include ../../components/info-block-1/info-block-1
+include ../../components/two-columns/two-columns
+include ../../components/video-block/video-block
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='project')
+            .row.offset-top-140
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-20
+                    h2.tp_h-1 Ресторан-пивоварня «Обломов»
+                    p.project__subtitle.tp__p-2 Санкт-Петербург
+                +preview-bg({bg:'./images/1.jpg'})
+            .row
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-20
+                    +info-block-1({
+                        title: 'Дизайн-концепция проекта',
+                        text1: '<p>Аномальная джетовая активность перечеркивает вращательный керн. Различное расположение точно колеблет дип-скай объект — это солнечное затмение предсказал ионянам Фалес Милетский.</p>',
+                        text2: '<p>Космогоническая гипотеза Шмидта позволяет достаточно просто объяснить эту нестыковку, однако орбита дает близкий Млечный Путь. Уравнение времени, по определению, параллельно. Небесная сфера, и это следует подчеркнуть, притягивает непреложный надир. Соединение пространственно неоднородно. Гелиоцентрическое расстояние, как бы это ни казалось парадоксальным, постоянно.</p>'
+                    }).offset-bottom-160
+                    +two-columns({
+                        title: 'Рецензии',
+                        items: [
+                            [
+                                'Андрей Андреичев,',
+                                '<p>&laquo;Прямая речь о&nbsp;процессе создания интерьера, как и&nbsp;почему они выбрали Stool Group и&nbsp;как оценивают результат. Прямая речь о&nbsp;процессе создания интерьера, как и&nbsp;почему они выбрали Stool Group и&nbsp;как оценивают результат.&raquo;</p>',
+                                'арт-директор ресторана La maison'
+                            ],
+                            [
+                                'Денис Денисов,',
+                                '<p>&laquo;Прямая речь от&nbsp;сотрудника компании Stool Group. Прямая речь от&nbsp;сотрудника компании Stool Group. Прямая речь от&nbsp;сотрудника компании Stool Group.&raquo;</p>',
+                                'менеджер Stool Group'
+                            ]
+                        ]
+                    }).offset-bottom-160
+            .row.offset-bottom-125
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-20
+                    h2.tp_h-3 Интервью
+                .offset-2.offset-md-1.offset-xl-5.col-20.col-md-22.col-xl-14
+                    +video-block({
+                        type: "youtube",
+                        id: "4Nd7hHvyQ_k"
+                    })
+                    +video-block({
+                        type: "inner",
+                        path: "../../pages/product/video/eames.mp4"
+                    })

@@ -1,0 +1,14 @@
+include ../../components/team-card/team-card
+
+mixin team-card-grid(args)
+    .row.team-card-grid&attributes(attributes)
+        if(args.title)
+            h3.tp_h-2.two-columns__title!= args.title
+        .team-card-grid__content
+            if(args.p)
+                p.tp__p-3!= args.p
+
+            .team-card-grid__container
+                each card in args.cards
+                    .team-card-grid__item
+                        +team-card(card)

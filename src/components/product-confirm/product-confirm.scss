@@ -1,0 +1,151 @@
+.product-confirm {
+    $root: &;
+
+    @include font-15;
+    width: 100%;
+    position: relative;
+
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            border: 1px solid $color-5;
+            border-radius: 3px;
+            padding: 35px calc(#{$col-width} * 0.6) 42px;
+            //min-width: 800px;
+        }
+    }
+
+    &__table {
+        width: 100%;
+
+        @include media-breakpoint-down(sm) {
+            display: block;
+
+        }
+        @include media-breakpoint-up(md) {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    }
+
+
+    &__head {
+        border-bottom: 1px solid $color-2;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__title {
+        @include font-22;
+
+        padding-bottom: 19px;
+        width: calc( (100% - (#{$col-width} * 5)) / 4);
+        text-align: center;
+
+        &:first-of-type {
+            text-align: left;
+            width: calc(#{$col-width} * 5);
+            //min-width: 300px;
+            min-width: 250px;
+        }
+
+    }
+
+    &__content-item {
+        margin-bottom: 35px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 15px;
+        }
+    }
+    &__delivery {
+        border-bottom: 1px solid $color-2;
+        border-top: 1px solid $color-2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 35px 0;
+
+        &-info {
+            @include media-breakpoint-down(sm) {
+                flex-shrink: 2;
+            }
+            a {
+                @include font-2;
+            }
+
+        }
+        &-cost {
+            @include font-5;
+            text-align: center;
+            width: calc( (100% - (#{$col-width} * 5)) / 4);
+            @include media-breakpoint-down(sm) {
+                width: auto;
+                text-align: right;
+                margin-left: 20px;
+                flex-shrink: 0;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            border: 1px solid $color-5;
+            border-radius: 3px;
+            margin-top: 0;
+            //padding: 11px 14px 15px 17px;
+            padding: 15px 15px 15px 20px;
+        }
+
+
+    }
+
+    &__total {
+        display: flex;
+        justify-content: flex-end;
+        @include font-10;
+        padding-top: 44px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            padding-top: 20px;
+        }
+
+        &-info {
+
+        }
+        &-cost {
+            width: calc( (100% - (#{$col-width} * 5)) / 4);
+            text-align: center;
+            @include media-breakpoint-down(sm) {
+                width: auto;
+                text-align: left;
+                margin-left: 17px;
+            }
+        }
+    }
+
+    //.ps__rail-x {
+    //    display: block !important;
+    //    opacity: 0.6 !important;
+    //    height: 4px;
+    //    background-color: transparent;
+    //
+    //    .ps__thumb-x {
+    //        height: 4px;
+    //        bottom: 0;
+    //        border-radius: 0;
+    //        background-color: $color-1;
+    //    }
+    //}
+}
+

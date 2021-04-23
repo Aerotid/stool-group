@@ -1,0 +1,22 @@
+[
+  {
+    "type": "Стулья, столы",
+    "title": "Мебель Eames",
+    "path": "./images/collections/1.jpg"
+  },
+  {
+    "type": "Стулья, столы",
+    "title": "Мебель Tolix",
+    "path": "./images/collections/2.jpg"
+  },
+  {
+    "type": "Столы, консоли, банкетки",
+    "title": "Дизайнерская коллекция",
+    "path": "./images/collections/3.jpg"
+  },
+  {
+    "type": "Стулья, кресла",
+    "title": "Мягкие стулья",
+    "path": "./images/collections/4.jpg"
+  }
+]

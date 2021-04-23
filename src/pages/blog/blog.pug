@@ -1,0 +1,13 @@
+extends ../../layout/layout
+include ../../components/blog-item/blog-item
+
+block content
+    div#barba-wrapper
+        .barba-container(data-namespace='blog')
+            .row.offset-top-140.offset-bottom-40
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    h2.tp_h-1 Блог
+            .row.blog__bottom
+                .offset-2.offset-md-1.offset-xl-3.col-20.col-md-22.col-xl-18
+                    each item, i in data.blogList
+                        +blog-item(item)
